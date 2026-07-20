@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "context_levels": [512, 1024, 2048, 4096],
+  "tail_probabilities": [1.0, 1.0, 1.0, 1.0],
+  "sampling": "shared_global_microbatch",
+  "source": {
+    "type": "safe_template",
+    "efficiency_claim": false
+  }
+}

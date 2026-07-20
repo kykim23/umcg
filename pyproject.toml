@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "umcg-pretraining"
+version = "0.1.0"
+description = "Independent production pretraining with Unbiased Multi-Resolution Context Gradients"
+requires-python = ">=3.12"
+dependencies = [
+  "datasets>=4.8",
+  "huggingface-hub>=1.4",
+  "numpy>=2.5",
+  "safetensors>=0.7",
+  "torch>=2.13",
+  "transformers>=5.14",
+  "wandb>=0.28",
+]
+
+[project.optional-dependencies]
+distributed = [
+  "deepspeed>=0.19.3",
+  "ninja>=1.13",
+]
+low-precision = [
+  "torchao>=0.17",
+]
+dev = [
+  "pytest>=9.1",
+  "ruff>=0.15",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

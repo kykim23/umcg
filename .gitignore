@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.mypy_cache/
+.pytest_cache/
+*.pyc
+
+# Builds & envs
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+env/
+.env
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+.DS_Store
+.github
+
+# Training artefacts
+checkpoints/
+wandb/
+result_analysis/
+imgs/
+*.pt
+*.bin
+*.ckpt
+*.safetensors
+*.npz
+
+# Data caches
+data/
+datasets/
+.cache/
+hf_cache/
+huggingface/
+
+# Logs & temp scripts
+logs/
+*.log
+*.out
+*.err
+configs/**/local_*.yaml
+checkpoint/
+wandb_graph_log_downloader.py
+*.sh
+data_analysis/
+
+# etc
+make_wandb_table*
+CG*

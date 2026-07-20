@@ -1,0 +1,24 @@
+{"text":"A small language model learns by predicting the next token from the tokens that came before it.","url":"https://example.test/000","timestamp":"2026-01-01T00:00:00Z"}
+{"text":"Distributed training combines work from several devices while preserving one global optimization objective.","url":"https://example.test/001","timestamp":"2026-01-01T00:00:01Z"}
+{"text":"A document boundary must remain visible when long web pages are split into fixed length parent sequences.","url":"https://example.test/002","timestamp":"2026-01-01T00:00:02Z"}
+{"text":"Right padding marks positions that do not belong to the original document and must not contribute targets.","url":"https://example.test/003","timestamp":"2026-01-01T00:00:03Z"}
+{"text":"Checkpoint replay restores random generators, data positions, optimizer state, and scheduler state together.","url":"https://example.test/004","timestamp":"2026-01-01T00:00:04Z"}
+{"text":"Validation uses the longest context and reports full loss and perplexity without a signed estimator shortcut.","url":"https://example.test/005","timestamp":"2026-01-01T00:00:05Z"}
+{"text":"The attention resolver measures local kernels and selects one backend shared by every distributed rank.","url":"https://example.test/006","timestamp":"2026-01-01T00:00:06Z"}
+{"text":"An explicit attention choice fails loudly when its package or hardware capability is unavailable.","url":"https://example.test/007","timestamp":"2026-01-01T00:00:07Z"}
+{"text":"Full precision reduction keeps token losses stable even when matrix multiplications use lower precision.","url":"https://example.test/008","timestamp":"2026-01-01T00:00:08Z"}
+{"text":"The global valid token denominator makes gradients independent of uneven padding across ranks.","url":"https://example.test/009","timestamp":"2026-01-01T00:00:09Z"}
+{"text":"A local worker can finish the remaining chunks of its current row before reading the next row.","url":"https://example.test/010","timestamp":"2026-01-01T00:00:10Z"}
+{"text":"The reference model and the library model share parameter names, masks, positions, and exported weights.","url":"https://example.test/011","timestamp":"2026-01-01T00:00:11Z"}
+{"text":"Sequence chunked language modeling heads avoid retaining one full batch by sequence by vocabulary tensor.","url":"https://example.test/012","timestamp":"2026-01-01T00:00:12Z"}
+{"text":"Russian roulette corrections may be negative while their expected gradient remains the full gradient.","url":"https://example.test/013","timestamp":"2026-01-01T00:00:13Z"}
+{"text":"Safe estimator templates use unit tail probabilities until calibration supplies measured probabilities.","url":"https://example.test/014","timestamp":"2026-01-01T00:00:14Z"}
+{"text":"Calibration measures correction sketches, execution time, peak memory, variance, and expected cost.","url":"https://example.test/015","timestamp":"2026-01-01T00:00:15Z"}
+{"text":"An atomic checkpoint is visible only after all required rank files and its manifest are complete.","url":"https://example.test/016","timestamp":"2026-01-01T00:00:16Z"}
+{"text":"Common floating point weights start a new run without carrying optimizer or data iterator state.","url":"https://example.test/017","timestamp":"2026-01-01T00:00:17Z"}
+{"text":"A deterministic seed controls model initialization, data shard order, and level sampling state.","url":"https://example.test/018","timestamp":"2026-01-01T00:00:18Z"}
+{"text":"Microbatch accumulation delays gradient synchronization until the final microbatch of an update.","url":"https://example.test/019","timestamp":"2026-01-01T00:00:19Z"}
+{"text":"Optimizer roles place hidden attention and feed forward matrices in Muon and all other tensors in AdamW.","url":"https://example.test/020","timestamp":"2026-01-01T00:00:20Z"}
+{"text":"The local metrics file remains available even when remote experiment logging is disabled.","url":"https://example.test/021","timestamp":"2026-01-01T00:00:21Z"}
+{"text":"A production run records its source hash, resolved packages, data revision, and complete command line.","url":"https://example.test/022","timestamp":"2026-01-01T00:00:22Z"}
+{"text":"External multi device validation is required before a distributed combination is declared complete.","url":"https://example.test/023","timestamp":"2026-01-01T00:00:23Z"}
