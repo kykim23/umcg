@@ -34,7 +34,6 @@ imgs/
 *.npz
 
 # Data caches
-data/
 datasets/
 .cache/
 hf_cache/
@@ -48,7 +47,6 @@ logs/
 configs/**/local_*.yaml
 checkpoint/
 wandb_graph_log_downloader.py
-*.sh
 data_analysis/
 
 # etc
