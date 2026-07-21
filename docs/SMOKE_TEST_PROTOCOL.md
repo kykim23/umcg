@@ -34,7 +34,7 @@ CUDA_VISIBLE_DEVICES=0 python smoke_main.py \
   --device cuda \
   --model_backend huggingface \
   --model_config configs/model/llama_tiny_smoke_1024.json \
-  --precision float16 \
+  --precision bfloat16 \
   --attention_backend automatic \
   --estimator_config configs/estimator/russian_roulette_safe_1024.json \
   --gradient_estimator full \
@@ -49,6 +49,8 @@ CUDA_VISIBLE_DEVICES=0 python smoke_main.py \
 ```
 
 결과는 `smoke_report.json`이다. Scalar와 모든 gradient가 finite여야 한다.
+
+H100 검증에서는 FP16을 실행하지 않고 BF16을 사용한다. FP8은 본 smoke와 분리된 2-GPU 기능 관문에서 검증한다.
 
 ## CPU test suite
 

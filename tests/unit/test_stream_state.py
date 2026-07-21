@@ -22,9 +22,10 @@ class FakeIterable:
         self.position = 0
         self.shuffle_arguments = None
         self.shard_arguments = None
+        self._ex_iterable = self
 
-    def shuffle(self, *, seed, buffer_size):
-        self.shuffle_arguments = (seed, buffer_size)
+    def shuffle_data_sources(self, generator):
+        self.shuffle_arguments = ("data_sources_only", type(generator).__name__)
         return self
 
     def shard(self, *, num_shards, index):
@@ -84,7 +85,7 @@ def test_stream_resume_restores_dataset_position_and_pending_document_chunks(mon
     assert first["input_ids"].tolist() == [10, 11, 12, 13]
     assert saved["row_position"] == 1
     assert len(saved["pending_chunks"]) == 1
-    assert created[0][2].shuffle_arguments == (777, 1)
+    assert created[0][2].shuffle_arguments == ("data_sources_only", "Generator")
     for expected_sample, actual_sample in zip(expected, actual, strict=True):
         assert expected_sample["document_hash"] == actual_sample["document_hash"]
         assert expected_sample["chunk_index"] == actual_sample["chunk_index"]

@@ -66,8 +66,8 @@ def main() -> None:
     rank = int(os.environ["RANK"])
     local_rank = int(os.environ["LOCAL_RANK"])
     world_size = int(os.environ["WORLD_SIZE"])
-    if world_size not in {1, 4}:
-        raise RuntimeError("global gradient validation requires one or four processes")
+    if world_size not in {1, 2, 4}:
+        raise RuntimeError("global gradient validation requires one, two, or four processes")
     torch.cuda.set_device(local_rank)
     device = torch.device("cuda", local_rank)
     distributed.init_process_group("nccl", init_method="env://", device_id=device)
@@ -76,7 +76,7 @@ def main() -> None:
         model.weight.fill_(2.0)
     wrapped = DistributedDataParallel(model, device_ids=[local_rank])
     levels = LevelSpec((2, 4, 6), (1.0, 1.0, 1.0))
-    global_indices = list(range(4)) if world_size == 1 else [rank]
+    global_indices = list(range(rank, len(GLOBAL_FEATURES), world_size))
     batches = [make_batch(index) for index in global_indices]
     plan = build_global_update_plan(
         batches,

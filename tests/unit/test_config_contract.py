@@ -74,6 +74,14 @@ def test_batch_accumulation_is_derived_exactly():
         derive_accumulation_steps(7, 512, 4)
 
 
+def test_local_raw_requires_a_path_and_accepts_two_gpu_runtime():
+    with pytest.raises(ValueError, match="c4_local_path"):
+        runtime_config(c4_source="local_raw").validate_before_model_creation(world_size=2)
+    runtime_config(
+        c4_source="local_raw", c4_local_path="/data/c4_en/en"
+    ).validate_before_model_creation(world_size=2)
+
+
 @pytest.mark.parametrize(
     "changes",
     [

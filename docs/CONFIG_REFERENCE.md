@@ -61,13 +61,15 @@ total_batch_size = batch_size * world_size * accumulation_steps
 
 ### Data
 
-- `--c4_source {streaming,local}`: 필수
+- `--c4_source {streaming,local,local_raw}`: 필수
 - `--c4_repo NAME`: 기본 `allenai/c4`
 - `--c4_revision REVISION`: 기본 `main`
-- `--c4_local_path PATH`: local에서 필수
+- `--c4_local_path PATH`: `local`과 `local_raw`에서 필수
 - `--workers INTEGER`: rank별 논리 worker 수, 기본 `1`
 
 Streaming C4와 tokenizer revision은 시작 시 immutable Hub commit으로 고정된다.
+
+`local`은 `prepare_c4_main.py`가 만든 tokenized parent manifest를 읽는다. `local_raw`는 C4 원본 `c4-train.*.json.gz`와 `c4-validation.*.json.gz`를 직접 streaming한다. 후자는 파일 목록과 크기의 SHA-256 및 사용자가 지정한 upstream revision을 실행 설정에 저장한다.
 
 ### 실행과 기록
 

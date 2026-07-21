@@ -49,7 +49,9 @@ def build_training_parser() -> argparse.ArgumentParser:
     parser.add_argument("--eval_parent_batches", type=int, default=32)
     parser.add_argument("--save_every", required=True, type=int)
     parser.add_argument("--save_dir", required=True)
-    parser.add_argument("--c4_source", required=True, choices=("streaming", "local"))
+    parser.add_argument(
+        "--c4_source", required=True, choices=("streaming", "local", "local_raw")
+    )
     parser.add_argument("--c4_repo", default="allenai/c4")
     parser.add_argument("--c4_revision", default="main")
     parser.add_argument("--c4_local_path")

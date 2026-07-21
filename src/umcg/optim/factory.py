@@ -219,9 +219,20 @@ class SchedulerController:
         def function(step: int) -> float:
             return learning_rate_multiplier(name, step, total_updates, warmup_updates)
 
+        scheduler_optimizers: list[torch.optim.Optimizer] = []
+        for optimizer in optimizer_controller.optimizers:
+            if isinstance(optimizer, torch.optim.Optimizer):
+                scheduler_optimizers.append(optimizer)
+                continue
+            inner_optimizer = getattr(optimizer, "optimizer", None)
+            if not isinstance(inner_optimizer, torch.optim.Optimizer):
+                raise TypeError(
+                    f"{type(optimizer).__name__} does not expose a PyTorch optimizer"
+                )
+            scheduler_optimizers.append(inner_optimizer)
         self.schedulers = [
             torch.optim.lr_scheduler.LambdaLR(optimizer, function)
-            for optimizer in optimizer_controller.optimizers
+            for optimizer in scheduler_optimizers
         ]
 
     def step(self) -> None:

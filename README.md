@@ -21,13 +21,15 @@ Python package는 내부 구현용이다. 학습은 항상 `torchrun_main.py`로
 
 ## 설치
 
-Python 3.12, PyTorch 2.13, Transformers 5.14 이상을 기준으로 한다.
+Python 3.12, CUDA 12.8용 PyTorch 2.11, Transformers 5.14를 기준으로 한다.
 
 Triton, DeepSpeed, FlashAttention을 사용하는 환경에는 C/C++ compiler와 binutils가 필요하다. 실행 전 build tool이 현재 shell의 `PATH`에서 확인되어야 한다.
 
 ```bash
 pip install -e '.[dev,distributed,low-precision]'
 ```
+
+이 서버의 재현 환경은 `requirements-implementation.txt`의 정확한 버전을 사용한다.
 
 DeepSpeed를 쓰지 않으면 `distributed` extra를 생략할 수 있다. FP8 또는 AdamW 8-bit를 쓰지 않으면 `low-precision` extra를 생략할 수 있다.
 
@@ -71,7 +73,17 @@ torchrun --standalone --nproc_per_node 4 torchrun_main.py \
   --name umcg_350m_rr_seed777
 ```
 
-`russian_roulette_safe_4096.json`은 모든 tail probability가 `Q=1`인 정확성 기준선이다. 효율적인 Russian Roulette 실험에는 `calibrate_main.py` 결과나 사용자가 검증한 estimator JSON을 사용한다.
+`russian_roulette_safe_4096.json`은 모든 tail probability가 `Q=1`인 수학적 정확성 기준선이다. 별도 GPU 실행의 bitwise equality를 뜻하지는 않는다. 효율적인 Russian Roulette 실험에는 `calibrate_main.py` 결과나 사용자가 검증한 estimator JSON을 사용한다.
+
+이미 내려받은 원본 C4 `json.gz` shard를 직접 읽을 때에는 다음 인자를 사용한다.
+
+```bash
+--c4_source local_raw \
+--c4_local_path /home/ubuntu/data/c4_en/en \
+--c4_revision 1588ec454efa1a09f29cd18ddd04fe05fc8653a2
+```
+
+`local_raw`는 원본을 복제하거나 사전 토큰화하지 않는다. 정렬된 train·validation shard 목록과 파일 크기의 SHA-256을 실행 계약과 checkpoint에 고정한다.
 
 FSDP2는 한 값만 바꾼다.
 

@@ -8,11 +8,13 @@ import random
 from pathlib import Path
 from typing import Any, Protocol
 
+import numpy as np
 import torch
 
 from umcg.data.collate import ParentBatch, collate_parent_samples
 from umcg.data.document_chunks import tokenize_c4_row
 from umcg.data.parent_dataset import ParentSample
+from umcg.data.sources import local_raw_file_paths, local_raw_snapshot
 
 
 class DocumentWorker(Protocol):
@@ -21,6 +23,19 @@ class DocumentWorker(Protocol):
     def state_dict(self) -> dict[str, Any]: ...
 
     def load_state_dict(self, state: dict[str, Any]) -> None: ...
+
+
+def _shuffle_huggingface_data_sources(dataset: Any, seed: int) -> Any:
+    """Shuffle only data-source shards, without a non-resumable example buffer."""
+    examples = getattr(dataset, "_ex_iterable", None)
+    shuffle_data_sources = getattr(examples, "shuffle_data_sources", None)
+    if examples is None or not callable(shuffle_data_sources):
+        raise RuntimeError(
+            "installed datasets version does not expose deterministic data-source shuffling"
+        )
+    shuffled = copy.copy(dataset)
+    shuffled._ex_iterable = shuffle_data_sources(np.random.default_rng(seed))
+    return shuffled
 
 
 class HuggingFaceC4Worker:
@@ -49,9 +64,7 @@ class HuggingFaceC4Worker:
             revision=revision,
         )
         if shuffle_shards:
-            # A one-row buffer leaves example order unchanged while the dataset
-            # implementation still permutes its data-source shards by seed.
-            dataset = dataset.shuffle(seed=seed, buffer_size=1)
+            dataset = _shuffle_huggingface_data_sources(dataset, seed)
         dataset = dataset.shard(num_shards=total_workers, index=worker_index)
         if not hasattr(dataset, "state_dict") or not hasattr(dataset, "load_state_dict"):
             raise RuntimeError("installed datasets version does not expose iterable state")
@@ -93,6 +106,91 @@ class HuggingFaceC4Worker:
         actual = (int(state["worker_index"]), int(state["total_workers"]))
         if actual != expected:
             raise ValueError(f"C4 worker topology changed: checkpoint={actual}, current={expected}")
+        self.dataset.load_state_dict(state["dataset_state"])
+        self.row_position = int(state["row_position"])
+        self.yielded_chunks = int(state["yielded_chunks"])
+        self.pending_chunks = copy.deepcopy(list(state["pending_chunks"]))
+        self._iterator = iter(self.dataset)
+
+
+class LocalRawC4Worker:
+    def __init__(
+        self,
+        *,
+        directory: str | Path,
+        split: str,
+        tokenizer: object,
+        maximum_context: int,
+        seed: int,
+        worker_index: int,
+        total_workers: int,
+        shuffle_shards: bool,
+    ) -> None:
+        try:
+            from datasets import load_dataset
+        except ImportError as error:
+            raise RuntimeError("c4_source=local_raw requires the datasets package") from error
+        paths = local_raw_file_paths(directory, split)
+        if len(paths) < total_workers:
+            raise ValueError(
+                "local_raw C4 requires at least one data shard per logical worker: "
+                f"split={split}, shards={len(paths)}, workers={total_workers}"
+            )
+        dataset = load_dataset(
+            "json",
+            data_files={split: [str(path) for path in paths]},
+            split=split,
+            streaming=True,
+        )
+        if shuffle_shards:
+            dataset = _shuffle_huggingface_data_sources(dataset, seed)
+        dataset = dataset.shard(num_shards=total_workers, index=worker_index)
+        if not hasattr(dataset, "state_dict") or not hasattr(dataset, "load_state_dict"):
+            raise RuntimeError("installed datasets version does not expose iterable state")
+        self.dataset = dataset
+        self.tokenizer = tokenizer
+        self.maximum_context = maximum_context
+        self.worker_index = worker_index
+        self.total_workers = total_workers
+        self.source_manifest = local_raw_snapshot(directory)["file_manifest_sha256"]
+        self.row_position = 0
+        self.yielded_chunks = 0
+        self.pending_chunks: list[ParentSample] = []
+        self._iterator = iter(self.dataset)
+
+    def next_sample(self) -> ParentSample:
+        while not self.pending_chunks:
+            try:
+                row = next(self._iterator)
+            except StopIteration as error:
+                raise RuntimeError("local_raw C4 exhausted before training completed") from error
+            self.row_position += 1
+            self.pending_chunks = tokenize_c4_row(row, self.tokenizer, self.maximum_context)
+        sample = self.pending_chunks.pop(0)
+        self.yielded_chunks += 1
+        return sample
+
+    def state_dict(self) -> dict[str, Any]:
+        return {
+            "kind": "local_raw_c4",
+            "worker_index": self.worker_index,
+            "total_workers": self.total_workers,
+            "source_manifest": self.source_manifest,
+            "row_position": self.row_position,
+            "yielded_chunks": self.yielded_chunks,
+            "dataset_state": self.dataset.state_dict(),
+            "pending_chunks": copy.deepcopy(self.pending_chunks),
+        }
+
+    def load_state_dict(self, state: dict[str, Any]) -> None:
+        expected = (self.worker_index, self.total_workers)
+        actual = (int(state["worker_index"]), int(state["total_workers"]))
+        if actual != expected:
+            raise ValueError(
+                f"local_raw C4 worker topology changed: checkpoint={actual}, current={expected}"
+            )
+        if state.get("source_manifest") != self.source_manifest:
+            raise ValueError("local_raw C4 file manifest changed")
         self.dataset.load_state_dict(state["dataset_state"])
         self.row_position = int(state["row_position"])
         self.yielded_chunks = int(state["yielded_chunks"])
@@ -324,7 +422,20 @@ def build_c4_stream(
                 seed=seed,
                 shuffle_shards=train,
             )
+        elif source == "local_raw":
+            if local_path is None:
+                raise ValueError("local_path is required for local_raw C4")
+            worker = LocalRawC4Worker(
+                directory=local_path,
+                split=split,
+                tokenizer=tokenizer,
+                maximum_context=maximum_context,
+                seed=seed,
+                worker_index=worker_index,
+                total_workers=total_workers,
+                shuffle_shards=train,
+            )
         else:
-            raise ValueError("source must be streaming or local")
+            raise ValueError("source must be streaming, local, or local_raw")
         workers.append(worker)
     return StatefulC4Stream(workers, rank=rank, world_size=world_size)

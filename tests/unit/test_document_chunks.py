@@ -1,7 +1,38 @@
+import pytest
 import torch
 
 from umcg.data.collate import collate_parent_samples
 from umcg.data.document_chunks import document_sha256, split_document_tokens
+
+
+@pytest.mark.parametrize(
+    ("raw_length", "expected_active_tokens"),
+    [
+        (3, [[10, 11, 12, 1]]),
+        (4, [[10, 11, 12, 13]]),
+        (5, [[10, 11, 12, 13], [14, 1]]),
+        (8, [[10, 11, 12, 13], [14, 15, 16, 17]]),
+    ],
+)
+def test_eos_exact_context_boundaries_keep_only_chunks_with_targets(
+    raw_length, expected_active_tokens
+):
+    maximum_context = 4
+    samples = split_document_tokens(
+        list(range(10, 10 + raw_length)),
+        eos_token_id=1,
+        pad_token_id=0,
+        maximum_context=maximum_context,
+        document_hash="boundary-document",
+    )
+
+    active_tokens = [
+        sample["input_ids"][: int(sample["attention_mask"].sum())].tolist()
+        for sample in samples
+    ]
+    assert active_tokens == expected_active_tokens
+    assert all(sample["causal_target_mask"].any() for sample in samples)
+    assert [sample["chunk_index"] for sample in samples] == list(range(len(samples)))
 
 
 def test_nine_thousand_token_document_is_split_without_overlap_or_mid_chunk_eos():

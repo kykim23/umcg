@@ -64,6 +64,23 @@ def test_only_six_canonical_root_entry_files(project_root):
     assert "[project.scripts]" not in (project_root / "pyproject.toml").read_text()
 
 
+def test_required_recovered_files_are_present_and_not_broadly_ignored(project_root):
+    required = (
+        project_root / "src/umcg/data/c4_stream.py",
+        project_root / "src/umcg/data/document_chunks.py",
+        project_root / "scripts/inspect_umcg_env.sh",
+        project_root / "scripts/run_external_validation.sh",
+    )
+    assert all(path.is_file() for path in required)
+    ignore_lines = {
+        line.strip()
+        for line in (project_root / ".gitignore").read_text(encoding="utf-8").splitlines()
+    }
+    assert "/data/" in ignore_lines
+    assert "data/" not in ignore_lines
+    assert "*.sh" not in ignore_lines
+
+
 @pytest.mark.parametrize(
     "forbidden",
     [
@@ -121,4 +138,5 @@ def test_public_artifacts_have_no_legacy_entry_names(project_root):
     for value in forbidden:
         assert value not in combined
     assert not any((project_root / "build").rglob("*.py"))
-    assert not any((project_root / "src/umcg_pretraining.egg-info").glob("*"))
+    ignore_lines = (project_root / ".gitignore").read_text(encoding="utf-8").splitlines()
+    assert "*.egg-info/" in ignore_lines

@@ -271,7 +271,7 @@ def build_backend_runtime(
             inner,
             device_ids=[context.local_rank],
             output_device=context.local_rank,
-            forward_sync_buffers=False,
+            broadcast_buffers=False,
         )
         optimizer = build_optimizer(
             model,

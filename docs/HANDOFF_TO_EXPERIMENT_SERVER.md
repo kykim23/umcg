@@ -87,7 +87,7 @@ DDP, FSDP2, ZeRO-3 checkpoint를 각각 export한다. Export 결과를 다른 di
 
 먼저 20 update를 중단 없이 실행한다. `save_every=10`, `eval_every=10`을 쓴다. 그다음 step 10 checkpoint에서 새 directory로 resume해 step 20까지 실행한다.
 
-두 step 20 checkpoint를 export한다. Weight, optimizer update, scheduler, C4 iterator, RR sampler, validation loss가 같아야 한다.
+두 step 20 checkpoint를 export한다. Optimizer update, scheduler, C4 iterator, RR sampler와 비부동소수점 상태는 정확히 같아야 한다. BF16 cuDNN 별도 실행의 부동소수점 weight·optimizer state와 validation loss는 `docs/H100_2GPU_VALIDATION.md`에 고정한 수치 허용치 안에서 같아야 한다.
 
 ## 8. 승인
 

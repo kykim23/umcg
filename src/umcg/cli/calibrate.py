@@ -38,7 +38,9 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--precision", required=True, choices=PRECISIONS)
     parser.add_argument("--attention_backend", default="automatic", choices=ATTENTION_BACKENDS)
     parser.add_argument("--context_preset", required=True, type=int, choices=(1024, 4096))
-    parser.add_argument("--c4_source", required=True, choices=("streaming", "local"))
+    parser.add_argument(
+        "--c4_source", required=True, choices=("streaming", "local", "local_raw")
+    )
     parser.add_argument("--c4_repo", default="allenai/c4")
     parser.add_argument("--c4_revision", default="main")
     parser.add_argument("--c4_local_path")

@@ -213,10 +213,12 @@ class RuntimeConfig:
             raise ValueError("warmup_steps must be between 0 and num_training_steps")
         if self.gradient_clip_norm is not None and self.gradient_clip_norm <= 0:
             raise ValueError("gradient_clip_norm must be positive")
-        if self.c4_source not in {"streaming", "local"}:
-            raise ValueError("c4_source must be streaming or local")
-        if self.c4_source == "local" and not self.c4_local_path:
-            raise ValueError("c4_local_path is required when c4_source=local")
+        if self.c4_source not in {"streaming", "local", "local_raw"}:
+            raise ValueError("c4_source must be streaming, local, or local_raw")
+        if self.c4_source in {"local", "local_raw"} and not self.c4_local_path:
+            raise ValueError(
+                "c4_local_path is required when c4_source is local or local_raw"
+            )
         if self.c4_source == "streaming" and self.c4_local_path is not None:
             raise ValueError("c4_local_path is valid only when c4_source=local")
         if self.continue_from is not None and self.initial_weights is not None:

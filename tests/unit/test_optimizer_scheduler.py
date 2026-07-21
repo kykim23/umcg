@@ -1,7 +1,10 @@
 import pytest
+import torch
 from torch import nn
 
 from umcg.optim.factory import (
+    OptimizerController,
+    SchedulerController,
     build_optimizer,
     classify_muon_parameters,
     learning_rate_multiplier,
@@ -76,3 +79,27 @@ def test_cosine_and_linear_scheduler_formulas():
     assert learning_rate_multiplier("cosine", 2, 10, 2) == pytest.approx(1.0)
     assert learning_rate_multiplier("cosine", 6, 10, 2) == pytest.approx(0.5)
     assert learning_rate_multiplier("cosine", 10, 10, 2) == pytest.approx(0.0)
+
+
+def test_scheduler_uses_pytorch_optimizer_inside_a_wrapper():
+    parameter = nn.Parameter(torch.ones(1))
+    inner = torch.optim.SGD([parameter], lr=1.0)
+
+    class OptimizerWrapper:
+        def __init__(self):
+            self.optimizer = inner
+
+        @property
+        def param_groups(self):
+            return self.optimizer.param_groups
+
+    controller = OptimizerController([OptimizerWrapper()], None)
+    scheduler = SchedulerController(
+        controller,
+        name="linear",
+        total_updates=4,
+        warmup_updates=0,
+    )
+    inner.step()
+    scheduler.step()
+    assert inner.param_groups[0]["lr"] == pytest.approx(0.75)
