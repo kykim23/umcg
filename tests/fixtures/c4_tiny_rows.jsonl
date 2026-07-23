@@ -13,7 +13,7 @@
 {"text":"Sequence chunked language modeling heads avoid retaining one full batch by sequence by vocabulary tensor.","url":"https://example.test/012","timestamp":"2026-01-01T00:00:12Z"}
 {"text":"Russian roulette corrections may be negative while their expected gradient remains the full gradient.","url":"https://example.test/013","timestamp":"2026-01-01T00:00:13Z"}
 {"text":"Safe estimator templates use unit tail probabilities until calibration supplies measured probabilities.","url":"https://example.test/014","timestamp":"2026-01-01T00:00:14Z"}
-{"text":"Calibration measures correction sketches, execution time, peak memory, variance, and expected cost.","url":"https://example.test/015","timestamp":"2026-01-01T00:00:15Z"}
+{"text":"Calibration measures exact gradient Gram matrices, execution time, peak memory, variance, and expected cost.","url":"https://example.test/015","timestamp":"2026-01-01T00:00:15Z"}
 {"text":"An atomic checkpoint is visible only after all required rank files and its manifest are complete.","url":"https://example.test/016","timestamp":"2026-01-01T00:00:16Z"}
 {"text":"Common floating point weights start a new run without carrying optimizer or data iterator state.","url":"https://example.test/017","timestamp":"2026-01-01T00:00:17Z"}
 {"text":"A deterministic seed controls model initialization, data shard order, and level sampling state.","url":"https://example.test/018","timestamp":"2026-01-01T00:00:18Z"}

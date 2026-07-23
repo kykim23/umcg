@@ -33,6 +33,10 @@ def test_eos_exact_context_boundaries_keep_only_chunks_with_targets(
     assert active_tokens == expected_active_tokens
     assert all(sample["causal_target_mask"].any() for sample in samples)
     assert [sample["chunk_index"] for sample in samples] == list(range(len(samples)))
+    if raw_length in {maximum_context, 2 * maximum_context}:
+        assert all(1 not in tokens for tokens in active_tokens)
+    else:
+        assert active_tokens[-1][-1] == 1
 
 
 def test_nine_thousand_token_document_is_split_without_overlap_or_mid_chunk_eos():

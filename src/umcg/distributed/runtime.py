@@ -87,6 +87,13 @@ class BackendRuntime:
     def loss_scale(self) -> float:
         return float(self.context.world_size)
 
+    @property
+    def evaluation_model(self) -> nn.Module:
+        """Return an uncompiled inference path when the backend safely exposes one."""
+        if self.backend_name in {"ddp", "fsdp2"}:
+            return self.checkpoint_model
+        return self.training_model
+
     @contextlib.contextmanager
     def synchronization_context(self, *, final_microbatch: bool):
         if self.backend_name == "ddp" and not final_microbatch:

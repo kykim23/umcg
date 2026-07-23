@@ -1,4 +1,13 @@
-"""Production torchrun training loop."""
+"""Production torchrun training loop.
+
+Argument flow:
+    torchrun_main.py -> main -> parse_runtime_config -> RuntimeConfig -> run
+
+The parser itself lives in :mod:`umcg.cli.arguments`.  This module receives the
+validated ``RuntimeConfig``.  ``SUPPORTED_RUNTIME_ARGUMENTS`` is a compact,
+machine-checked map of every configuration field consumed by this runner; the
+parser remains the single source of defaults, choices, and validation rules.
+"""
 
 from __future__ import annotations
 
@@ -54,6 +63,56 @@ from umcg.training.checkpoint import (
 from umcg.training.metrics import MetricsLogger, WandbLogger
 from umcg.training.state import TrainingState
 from umcg.training.vram import BatchSelection, find_automatic_batch_size
+
+SUPPORTED_RUNTIME_ARGUMENTS: tuple[tuple[str, tuple[str, ...]], ...] = (
+    (
+        "distributed and model",
+        (
+            "distributed_backend",
+            "zero_stage",
+            "model_backend",
+            "model_config",
+            "tokenizer",
+            "tokenizer_revision",
+        ),
+    ),
+    ("precision and attention", ("precision", "attention_backend")),
+    ("gradient estimator", ("estimator_config", "gradient_estimator")),
+    (
+        "optimizer and scheduler",
+        (
+            "optimizer",
+            "scheduler",
+            "learning_rate",
+            "beta1",
+            "beta2",
+            "epsilon",
+            "weight_decay",
+            "momentum",
+            "gradient_clip_norm",
+        ),
+    ),
+    (
+        "batch, training, evaluation, and saving",
+        (
+            "batch_size",
+            "total_batch_size",
+            "num_training_steps",
+            "warmup_steps",
+            "eval_every",
+            "eval_parent_batches",
+            "save_every",
+            "save_at_steps",
+        ),
+    ),
+    ("C4 data", ("c4_source", "c4_repo", "c4_revision", "c4_local_path", "workers")),
+    (
+        "runtime performance and output",
+        ("save_dir", "seed", "use_torch_compile", "compile_mode", "activation_checkpointing"),
+    ),
+    ("experiment tracking", ("wandb_mode", "wandb_project", "wandb_entity", "name")),
+    ("restart", ("continue_from", "initial_weights")),
+)
 
 
 def _absolute_runtime_paths(config: RuntimeConfig) -> RuntimeConfig:
@@ -280,14 +339,16 @@ def _evaluate(
         worker_count=config.workers,
         train=False,
     )
+    evaluation_model = backend.evaluation_model
     backend.training_model.eval()
+    evaluation_model.eval()
     numerator = torch.zeros((), device=backend.context.device, dtype=torch.float64)
     denominator = torch.zeros((), device=backend.context.device, dtype=torch.long)
     with torch.no_grad():
         for _ in range(config.eval_parent_batches):
             batch = validation.next_batch(batch_size).to(backend.context.device)
             with backend.precision.autocast():
-                losses = backend.training_model(
+                losses = evaluation_model(
                     batch.input_ids, batch.attention_mask, batch.position_ids
                 )
             mask = batch.causal_target_mask
@@ -601,6 +662,7 @@ def run(config: RuntimeConfig) -> None:
         )
         restore_rng_state(logging_rng_state, context.device)
         consecutive_scaler_retries = 0
+        explicit_save_steps = set(config.save_at_steps)
         while state.optimizer_update < config.num_training_steps:
             retry_stream_state = (
                 train_stream.state_dict() if config.precision == "float16" else None
@@ -708,7 +770,10 @@ def run(config: RuntimeConfig) -> None:
                 metrics.log(metric)
                 wandb.log(metric)
                 print(json.dumps(metric, sort_keys=True, allow_nan=False), flush=True)
-            if state.optimizer_update % config.save_every == 0:
+            if (
+                state.optimizer_update % config.save_every == 0
+                or state.optimizer_update in explicit_save_steps
+            ):
                 save_native_checkpoint(
                     save_directory / f"checkpoint-{state.optimizer_update:08d}",
                     backend=backend,
@@ -718,7 +783,10 @@ def run(config: RuntimeConfig) -> None:
                     resolved_config=resolved_config,
                     wandb_run_id=wandb.run_id,
                 )
-        if state.optimizer_update % config.save_every != 0:
+        if (
+            state.optimizer_update % config.save_every != 0
+            and state.optimizer_update not in explicit_save_steps
+        ):
             save_native_checkpoint(
                 save_directory / f"checkpoint-{state.optimizer_update:08d}",
                 backend=backend,

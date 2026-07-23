@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#222}.grid{stroke:#ddd;stroke-width:1}.axis{stroke:#222;stroke-width:1.5}.series{fill:none;stroke-width:3}.point{stroke:white;stroke-width:1.5}</style>
+<text x="500.0" y="34" text-anchor="middle" font-size="22" font-weight="bold">Full vs Russian Roulette validation loss</text>
+<line class="grid" x1="100.00" y1="70" x2="100.00" y2="530"/>
+<text x="100.00" y="558" text-anchor="middle" font-size="13">100</text>
+<line class="grid" x1="100" y1="530.00" x2="965" y2="530.00"/>
+<text x="88" y="535.00" text-anchor="end" font-size="13">3.14</text>
+<line class="grid" x1="273.00" y1="70" x2="273.00" y2="530"/>
+<text x="273.00" y="558" text-anchor="middle" font-size="13">680</text>
+<line class="grid" x1="100" y1="438.00" x2="965" y2="438.00"/>
+<text x="88" y="443.00" text-anchor="end" font-size="13">3.96</text>
+<line class="grid" x1="446.00" y1="70" x2="446.00" y2="530"/>
+<text x="446.00" y="558" text-anchor="middle" font-size="13">1260</text>
+<line class="grid" x1="100" y1="346.00" x2="965" y2="346.00"/>
+<text x="88" y="351.00" text-anchor="end" font-size="13">4.78</text>
+<line class="grid" x1="619.00" y1="70" x2="619.00" y2="530"/>
+<text x="619.00" y="558" text-anchor="middle" font-size="13">1840</text>
+<line class="grid" x1="100" y1="254.00" x2="965" y2="254.00"/>
+<text x="88" y="259.00" text-anchor="end" font-size="13">5.6</text>
+<line class="grid" x1="792.00" y1="70" x2="792.00" y2="530"/>
+<text x="792.00" y="558" text-anchor="middle" font-size="13">2420</text>
+<line class="grid" x1="100" y1="162.00" x2="965" y2="162.00"/>
+<text x="88" y="167.00" text-anchor="end" font-size="13">6.41</text>
+<line class="grid" x1="965.00" y1="70" x2="965.00" y2="530"/>
+<text x="965.00" y="558" text-anchor="middle" font-size="13">3000</text>
+<line class="grid" x1="100" y1="70.00" x2="965" y2="70.00"/>
+<text x="88" y="75.00" text-anchor="end" font-size="13">7.23</text>
+<line class="axis" x1="100" y1="530" x2="965" y2="530"/>
+<line class="axis" x1="100" y1="70" x2="100" y2="530"/>
+<text x="532.5" y="596" text-anchor="middle" font-size="16">Optimizer update</text>
+<text x="24" y="300.0" text-anchor="middle" font-size="16" transform="rotate(-90 24 300.0)">Validation loss (lower is better)</text>
+<polyline class="series" points="100.00,103.75 129.83,224.09 159.66,286.85 189.48,326.54 219.31,358.94 249.14,384.95 278.97,406.21 308.79,423.11 338.62,434.65 368.45,444.71 398.28,450.19 428.10,458.58 457.93,464.49 487.76,469.55 517.59,473.06 547.41,477.43 577.24,480.78 607.07,484.04 636.90,486.52 666.72,488.75 696.55,490.86 726.38,492.71 756.21,494.15 786.03,495.46 815.86,496.47 845.69,497.23 875.52,497.80 905.34,498.12 935.17,498.25 965.00,498.28" stroke="#0072B2"/>
+<circle class="point" cx="100.00" cy="103.75" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="129.83" cy="224.09" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="159.66" cy="286.85" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="189.48" cy="326.54" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="219.31" cy="358.94" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="249.14" cy="384.95" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="278.97" cy="406.21" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="308.79" cy="423.11" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="338.62" cy="434.65" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="368.45" cy="444.71" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="398.28" cy="450.19" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="428.10" cy="458.58" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="457.93" cy="464.49" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="487.76" cy="469.55" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="517.59" cy="473.06" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="547.41" cy="477.43" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="577.24" cy="480.78" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="607.07" cy="484.04" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="636.90" cy="486.52" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="666.72" cy="488.75" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="696.55" cy="490.86" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="726.38" cy="492.71" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="756.21" cy="494.15" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="786.03" cy="495.46" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="815.86" cy="496.47" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="845.69" cy="497.23" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="875.52" cy="497.80" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="905.34" cy="498.12" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="935.17" cy="498.25" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="965.00" cy="498.28" r="4.5" fill="#0072B2"/>
+<polyline class="series" points="100.00,101.72 129.83,221.39 159.66,282.16 189.48,320.55 219.31,348.84 249.14,373.26 278.97,395.33 308.79,413.03 338.62,424.68 368.45,434.79 398.28,441.52 428.10,449.65 457.93,455.95 487.76,462.35 517.59,466.17 547.41,470.23 577.24,473.72 607.07,477.49 636.90,480.15 666.72,482.03 696.55,484.48 726.38,486.45 756.21,487.99 786.03,489.35 815.86,490.45 845.69,491.28 875.52,491.84 905.34,492.16 935.17,492.31 965.00,492.34" stroke="#D55E00"/>
+<circle class="point" cx="100.00" cy="101.72" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="129.83" cy="221.39" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="159.66" cy="282.16" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="189.48" cy="320.55" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="219.31" cy="348.84" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="249.14" cy="373.26" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="278.97" cy="395.33" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="308.79" cy="413.03" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="338.62" cy="424.68" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="368.45" cy="434.79" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="398.28" cy="441.52" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="428.10" cy="449.65" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="457.93" cy="455.95" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="487.76" cy="462.35" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="517.59" cy="466.17" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="547.41" cy="470.23" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="577.24" cy="473.72" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="607.07" cy="477.49" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="636.90" cy="480.15" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="666.72" cy="482.03" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="696.55" cy="484.48" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="726.38" cy="486.45" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="756.21" cy="487.99" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="786.03" cy="489.35" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="815.86" cy="490.45" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="845.69" cy="491.28" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="875.52" cy="491.84" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="905.34" cy="492.16" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="935.17" cy="492.31" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="965.00" cy="492.34" r="4.5" fill="#D55E00"/>
+<line x1="112" y1="90" x2="142" y2="90" stroke="#0072B2" stroke-width="4"/>
+<text x="150" y="95" font-size="13">Full</text>
+<line x1="112" y1="113" x2="142" y2="113" stroke="#D55E00" stroke-width="4"/>
+<text x="150" y="118" font-size="13">Russian Roulette</text>
+</svg>

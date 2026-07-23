@@ -1,0 +1,6017 @@
+{
+  "activation_checkpointing": true,
+  "all_candidates": [
+    {
+      "estimator_noise_second_moment": 0.06998971546821942,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2453.479393005371,
+      "gradient_variance": 0.21191370833639311,
+      "maximum_level_probabilities": [
+        0.0,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "objective": 519.925916498691,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.08258182977393999,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2321.161340713501,
+      "gradient_variance": 0.22450582264211372,
+      "maximum_level_probabilities": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "objective": 521.1142362819561,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.05066330932592819,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2760.2128524780273,
+      "gradient_variance": 0.1925873021941018,
+      "maximum_level_probabilities": [
+        0.0,
+        0.25,
+        0.5,
+        0.25
+      ],
+      "objective": 531.5819467402296,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.75,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.13724863811365018,
+      "expected_correction_coefficients": [
+        1.0,
+        0.9999999999999999,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1924.7915935516357,
+      "gradient_variance": 0.2791726309818241,
+      "maximum_level_probabilities": [
+        0.25,
+        0.25,
+        0.375,
+        0.125
+      ],
+      "objective": 537.349133263508,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.5,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.22041208515196486,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1485.7400817871094,
+      "gradient_variance": 0.36233607802013834,
+      "maximum_level_probabilities": [
+        0.5,
+        0.25,
+        0.125,
+        0.125
+      ],
+      "objective": 538.3372341920608,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.5,
+        0.25,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.06325542363164882,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2627.894800186157,
+      "gradient_variance": 0.20517941649982285,
+      "maximum_level_probabilities": [
+        0.25,
+        0.0,
+        0.5,
+        0.25
+      ],
+      "objective": 539.1899217251143,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.75,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.19522785654052374,
+      "expected_correction_coefficients": [
+        1.0,
+        0.9999999999999999,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1618.0581340789795,
+      "gradient_variance": 0.3371518494086976,
+      "maximum_level_probabilities": [
+        0.25,
+        0.5,
+        0.125,
+        0.125
+      ],
+      "objective": 545.5312923555143,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.25,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.16243286672509122,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1792.4735412597656,
+      "gradient_variance": 0.30435685959326486,
+      "maximum_level_probabilities": [
+        0.5,
+        0.0,
+        0.375,
+        0.125
+      ],
+      "objective": 545.5516179218407,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.5,
+        0.5,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.10776605838538111,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2188.843288421631,
+      "gradient_variance": 0.24969005125355492,
+      "maximum_level_probabilities": [
+        0.5,
+        0.0,
+        0.25,
+        0.25
+      ],
+      "objective": 546.5323928719968,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.5,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.12465652380792955,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2057.109645843506,
+      "gradient_variance": 0.26658051667610305,
+      "maximum_level_probabilities": [
+        0.0,
+        0.5,
+        0.375,
+        0.125
+      ],
+      "objective": 548.3853522483572,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.5,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.041000106254782634,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 3066.9463119506836,
+      "gradient_variance": 0.18292409912295637,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.75,
+        0.25
+      ],
+      "objective": 561.0183911720524,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.18263574223480322,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1750.3761863708496,
+      "gradient_variance": 0.324559735102977,
+      "maximum_level_probabilities": [
+        0.0,
+        0.75,
+        0.125,
+        0.125
+      ],
+      "objective": 568.101631379082,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.25,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.14056104820081355,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2014.4278812408447,
+      "gradient_variance": 0.2824850410689872,
+      "maximum_level_probabilities": [
+        0.25,
+        0.5,
+        0.0,
+        0.25
+      ],
+      "objective": 569.0457427628329,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.16574527681225473,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1882.1098289489746,
+      "gradient_variance": 0.3076692696804284,
+      "maximum_level_probabilities": [
+        0.5,
+        0.25,
+        0.0,
+        0.25
+      ],
+      "objective": 579.0673565310871,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.12796893389509303,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2146.745933532715,
+      "gradient_variance": 0.2698929267632666,
+      "maximum_level_probabilities": [
+        0.0,
+        0.75,
+        0.0,
+        0.25
+      ],
+      "objective": 579.3915430182853,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.11792223197135898,
+      "expected_correction_coefficients": [
+        1.0,
+        0.9999999999999999,
+        0.9999999999999999,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2231.525053024292,
+      "gradient_variance": 0.2598462248395328,
+      "maximum_level_probabilities": [
+        0.25,
+        0.0,
+        0.625,
+        0.125
+      ],
+      "objective": 579.8533606632005,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.75,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.10533011766563846,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        0.9999999999999999,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2363.843105316162,
+      "gradient_variance": 0.24725411053381174,
+      "maximum_level_probabilities": [
+        0.0,
+        0.25,
+        0.625,
+        0.125
+      ],
+      "objective": 584.4699244464312,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.75,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.023329905156073166,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 3552.952346801758,
+      "gradient_variance": 0.16525389802424684,
+      "maximum_level_probabilities": [
+        0.0,
+        0.25,
+        0.25,
+        0.5
+      ],
+      "objective": 587.1392248033861,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.75,
+        0.5
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.29596477098628826,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1353.4220294952393,
+      "gradient_variance": 0.43788876385446196,
+      "maximum_level_probabilities": [
+        0.75,
+        0.0,
+        0.125,
+        0.125
+      ],
+      "objective": 592.6482994690675,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.25,
+        0.25,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.04265631129836436,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 3246.2188873291016,
+      "gradient_variance": 0.18458030416653814,
+      "maximum_level_probabilities": [
+        0.0,
+        0.5,
+        0.0,
+        0.5
+      ],
+      "objective": 599.1880696143666,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.013666702084927554,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 3859.685806274414,
+      "gradient_variance": 0.1555906949531014,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.5,
+        0.5
+      ],
+      "objective": 600.5311968988576,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        0.5
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.035922019461793755,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 3420.6342945098877,
+      "gradient_variance": 0.17784601232996788,
+      "maximum_level_probabilities": [
+        0.25,
+        0.0,
+        0.25,
+        0.5
+      ],
+      "objective": 608.3461689177165,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.75,
+        0.5
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.05524842560408495,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 3113.9008350372314,
+      "gradient_variance": 0.19717241847225875,
+      "maximum_level_probabilities": [
+        0.25,
+        0.25,
+        0.0,
+        0.5
+      ],
+      "objective": 613.975358527077,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.09566691459449278,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2670.5765647888184,
+      "gradient_variance": 0.2375909074626663,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.875,
+        0.125
+      ],
+      "objective": 634.5047094767054,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.3363705220057122,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1332.3733520507812,
+      "gradient_variance": 0.4782945148738862,
+      "maximum_level_probabilities": [
+        0.5,
+        0.375,
+        0.0,
+        0.125
+      ],
+      "objective": 637.266866050022,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.5,
+        0.125,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.08043265421552606,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2981.5827827453613,
+      "gradient_variance": 0.2223566470836995,
+      "maximum_level_probabilities": [
+        0.5,
+        0.0,
+        0.0,
+        0.5
+      ],
+      "objective": 662.974750573745,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.31118629339427106,
+      "expected_correction_coefficients": [
+        1.0,
+        0.9999999999999999,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1464.6914043426514,
+      "gradient_variance": 0.45311028626244454,
+      "maximum_level_probabilities": [
+        0.25,
+        0.625,
+        0.0,
+        0.125
+      ],
+      "objective": 663.6667415078407,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.125,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.41192320784003555,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1200.0552997589111,
+      "gradient_variance": 0.5538472007082098,
+      "maximum_level_probabilities": [
+        0.75,
+        0.125,
+        0.0,
+        0.125
+      ],
+      "objective": 664.6472684665246,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.25,
+        0.125,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.2412979626465781,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1749.7917766571045,
+      "gradient_variance": 0.383221955514752,
+      "maximum_level_probabilities": [
+        0.75,
+        0.0,
+        0.0,
+        0.25
+      ],
+      "objective": 670.5586263941678,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.0142187704327882,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 4345.691841125488,
+      "gradient_variance": 0.156142763300962,
+      "maximum_level_probabilities": [
+        0.0,
+        0.25,
+        0.0,
+        0.75
+      ],
+      "objective": 678.5483325277788,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.004555567361642504,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 4652.4253005981445,
+      "gradient_variance": 0.14647956022981612,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.25,
+        0.75
+      ],
+      "objective": 681.4852120336863,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        0.75
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.29859417908855046,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1597.0094566345215,
+      "gradient_variance": 0.44051817195672394,
+      "maximum_level_probabilities": [
+        0.0,
+        0.875,
+        0.0,
+        0.125
+      ],
+      "objective": 703.5116864342403,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.125,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.02681088473850865,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 4213.373788833618,
+      "gradient_variance": 0.1687348776066826,
+      "maximum_level_probabilities": [
+        0.25,
+        0.0,
+        0.0,
+        0.75
+      ],
+      "objective": 710.9431105700451,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.0,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 5445.164794921875,
+      "gradient_variance": 0.1419239928681737,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "objective": 772.7995295205227,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.5630285795086825,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1133.896273612976,
+      "gradient_variance": 0.7049525723768562,
+      "maximum_level_probabilities": [
+        0.875,
+        0.0,
+        0.0,
+        0.125
+      ],
+      "objective": 799.343094891999,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.125,
+        0.125,
+        0.125
+      ]
+    }
+  ],
+  "attention": {
+    "hardware": {
+      "capability_major": 9,
+      "capability_minor": 0,
+      "cuda_available": true,
+      "device_name": "NVIDIA H100 80GB HBM3"
+    },
+    "huggingface_implementation": "sdpa",
+    "package_versions": {
+      "flash-attn": null,
+      "flash-attn-3": null,
+      "flash-attn-4": null,
+      "torch": "2.11.0+cu128",
+      "transformers": "5.14.1"
+    },
+    "rank_probe_results": [
+      {
+        "rank": 0,
+        "results": [
+          {
+            "backend": "pytorch_sdpa_flash",
+            "error": "RuntimeError: No available kernel. Aborting execution.",
+            "level_times_ms": {},
+            "passed": false,
+            "worst_level_time_ms": null
+          },
+          {
+            "backend": "pytorch_sdpa_cudnn",
+            "error": null,
+            "level_times_ms": {
+              "512": 1.2886878103017807,
+              "1024": 1.4944635331630707,
+              "2048": 1.492377370595932,
+              "4096": 2.017049118876457
+            },
+            "passed": true,
+            "worst_level_time_ms": 2.017049118876457
+          },
+          {
+            "backend": "pytorch_sdpa_efficient",
+            "error": null,
+            "level_times_ms": {
+              "512": 0.5038250237703323,
+              "1024": 0.5516670644283295,
+              "2048": 1.0794755071401596,
+              "4096": 3.141995519399643
+            },
+            "passed": true,
+            "worst_level_time_ms": 3.141995519399643
+          },
+          {
+            "backend": "pytorch_sdpa_math",
+            "error": null,
+            "level_times_ms": {
+              "512": 0.9448360651731491,
+              "1024": 1.1740997433662415,
+              "2048": 3.239644691348076,
+              "4096": 11.895174160599709
+            },
+            "passed": true,
+            "worst_level_time_ms": 11.895174160599709
+          },
+          {
+            "backend": "eager",
+            "error": null,
+            "level_times_ms": {
+              "512": 0.9903926402330399,
+              "1024": 1.158362254500389,
+              "2048": 2.7740225195884705,
+              "4096": 10.365108028054237
+            },
+            "passed": true,
+            "worst_level_time_ms": 10.365108028054237
+          }
+        ]
+      },
+      {
+        "rank": 1,
+        "results": [
+          {
+            "backend": "pytorch_sdpa_flash",
+            "error": "RuntimeError: No available kernel. Aborting execution.",
+            "level_times_ms": {},
+            "passed": false,
+            "worst_level_time_ms": null
+          },
+          {
+            "backend": "pytorch_sdpa_cudnn",
+            "error": null,
+            "level_times_ms": {
+              "512": 1.3722162693738937,
+              "1024": 1.3640597462654114,
+              "2048": 1.3047046959400177,
+              "4096": 2.079073339700699
+            },
+            "passed": true,
+            "worst_level_time_ms": 2.079073339700699
+          },
+          {
+            "backend": "pytorch_sdpa_efficient",
+            "error": null,
+            "level_times_ms": {
+              "512": 0.7658805698156357,
+              "1024": 0.7734876126050949,
+              "2048": 1.2713447213172913,
+              "4096": 3.2861605286598206
+            },
+            "passed": true,
+            "worst_level_time_ms": 3.2861605286598206
+          },
+          {
+            "backend": "pytorch_sdpa_math",
+            "error": null,
+            "level_times_ms": {
+              "512": 0.8866209536790848,
+              "1024": 1.1542215943336487,
+              "2048": 3.245033323764801,
+              "4096": 11.885233223438263
+            },
+            "passed": true,
+            "worst_level_time_ms": 11.885233223438263
+          },
+          {
+            "backend": "eager",
+            "error": null,
+            "level_times_ms": {
+              "512": 0.9161662310361862,
+              "1024": 1.1122077703475952,
+              "2048": 2.7648992836475372,
+              "4096": 10.347789153456688
+            },
+            "passed": true,
+            "worst_level_time_ms": 10.347789153456688
+          }
+        ]
+      }
+    ],
+    "requested_backend": "automatic",
+    "resolved_backend": "pytorch_sdpa_cudnn"
+  },
+  "batch_contract": {
+    "logical_parent_batch_size": 128,
+    "parent_samples": {
+      "audit": 4096,
+      "measurement": 8192,
+      "selection": 4096
+    },
+    "selected_physical_parent_batch_size_per_gpu": 64,
+    "vram_probe": {
+      "memory_limit_fraction": 0.85,
+      "probes": [
+        {
+          "error": null,
+          "maximum_memory_fraction": 0.6407779271154318,
+          "passed": true,
+          "physical_parent_batch_size_per_gpu": 64
+        }
+      ],
+      "selected_physical_parent_batch_size_per_gpu": 64
+    },
+    "world_size": 2
+  },
+  "candidate_count": 35,
+  "canonical_cli": [
+    "calibrate_main.py",
+    "--model_backend",
+    "huggingface",
+    "--model_config",
+    "configs/model/llama_350m_t5_4096.json",
+    "--tokenizer",
+    "t5-base",
+    "--tokenizer_revision",
+    "main",
+    "--precision",
+    "bfloat16",
+    "--attention_backend",
+    "automatic",
+    "--context_preset",
+    "4096",
+    "--initial_weights",
+    "/home/ubuntu/checkpoint/keunyoung/umcg/full_gradient_3000_20260721T232425_KST_f57ee32/exports/rr_3000_step00030.safetensors",
+    "--activation_checkpointing",
+    "--c4_source",
+    "local_raw",
+    "--c4_local_path",
+    "/home/ubuntu/data/c4_en/en",
+    "--c4_revision",
+    "1588ec454efa1a09f29cd18ddd04fe05fc8653a2",
+    "--parent_cache",
+    "/home/ubuntu/checkpoint/keunyoung/umcg/full_gradient_3000_20260721T232425_KST_f57ee32/calibration_350m_exact_64_32_32.parents.pt",
+    "--logical_parent_batch_size",
+    "128",
+    "--max_parent_batch_size_per_gpu",
+    "64",
+    "--memory_limit_fraction",
+    "0.85",
+    "--measurement_parent_batches",
+    "64",
+    "--selection_parent_batches",
+    "32",
+    "--audit_parent_batches",
+    "32",
+    "--timing_parent_batches",
+    "8",
+    "--timing_repeats",
+    "1",
+    "--bootstrap_parent_resamples",
+    "10000",
+    "--seed",
+    "777",
+    "--locked_estimator",
+    "/home/ubuntu/checkpoint/keunyoung/umcg/full_gradient_3000_20260721T232425_KST_f57ee32/calibration_350m_exact_64_32_32.json",
+    "--diagnostic_only",
+    "--output",
+    "/home/ubuntu/checkpoint/keunyoung/umcg/full_gradient_3000_20260721T232425_KST_f57ee32/diagnostics/rr_step00030.json"
+  ],
+  "data_source": {
+    "file_manifest_sha256": "c26bb10e180f23234c55564cad5364f8c5b826d8f5a690c002234e3df8852b4f",
+    "path": "/home/ubuntu/data/c4_en/en",
+    "source": "local_raw",
+    "train_shard_count": 1024,
+    "upstream_revision": "1588ec454efa1a09f29cd18ddd04fe05fc8653a2",
+    "validation_shard_count": 8
+  },
+  "diagnostic_only": true,
+  "estimator": null,
+  "gradient_statistics": {
+    "audit_temporary_full_gradient_count": 32,
+    "dot_product_accumulator_dtype": "float64",
+    "gradient_storage": "current_logical_batch_only",
+    "method": "full_coordinate_streaming_gram",
+    "model_parameter_count": 368174080,
+    "projection": null,
+    "trainable_parameter_count": 368174080
+  },
+  "independent_audit": {
+    "bootstrap_parent_batch_resamples": 10000,
+    "cosine_similarity": 1.0,
+    "efficiency_objective_ratio_vs_q_one": 0.6325580294555377,
+    "efficiency_passed": true,
+    "efficiency_ratio_95_percent_confidence_interval": [
+      0.5964278890540309,
+      0.6859897907363468
+    ],
+    "error_l2": 0.0,
+    "gram_consistency_passed": true,
+    "locked_schedule": {
+      "estimator_noise_second_moment": 0.051172577732764124,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2453.479393005371,
+      "gradient_variance": 0.1778760234214687,
+      "maximum_level_probabilities": [
+        0.0,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "objective": 436.4151579743142,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.5,
+        0.25
+      ]
+    },
+    "passed": true,
+    "q_one_baseline": {
+      "estimator_noise_second_moment": 0.0,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 5445.164794921875,
+      "gradient_variance": 0.12670344568870417,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "objective": 689.9211418594278,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "relative_l2_error": 0.0,
+    "unbiasedness_passed": true
+  },
+  "locked_estimator_diagnostic": {
+    "estimator_path": "/home/ubuntu/checkpoint/keunyoung/umcg/full_gradient_3000_20260721T232425_KST_f57ee32/calibration_350m_exact_64_32_32.json",
+    "independent_audit": {
+      "bootstrap_parent_batch_resamples": 10000,
+      "cosine_similarity": 1.0,
+      "efficiency_objective_ratio_vs_q_one": 0.6528986438635089,
+      "efficiency_passed": true,
+      "efficiency_ratio_95_percent_confidence_interval": [
+        0.6188269473949539,
+        0.7006355631637047
+      ],
+      "error_l2": 0.0,
+      "locked_schedule": {
+        "estimator_noise_second_moment": 0.036489975241998956,
+        "expected_correction_coefficients": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "expected_cuda_cost_ms": 2760.2128524780273,
+        "gradient_variance": 0.16319342093070333,
+        "maximum_level_probabilities": [
+          0.0,
+          0.25,
+          0.5,
+          0.25
+        ],
+        "objective": 450.44857789278404,
+        "schedule_evaluation": "analytic_four_outcome_enumeration",
+        "tail_probabilities": [
+          1.0,
+          1.0,
+          0.75,
+          0.25
+        ]
+      },
+      "passed": true,
+      "q_one_baseline": {
+        "estimator_noise_second_moment": 0.0,
+        "expected_correction_coefficients": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "expected_cuda_cost_ms": 5445.164794921875,
+        "gradient_variance": 0.12670344568870417,
+        "maximum_level_probabilities": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "objective": 689.9211418594278,
+        "schedule_evaluation": "analytic_four_outcome_enumeration",
+        "tail_probabilities": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "relative_l2_error": 0.0,
+      "unbiasedness_passed": true
+    },
+    "selection": {
+      "estimator_noise_second_moment": 0.05066330932592819,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2760.2128524780273,
+      "gradient_variance": 0.1925873021941018,
+      "maximum_level_probabilities": [
+        0.0,
+        0.25,
+        0.5,
+        0.25
+      ],
+      "objective": 531.5819467402296,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.75,
+        0.25
+      ]
+    }
+  },
+  "optimizer_updates": 0,
+  "parent_cache": {
+    "batch_counts": {
+      "audit": 32,
+      "measurement": 64,
+      "selection": 32
+    },
+    "data_source": {
+      "file_manifest_sha256": "c26bb10e180f23234c55564cad5364f8c5b826d8f5a690c002234e3df8852b4f",
+      "path": "/home/ubuntu/data/c4_en/en",
+      "source": "local_raw",
+      "train_shard_count": 1024,
+      "upstream_revision": "1588ec454efa1a09f29cd18ddd04fe05fc8653a2",
+      "validation_shard_count": 8
+    },
+    "logical_parent_batch_size": 128,
+    "maximum_context": 4096,
+    "path": "/home/ubuntu/checkpoint/keunyoung/umcg/full_gradient_3000_20260721T232425_KST_f57ee32/calibration_350m_exact_64_32_32.parents.pt",
+    "schema_version": 1,
+    "seed": 777,
+    "sha256": "eb7544d32952f95fd9cb4b8344a13e38bf31f51c368e604814051af143466819",
+    "split_contract": {
+      "assignment": "sha256(seed:calibration-split:document_hash) modulo 4",
+      "overlap_document_counts": {
+        "measurement_audit": 0,
+        "measurement_selection": 0,
+        "selection_audit": 0
+      },
+      "ratio": {
+        "audit": 0.25,
+        "measurement": 0.5,
+        "selection": 0.25
+      },
+      "scanned_parent_samples": 16736,
+      "seed": 777,
+      "splits": {
+        "audit": {
+          "document_manifest_sha256": "fd1232a699380ad81e84c2bd6756658683a86aca6760481f67e73183567f2b1f",
+          "parent_batches": 32,
+          "parent_samples": 4096,
+          "unique_documents": 4052
+        },
+        "measurement": {
+          "document_manifest_sha256": "d7dc3e3a6d9b87cce43401e042f442524eac1860c1682fe0b2917a32ed7ebfd5",
+          "parent_batches": 64,
+          "parent_samples": 8192,
+          "unique_documents": 8088
+        },
+        "selection": {
+          "document_manifest_sha256": "1818ec0eea5d4e717fcb52c15e18a34f8acdf0d16850121fe0d1b95bb2142eab",
+          "parent_batches": 32,
+          "parent_samples": 4096,
+          "unique_documents": 4042
+        }
+      }
+    },
+    "tokenizer": {
+      "eos_token_id": 1,
+      "name": "t5-base",
+      "pad_token_id": 0,
+      "resolved_commit": "a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1",
+      "revision": "main",
+      "vocab_size": 32100
+    }
+  },
+  "pareto_candidates": [
+    {
+      "estimator_noise_second_moment": 0.5630285795086825,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1133.896273612976,
+      "gradient_variance": 0.7049525723768562,
+      "maximum_level_probabilities": [
+        0.875,
+        0.0,
+        0.0,
+        0.125
+      ],
+      "objective": 799.343094891999,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.125,
+        0.125,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.41192320784003555,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1200.0552997589111,
+      "gradient_variance": 0.5538472007082098,
+      "maximum_level_probabilities": [
+        0.75,
+        0.125,
+        0.0,
+        0.125
+      ],
+      "objective": 664.6472684665246,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.25,
+        0.125,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.3363705220057122,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1332.3733520507812,
+      "gradient_variance": 0.4782945148738862,
+      "maximum_level_probabilities": [
+        0.5,
+        0.375,
+        0.0,
+        0.125
+      ],
+      "objective": 637.266866050022,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.5,
+        0.125,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.29596477098628826,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1353.4220294952393,
+      "gradient_variance": 0.43788876385446196,
+      "maximum_level_probabilities": [
+        0.75,
+        0.0,
+        0.125,
+        0.125
+      ],
+      "objective": 592.6482994690675,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.25,
+        0.25,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.22041208515196486,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1485.7400817871094,
+      "gradient_variance": 0.36233607802013834,
+      "maximum_level_probabilities": [
+        0.5,
+        0.25,
+        0.125,
+        0.125
+      ],
+      "objective": 538.3372341920608,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.5,
+        0.25,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.19522785654052374,
+      "expected_correction_coefficients": [
+        1.0,
+        0.9999999999999999,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1618.0581340789795,
+      "gradient_variance": 0.3371518494086976,
+      "maximum_level_probabilities": [
+        0.25,
+        0.5,
+        0.125,
+        0.125
+      ],
+      "objective": 545.5312923555143,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.25,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.18263574223480322,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1750.3761863708496,
+      "gradient_variance": 0.324559735102977,
+      "maximum_level_probabilities": [
+        0.0,
+        0.75,
+        0.125,
+        0.125
+      ],
+      "objective": 568.101631379082,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.25,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.16243286672509122,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1792.4735412597656,
+      "gradient_variance": 0.30435685959326486,
+      "maximum_level_probabilities": [
+        0.5,
+        0.0,
+        0.375,
+        0.125
+      ],
+      "objective": 545.5516179218407,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.5,
+        0.5,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.13724863811365018,
+      "expected_correction_coefficients": [
+        1.0,
+        0.9999999999999999,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 1924.7915935516357,
+      "gradient_variance": 0.2791726309818241,
+      "maximum_level_probabilities": [
+        0.25,
+        0.25,
+        0.375,
+        0.125
+      ],
+      "objective": 537.349133263508,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.5,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.12465652380792955,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2057.109645843506,
+      "gradient_variance": 0.26658051667610305,
+      "maximum_level_probabilities": [
+        0.0,
+        0.5,
+        0.375,
+        0.125
+      ],
+      "objective": 548.3853522483572,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.5,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.10776605838538111,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2188.843288421631,
+      "gradient_variance": 0.24969005125355492,
+      "maximum_level_probabilities": [
+        0.5,
+        0.0,
+        0.25,
+        0.25
+      ],
+      "objective": 546.5323928719968,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.5,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.08258182977393999,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2321.161340713501,
+      "gradient_variance": 0.22450582264211372,
+      "maximum_level_probabilities": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "objective": 521.1142362819561,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.06998971546821942,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2453.479393005371,
+      "gradient_variance": 0.21191370833639311,
+      "maximum_level_probabilities": [
+        0.0,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "objective": 519.925916498691,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.06325542363164882,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2627.894800186157,
+      "gradient_variance": 0.20517941649982285,
+      "maximum_level_probabilities": [
+        0.25,
+        0.0,
+        0.5,
+        0.25
+      ],
+      "objective": 539.1899217251143,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.75,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.05066330932592819,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 2760.2128524780273,
+      "gradient_variance": 0.1925873021941018,
+      "maximum_level_probabilities": [
+        0.0,
+        0.25,
+        0.5,
+        0.25
+      ],
+      "objective": 531.5819467402296,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.75,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.041000106254782634,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 3066.9463119506836,
+      "gradient_variance": 0.18292409912295637,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.75,
+        0.25
+      ],
+      "objective": 561.0183911720524,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.035922019461793755,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 3420.6342945098877,
+      "gradient_variance": 0.17784601232996788,
+      "maximum_level_probabilities": [
+        0.25,
+        0.0,
+        0.25,
+        0.5
+      ],
+      "objective": 608.3461689177165,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.75,
+        0.5
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.023329905156073166,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 3552.952346801758,
+      "gradient_variance": 0.16525389802424684,
+      "maximum_level_probabilities": [
+        0.0,
+        0.25,
+        0.25,
+        0.5
+      ],
+      "objective": 587.1392248033861,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.75,
+        0.5
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.013666702084927554,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 3859.685806274414,
+      "gradient_variance": 0.1555906949531014,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.5,
+        0.5
+      ],
+      "objective": 600.5311968988576,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        0.5
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.004555567361642504,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 4652.4253005981445,
+      "gradient_variance": 0.14647956022981612,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.25,
+        0.75
+      ],
+      "objective": 681.4852120336863,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        0.75
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.0,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 5445.164794921875,
+      "gradient_variance": 0.1419239928681737,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "objective": 772.7995295205227,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "precision": "bfloat16",
+  "proposed_estimator": {
+    "context_levels": [
+      512,
+      1024,
+      2048,
+      4096
+    ],
+    "sampling": "shared_global_microbatch",
+    "schema_version": 1,
+    "source": {
+      "audit_parent_batches": 32,
+      "criterion": "gradient_variance_times_expected_distributed_cuda_cost",
+      "independent_audit_passed": true,
+      "logical_parent_batch_size": 128,
+      "measurement_parent_batches": 64,
+      "seed": 777,
+      "selection_parent_batches": 32,
+      "timing_repeats": 1,
+      "type": "full_coordinate_calibration"
+    },
+    "tail_probabilities": [
+      1.0,
+      1.0,
+      0.5,
+      0.25
+    ]
+  },
+  "schema_version": 3,
+  "selection_recommendation": {
+    "estimator_noise_second_moment": 0.06998971546821942,
+    "expected_correction_coefficients": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "expected_cuda_cost_ms": 2453.479393005371,
+    "gradient_variance": 0.21191370833639311,
+    "maximum_level_probabilities": [
+      0.0,
+      0.5,
+      0.25,
+      0.25
+    ],
+    "objective": 519.925916498691,
+    "schedule_evaluation": "analytic_four_outcome_enumeration",
+    "tail_probabilities": [
+      1.0,
+      1.0,
+      0.5,
+      0.25
+    ]
+  },
+  "source_tree_sha256": "952ae8bbcc29b075017527c68052eec748e228278edde7b0da666a3351805163",
+  "split_statistics": {
+    "audit": {
+      "batch_level_grams": [
+        [
+          [
+            3.3508249089681557,
+            3.3762164232158125,
+            3.3608670945505454,
+            3.3457373641020256
+          ],
+          [
+            3.3762164232158125,
+            3.4164458037800163,
+            3.4051784264656546,
+            3.391469264012316
+          ],
+          [
+            3.3608670945505454,
+            3.4051784264656546,
+            3.402199428595588,
+            3.389758598989137
+          ],
+          [
+            3.3457373641020256,
+            3.391469264012316,
+            3.389758598989137,
+            3.3807605643516143
+          ]
+        ],
+        [
+          [
+            3.1460884176402755,
+            3.180043051724561,
+            3.1874099547064483,
+            3.1881941052185283
+          ],
+          [
+            3.180043051724561,
+            3.225234841896405,
+            3.234604236875609,
+            3.2364211368514204
+          ],
+          [
+            3.1874099547064483,
+            3.234604236875609,
+            3.2568224461216975,
+            3.261575823248791
+          ],
+          [
+            3.1881941052185283,
+            3.2364211368514204,
+            3.261575823248791,
+            3.2712574634744627
+          ]
+        ],
+        [
+          [
+            3.094295199797592,
+            3.0820569321609566,
+            3.0567877781318846,
+            3.043475976061246
+          ],
+          [
+            3.0820569321609566,
+            3.0829703628680734,
+            3.059640343323395,
+            3.046668399326522
+          ],
+          [
+            3.0567877781318846,
+            3.059640343323395,
+            3.043327356001748,
+            3.031233025921951
+          ],
+          [
+            3.043475976061246,
+            3.046668399326522,
+            3.031233025921951,
+            3.021713491110379
+          ]
+        ],
+        [
+          [
+            3.1970592794060475,
+            3.2054254926134975,
+            3.1793119189050705,
+            3.1444730192979025
+          ],
+          [
+            3.2054254926134975,
+            3.230062633414683,
+            3.2073116851240457,
+            3.1776574640156805
+          ],
+          [
+            3.1793119189050705,
+            3.2073116851240457,
+            3.1986537922883245,
+            3.180760833409818
+          ],
+          [
+            3.1444730192979025,
+            3.1776574640156805,
+            3.180760833409818,
+            3.186513114986221
+          ]
+        ],
+        [
+          [
+            3.342519503167313,
+            3.3412002488648653,
+            3.342847186762393,
+            3.347265688539587
+          ],
+          [
+            3.3412002488648653,
+            3.359678141030717,
+            3.364401264556745,
+            3.369292340998874
+          ],
+          [
+            3.342847186762393,
+            3.364401264556745,
+            3.3770574030075524,
+            3.3825106023030505
+          ],
+          [
+            3.347265688539587,
+            3.369292340998874,
+            3.3825106023030505,
+            3.3895136952904377
+          ]
+        ],
+        [
+          [
+            3.0706988106488624,
+            3.040855545323023,
+            3.0195233411816984,
+            3.0137859298174043
+          ],
+          [
+            3.040855545323023,
+            3.028379258840225,
+            3.012761459374708,
+            3.0105159136648445
+          ],
+          [
+            3.0195233411816984,
+            3.012761459374708,
+            3.009360145198663,
+            3.0123092470579715
+          ],
+          [
+            3.0137859298174043,
+            3.0105159136648445,
+            3.0123092470579715,
+            3.0221753173489643
+          ]
+        ],
+        [
+          [
+            3.477130862224984,
+            3.447568499643838,
+            3.4299986666618048,
+            3.40657846837897
+          ],
+          [
+            3.447568499643838,
+            3.440024975259072,
+            3.422360537348538,
+            3.3997931564862034
+          ],
+          [
+            3.4299986666618048,
+            3.422360537348538,
+            3.4101137464622147,
+            3.3907840089168895
+          ],
+          [
+            3.40657846837897,
+            3.3997931564862034,
+            3.3907840089168895,
+            3.3783554348319087
+          ]
+        ],
+        [
+          [
+            3.427448679972435,
+            3.411468562679898,
+            3.4329776124515803,
+            3.4245333009758028
+          ],
+          [
+            3.411468562679898,
+            3.414751447920704,
+            3.439479269700994,
+            3.4310491085579966
+          ],
+          [
+            3.4329776124515803,
+            3.439479269700994,
+            3.4755526678048145,
+            3.471726146559999
+          ],
+          [
+            3.4245333009758028,
+            3.4310491085579966,
+            3.471726146559999,
+            3.4784863593514532
+          ]
+        ],
+        [
+          [
+            3.1317932143223906,
+            3.1443681966415693,
+            3.1411140863961595,
+            3.1553640741579203
+          ],
+          [
+            3.1443681966415693,
+            3.176031812333621,
+            3.176711711474699,
+            3.193037666681058
+          ],
+          [
+            3.1411140863961595,
+            3.176711711474699,
+            3.18647326768001,
+            3.2049683826189534
+          ],
+          [
+            3.1553640741579203,
+            3.193037666681058,
+            3.2049683826189534,
+            3.230127177961861
+          ]
+        ],
+        [
+          [
+            3.201425967200561,
+            3.1667594263744347,
+            3.1689260619473645,
+            3.180529527716697
+          ],
+          [
+            3.1667594263744347,
+            3.1487987002173012,
+            3.1536727595454424,
+            3.165894403833206
+          ],
+          [
+            3.1689260619473645,
+            3.1536727595454424,
+            3.1671686312785066,
+            3.180639002218944
+          ],
+          [
+            3.180529527716697,
+            3.165894403833206,
+            3.180639002218944,
+            3.198401505542318
+          ]
+        ],
+        [
+          [
+            3.304505663214701,
+            3.3260168746029173,
+            3.3214920002433215,
+            3.3352441432675843
+          ],
+          [
+            3.3260168746029173,
+            3.366920151530389,
+            3.3656451875220417,
+            3.3815073440676664
+          ],
+          [
+            3.3214920002433215,
+            3.3656451875220417,
+            3.377003886745143,
+            3.395102871223949
+          ],
+          [
+            3.3352441432675843,
+            3.3815073440676664,
+            3.395102871223949,
+            3.4183214910362922
+          ]
+        ],
+        [
+          [
+            3.3008292012457265,
+            3.246099474783801,
+            3.22322626851674,
+            3.2508124257525983
+          ],
+          [
+            3.246099474783801,
+            3.211156812344024,
+            3.1975212245498876,
+            3.2255140928576607
+          ],
+          [
+            3.22322626851674,
+            3.1975212245498876,
+            3.2036189285533547,
+            3.235168320090282
+          ],
+          [
+            3.2508124257525983,
+            3.2255140928576607,
+            3.235168320090282,
+            3.2752798263439677
+          ]
+        ],
+        [
+          [
+            3.4188421414676875,
+            3.448567217413824,
+            3.5304625128847626,
+            3.6569367732097375
+          ],
+          [
+            3.448567217413824,
+            3.502834571554313,
+            3.5997909189969013,
+            3.749234637795523
+          ],
+          [
+            3.5304625128847626,
+            3.5997909189969013,
+            3.7331347872879395,
+            3.92710812952539
+          ],
+          [
+            3.6569367732097375,
+            3.749234637795523,
+            3.92710812952539,
+            4.2047574745337
+          ]
+        ],
+        [
+          [
+            3.3978624275304536,
+            3.3949715674660528,
+            3.3730078554168155,
+            3.362145623509969
+          ],
+          [
+            3.3949715674660528,
+            3.4061588087597867,
+            3.387414497794526,
+            3.3781729370459503
+          ],
+          [
+            3.3730078554168155,
+            3.387414497794526,
+            3.3787536954262265,
+            3.3728846234106102
+          ],
+          [
+            3.362145623509969,
+            3.3781729370459503,
+            3.3728846234106102,
+            3.3728625899649165
+          ]
+        ],
+        [
+          [
+            3.316209360036005,
+            3.295752708610798,
+            3.2948124366272333,
+            3.2982897189019056
+          ],
+          [
+            3.295752708610798,
+            3.3049575454561384,
+            3.308251256442095,
+            3.3118977851934632
+          ],
+          [
+            3.2948124366272333,
+            3.308251256442095,
+            3.3315780945918414,
+            3.342307052989455
+          ],
+          [
+            3.2982897189019056,
+            3.3118977851934632,
+            3.342307052989455,
+            3.3620248412830804
+          ]
+        ],
+        [
+          [
+            3.3084830315731986,
+            3.2982179474136015,
+            3.308078588019739,
+            3.3150554555319367
+          ],
+          [
+            3.2982179474136015,
+            3.302213539255706,
+            3.3146058232919535,
+            3.3241957138174185
+          ],
+          [
+            3.308078588019739,
+            3.3146058232919535,
+            3.3357569387034673,
+            3.348600957683779
+          ],
+          [
+            3.3150554555319367,
+            3.3241957138174185,
+            3.348600957683779,
+            3.3698699695747516
+          ]
+        ],
+        [
+          [
+            3.067124035708456,
+            3.0777896956044875,
+            3.099063732634941,
+            3.097960833780369
+          ],
+          [
+            3.0777896956044875,
+            3.1050124635042624,
+            3.130097465807201,
+            3.1298190702150324
+          ],
+          [
+            3.099063732634941,
+            3.130097465807201,
+            3.1670555097076853,
+            3.167827072181735
+          ],
+          [
+            3.097960833780369,
+            3.1298190702150324,
+            3.167827072181735,
+            3.174392253518606
+          ]
+        ],
+        [
+          [
+            3.4760773022150886,
+            3.447545932493405,
+            3.427948011050614,
+            3.4467799630509823
+          ],
+          [
+            3.447545932493405,
+            3.4366514830808197,
+            3.420869561545915,
+            3.440330645992164
+          ],
+          [
+            3.427948011050614,
+            3.420869561545915,
+            3.417123028854613,
+            3.439654430409302
+          ],
+          [
+            3.4467799630509823,
+            3.440330645992164,
+            3.439654430409302,
+            3.4681405758403874
+          ]
+        ],
+        [
+          [
+            3.1577800571602124,
+            3.1812206853907754,
+            3.175178578813714,
+            3.153340506688832
+          ],
+          [
+            3.1812206853907754,
+            3.2210415448853382,
+            3.223313079989196,
+            3.206762058160998
+          ],
+          [
+            3.175178578813714,
+            3.223313079989196,
+            3.241346162479615,
+            3.232088679526867
+          ],
+          [
+            3.153340506688832,
+            3.206762058160998,
+            3.232088679526867,
+            3.234733537312403
+          ]
+        ],
+        [
+          [
+            3.458396421139538,
+            3.465381237632026,
+            3.4565487647447712,
+            3.44062385666165
+          ],
+          [
+            3.465381237632026,
+            3.488621886451223,
+            3.482637376895601,
+            3.4682099300031513
+          ],
+          [
+            3.4565487647447712,
+            3.482637376895601,
+            3.4839266635095565,
+            3.471585487623841
+          ],
+          [
+            3.44062385666165,
+            3.4682099300031513,
+            3.471585487623841,
+            3.464251613579437
+          ]
+        ],
+        [
+          [
+            3.296877611541271,
+            3.3051035816805445,
+            3.2955361344592844,
+            3.285162310757034
+          ],
+          [
+            3.3051035816805445,
+            3.3308108895301154,
+            3.326618406981306,
+            3.3187031509171754
+          ],
+          [
+            3.2955361344592844,
+            3.326618406981306,
+            3.330526196746925,
+            3.3243412632971525
+          ],
+          [
+            3.285162310757034,
+            3.3187031509171754,
+            3.3243412632971525,
+            3.3233674716813817
+          ]
+        ],
+        [
+          [
+            3.140360101585441,
+            3.175308965228829,
+            3.1672796939166727,
+            3.1787890290675516
+          ],
+          [
+            3.175308965228829,
+            3.2305719117342977,
+            3.228962070027037,
+            3.2442109569008633
+          ],
+          [
+            3.1672796939166727,
+            3.228962070027037,
+            3.2431549065016525,
+            3.266491596688922
+          ],
+          [
+            3.1787890290675516,
+            3.2442109569008633,
+            3.266491596688922,
+            3.307265510397166
+          ]
+        ],
+        [
+          [
+            3.2813692866173065,
+            3.2931965717212606,
+            3.3136521507698466,
+            3.336335769380922
+          ],
+          [
+            3.2931965717212606,
+            3.3216327989906693,
+            3.350594826867498,
+            3.379625176459758
+          ],
+          [
+            3.3136521507698466,
+            3.350594826867498,
+            3.398882423078365,
+            3.4393835865874096
+          ],
+          [
+            3.336335769380922,
+            3.379625176459758,
+            3.4393835865874096,
+            3.495011860662343
+          ]
+        ],
+        [
+          [
+            3.495339128650705,
+            3.517660063949022,
+            3.525835162761277,
+            3.5069918726290417
+          ],
+          [
+            3.517660063949022,
+            3.561724867280884,
+            3.5739612810325077,
+            3.559669010671765
+          ],
+          [
+            3.525835162761277,
+            3.5739612810325077,
+            3.598978456466899,
+            3.5885340496790694
+          ],
+          [
+            3.5069918726290417,
+            3.559669010671765,
+            3.5885340496790694,
+            3.5879861235494306
+          ]
+        ],
+        [
+          [
+            3.0688554807235118,
+            3.10154907986163,
+            3.110490994419296,
+            3.1214043545590244
+          ],
+          [
+            3.10154907986163,
+            3.152611718427519,
+            3.1676346988490964,
+            3.18185217310691
+          ],
+          [
+            3.110490994419296,
+            3.1676346988490964,
+            3.1931990006161617,
+            3.211055041042776
+          ],
+          [
+            3.1214043545590244,
+            3.18185217310691,
+            3.211055041042776,
+            3.2332878699526435
+          ]
+        ],
+        [
+          [
+            3.2159761113142333,
+            3.2246216933505174,
+            3.204931020255398,
+            3.2090076344847867
+          ],
+          [
+            3.2246216933505174,
+            3.2468448988086185,
+            3.22844469154905,
+            3.2327266831129897
+          ],
+          [
+            3.204931020255398,
+            3.22844469154905,
+            3.2135083703651164,
+            3.2177939146191914
+          ],
+          [
+            3.2090076344847867,
+            3.2327266831129897,
+            3.2177939146191914,
+            3.2222423054945755
+          ]
+        ],
+        [
+          [
+            3.1243074549850545,
+            3.151705651475658,
+            3.1876542106835655,
+            3.1860404169306618
+          ],
+          [
+            3.151705651475658,
+            3.199358632318398,
+            3.243307962898694,
+            3.244837288058603
+          ],
+          [
+            3.1876542106835655,
+            3.243307962898694,
+            3.3037617772763785,
+            3.3124514412280965
+          ],
+          [
+            3.1860404169306618,
+            3.244837288058603,
+            3.3124514412280965,
+            3.3338179222905686
+          ]
+        ],
+        [
+          [
+            3.2193635393643967,
+            3.1748609808648416,
+            3.159290073819978,
+            3.180271034515749
+          ],
+          [
+            3.1748609808648416,
+            3.144774392508472,
+            3.132489563941913,
+            3.1538409736427346
+          ],
+          [
+            3.159290073819978,
+            3.132489563941913,
+            3.1284598716655543,
+            3.1518743048501383
+          ],
+          [
+            3.180271034515749,
+            3.1538409736427346,
+            3.1518743048501383,
+            3.182252626911917
+          ]
+        ],
+        [
+          [
+            3.2944370568994317,
+            3.2828737233251046,
+            3.28184899504182,
+            3.2935620531988956
+          ],
+          [
+            3.2828737233251046,
+            3.299455711953638,
+            3.305178097618307,
+            3.3184676821022294
+          ],
+          [
+            3.28184899504182,
+            3.305178097618307,
+            3.3200021462746516,
+            3.334015654649744
+          ],
+          [
+            3.2935620531988956,
+            3.3184676821022294,
+            3.334015654649744,
+            3.351250558257213
+          ]
+        ],
+        [
+          [
+            3.4925410284565404,
+            3.499262184480721,
+            3.488516697388084,
+            3.4703760903909497
+          ],
+          [
+            3.499262184480721,
+            3.524203268826919,
+            3.5167462223392905,
+            3.496925008690305
+          ],
+          [
+            3.488516697388084,
+            3.5167462223392905,
+            3.519136622716579,
+            3.500743021116999
+          ],
+          [
+            3.4703760903909497,
+            3.496925008690305,
+            3.500743021116999,
+            3.4883307431176225
+          ]
+        ],
+        [
+          [
+            3.3162340551614817,
+            3.299895004697449,
+            3.358599056590077,
+            3.358706075941887
+          ],
+          [
+            3.299895004697449,
+            3.3035699336652082,
+            3.3679370133652906,
+            3.369722632136595
+          ],
+          [
+            3.358599056590077,
+            3.3679370133652906,
+            3.455427000464628,
+            3.4595810418816355
+          ],
+          [
+            3.358706075941887,
+            3.369722632136595,
+            3.4595810418816355,
+            3.472072589981808
+          ]
+        ],
+        [
+          [
+            3.4545529598452114,
+            3.432793040774494,
+            3.4339144379613327,
+            3.425197611511961
+          ],
+          [
+            3.432793040774494,
+            3.427473986058427,
+            3.4323388733802482,
+            3.423830837213741
+          ],
+          [
+            3.4339144379613327,
+            3.4323388733802482,
+            3.44470787405776,
+            3.4367746068389584
+          ],
+          [
+            3.425197611511961,
+            3.423830837213741,
+            3.4367746068389584,
+            3.4295897200157928
+          ]
+        ]
+      ],
+      "correction_second_moment_v_k": [
+        3.282675259368258,
+        0.018246111566931712,
+        0.012368357189513648,
+        0.009716224665537967
+      ],
+      "logical_parent_batches": 32,
+      "maximum_level_peak_memory_bytes": [
+        11585175040,
+        15769498112,
+        28762423808,
+        54486041088
+      ],
+      "mean_gradient_correction_cosine": [
+        [
+          1.0,
+          0.15814110441880586,
+          0.1176634689238149,
+          0.12440612820152586
+        ],
+        [
+          0.15814110441880586,
+          0.9999999999999998,
+          0.7654775718933171,
+          0.5571848637617262
+        ],
+        [
+          0.1176634689238149,
+          0.7654775718933171,
+          1.0,
+          0.6545370953141196
+        ],
+        [
+          0.12440612820152586,
+          0.5571848637617262,
+          0.6545370953141196,
+          1.0
+        ]
+      ],
+      "mean_gradient_correction_gram": [
+        [
+          3.170837302692808,
+          0.012890416795720703,
+          0.0064230266137847,
+          0.0050363894770487335
+        ],
+        [
+          0.012890416795720703,
+          0.002095416822622136,
+          0.0010741842439378085,
+          0.0005798625720730999
+        ],
+        [
+          0.0064230266137847,
+          0.0010741842439378085,
+          0.0009397713227038065,
+          0.00045617965604373694
+        ],
+        [
+          0.0050363894770487335,
+          0.0005798625720730999,
+          0.00045617965604373694,
+          0.0005168697418760592
+        ]
+      ],
+      "mean_gradient_level_cosine": [
+        [
+          1.0,
+          0.9996805997707401,
+          0.9992117461969384,
+          0.9988241004513865
+        ],
+        [
+          0.9996805997707401,
+          0.9999999999999999,
+          0.9998565526573646,
+          0.9996412405206666
+        ],
+        [
+          0.9992117461969384,
+          0.9998565526573646,
+          0.9999999999999999,
+          0.9999216965739997
+        ],
+        [
+          0.9988241004513865,
+          0.9996412405206666,
+          0.9999216965739997,
+          1.0
+        ]
+      ],
+      "mean_gradient_level_gram": [
+        [
+          3.170837302692808,
+          3.1837277194885214,
+          3.1901507461023035,
+          3.1951871355793524
+        ],
+        [
+          3.1837277194885214,
+          3.198713553106865,
+          3.2062107639645867,
+          3.211827016013711
+        ],
+        [
+          3.1901507461023035,
+          3.2062107639645867,
+          3.2146477461450123,
+          3.220720177850169
+        ],
+        [
+          3.1951871355793524,
+          3.211827016013711,
+          3.220720177850169,
+          3.2273094792972215
+        ]
+      ],
+      "mean_gradient_level_to_direct_correction_gram_relative_residual": 9.152617589050052e-15,
+      "mean_per_batch_correction_cosine": [
+        [
+          0.9999999999999999,
+          -0.0011813764040954555,
+          0.0032219385326938146,
+          0.017819904635934754
+        ],
+        [
+          -0.0011813764040954555,
+          1.0,
+          0.3093849654065365,
+          0.18666504540696807
+        ],
+        [
+          0.0032219385326938146,
+          0.3093849654065365,
+          1.0,
+          0.4403946987757631
+        ],
+        [
+          0.017819904635934754,
+          0.18666504540696807,
+          0.4403946987757631,
+          1.0
+        ]
+      ],
+      "mean_per_batch_correction_gram": [
+        [
+          3.282675259368258,
+          -0.0002891261787515125,
+          0.0006492130203125536,
+          0.0031824977898714164
+        ],
+        [
+          -0.0002891261787515125,
+          0.018246111566931712,
+          0.00464772451060631,
+          0.0024854036824849875
+        ],
+        [
+          0.0006492130203125536,
+          0.00464772451060631,
+          0.012368357189513648,
+          0.00482777327331806
+        ],
+        [
+          0.0031824977898714164,
+          0.0024854036824849875,
+          0.00482777327331806,
+          0.009716224665537967
+        ]
+      ],
+      "mean_per_batch_level_cosine": [
+        [
+          0.9999999999999999,
+          0.9972318977206103,
+          0.9939773178641272,
+          0.9903758064573412
+        ],
+        [
+          0.9972318977206103,
+          1.0,
+          0.9981386950752854,
+          0.9952625443000195
+        ],
+        [
+          0.9939773178641272,
+          0.9981386950752854,
+          1.0,
+          0.9985554503958625
+        ],
+        [
+          0.9903758064573412,
+          0.9952625443000195,
+          0.9985554503958625,
+          0.9999999999999999
+        ]
+      ],
+      "mean_per_batch_level_gram": [
+        [
+          3.282675259368258,
+          3.2823861331895072,
+          3.2830353462098203,
+          3.286217843999691
+        ],
+        [
+          3.2823861331895072,
+          3.300343118577687,
+          3.3056400561086057,
+          3.311307957580963
+        ],
+        [
+          3.2830353462098203,
+          3.3056400561086057,
+          3.3233053508290387,
+          3.3338010255747124
+        ],
+        [
+          3.286217843999691,
+          3.311307957580963,
+          3.3338010255747124,
+          3.354012924985926
+        ]
+      ],
+      "per_batch_level_to_direct_correction_gram_relative_residual": 1.3813882931577756e-15
+    },
+    "measurement": {
+      "batch_level_grams": [
+        [
+          [
+            3.2347922049175337,
+            3.237532297914113,
+            3.236779767475557,
+            3.236686608808874
+          ],
+          [
+            3.237532297914113,
+            3.2646379350918893,
+            3.2748494091546836,
+            3.2794937189364144
+          ],
+          [
+            3.236779767475557,
+            3.2748494091546836,
+            3.302485281136528,
+            3.3151754232220925
+          ],
+          [
+            3.236686608808874,
+            3.2794937189364144,
+            3.3151754232220925,
+            3.33526784031899
+          ]
+        ],
+        [
+          [
+            3.3716249727223966,
+            3.3922012667409893,
+            3.3853306935450727,
+            3.3792347809736465
+          ],
+          [
+            3.3922012667409893,
+            3.4337198001188125,
+            3.4282724603411494,
+            3.422533869418261
+          ],
+          [
+            3.3853306935450727,
+            3.4282724603411494,
+            3.4364018183830214,
+            3.4379261384876085
+          ],
+          [
+            3.3792347809736465,
+            3.422533869418261,
+            3.4379261384876085,
+            3.4519212748628125
+          ]
+        ],
+        [
+          [
+            3.1972965643359363,
+            3.1738453551409767,
+            3.1720810500818586,
+            3.1657920361620775
+          ],
+          [
+            3.1738453551409767,
+            3.168641255663242,
+            3.171042135373016,
+            3.1662422977370763
+          ],
+          [
+            3.1720810500818586,
+            3.171042135373016,
+            3.1898830684963757,
+            3.1895682576828603
+          ],
+          [
+            3.1657920361620775,
+            3.1662422977370763,
+            3.1895682576828603,
+            3.1922038378208484
+          ]
+        ],
+        [
+          [
+            3.240454524612234,
+            3.2350423709817884,
+            3.2140270896844543,
+            3.1727174775681357
+          ],
+          [
+            3.2350423709817884,
+            3.2439716381796284,
+            3.223598578654322,
+            3.18169625552063
+          ],
+          [
+            3.2140270896844543,
+            3.223598578654322,
+            3.213043998683357,
+            3.1818609983773554
+          ],
+          [
+            3.1727174775681357,
+            3.18169625552063,
+            3.1818609983773554,
+            3.172317285563757
+          ]
+        ],
+        [
+          [
+            3.3028223608897567,
+            3.2916264973199296,
+            3.284650246544975,
+            3.3089711967264175
+          ],
+          [
+            3.2916264973199296,
+            3.2955510049807497,
+            3.2907088223244254,
+            3.3157290222543074
+          ],
+          [
+            3.284650246544975,
+            3.2907088223244254,
+            3.2920756097349995,
+            3.317875237550988
+          ],
+          [
+            3.3089711967264175,
+            3.3157290222543074,
+            3.317875237550988,
+            3.3477845355764053
+          ]
+        ],
+        [
+          [
+            3.268391408152481,
+            3.228628831406444,
+            3.2351707782304615,
+            3.2140643466448995
+          ],
+          [
+            3.228628831406444,
+            3.2050410454230014,
+            3.2141195270839753,
+            3.195675852712275
+          ],
+          [
+            3.2351707782304615,
+            3.2141195270839753,
+            3.2319108621023935,
+            3.2195512229811496
+          ],
+          [
+            3.2140643466448995,
+            3.195675852712275,
+            3.2195512229811496,
+            3.2228551960613734
+          ]
+        ],
+        [
+          [
+            3.3996352206676437,
+            3.3789819491902797,
+            3.4194863802382724,
+            3.462282130061373
+          ],
+          [
+            3.3789819491902797,
+            3.3838913798888948,
+            3.428052039892063,
+            3.470869130260958
+          ],
+          [
+            3.4194863802382724,
+            3.428052039892063,
+            3.491518182276995,
+            3.53884697008276
+          ],
+          [
+            3.462282130061373,
+            3.470869130260958,
+            3.53884697008276,
+            3.5986549656977123
+          ]
+        ],
+        [
+          [
+            3.494361874909814,
+            3.456285159039499,
+            3.460049069672167,
+            3.4531695220201657
+          ],
+          [
+            3.456285159039499,
+            3.437046337815442,
+            3.4400891003982865,
+            3.4329881459412905
+          ],
+          [
+            3.460049069672167,
+            3.4400891003982865,
+            3.4599046101855744,
+            3.459613445386076
+          ],
+          [
+            3.4531695220201657,
+            3.4329881459412905,
+            3.459613445386076,
+            3.4716082340688548
+          ]
+        ],
+        [
+          [
+            3.2462664015534037,
+            3.266668239483091,
+            3.276545458495826,
+            3.2768543335727793
+          ],
+          [
+            3.266668239483091,
+            3.3048204759059643,
+            3.3190278304187775,
+            3.321151493544915
+          ],
+          [
+            3.276545458495826,
+            3.3190278304187775,
+            3.347473521897635,
+            3.354019487127821
+          ],
+          [
+            3.2768543335727793,
+            3.321151493544915,
+            3.354019487127821,
+            3.3678553318237188
+          ]
+        ],
+        [
+          [
+            3.3064387476670163,
+            3.280696519502439,
+            3.2802720761956974,
+            3.2907003593517867
+          ],
+          [
+            3.280696519502439,
+            3.272361412320597,
+            3.275382567327311,
+            3.2867515473910327
+          ],
+          [
+            3.2802720761956974,
+            3.275382567327311,
+            3.2928527818967845,
+            3.3081522406706485
+          ],
+          [
+            3.2907003593517867,
+            3.2867515473910327,
+            3.3081522406706485,
+            3.3323875253323694
+          ]
+        ],
+        [
+          [
+            3.2695379031651415,
+            3.2932968632050903,
+            3.3039347270999158,
+            3.3107411553779107
+          ],
+          [
+            3.2932968632050903,
+            3.3361877954235,
+            3.359889454080753,
+            3.377397238739402
+          ],
+          [
+            3.3039347270999158,
+            3.359889454080753,
+            3.411083243970399,
+            3.447273561960156
+          ],
+          [
+            3.3107411553779107,
+            3.377397238739402,
+            3.447273561960156,
+            3.5038635513585605
+          ]
+        ],
+        [
+          [
+            3.2047976048367164,
+            3.2098096991828524,
+            3.216922407885917,
+            3.2388641716488746
+          ],
+          [
+            3.2098096991828524,
+            3.2302971401896317,
+            3.2387629666482223,
+            3.26153190197619
+          ],
+          [
+            3.216922407885917,
+            3.2387629666482223,
+            3.2553064134652887,
+            3.283387158049475
+          ],
+          [
+            3.2388641716488746,
+            3.26153190197619,
+            3.283387158049475,
+            3.3213013028100042
+          ]
+        ],
+        [
+          [
+            3.199122728194605,
+            3.1598906491378718,
+            3.152352231118811,
+            3.145235057387792
+          ],
+          [
+            3.1598906491378718,
+            3.1398034848601646,
+            3.1367733063221372,
+            3.1331507884184506
+          ],
+          [
+            3.152352231118811,
+            3.1367733063221372,
+            3.144141326837493,
+            3.1415519548195365
+          ],
+          [
+            3.145235057387792,
+            3.1331507884184506,
+            3.1415519548195365,
+            3.1534782604439617
+          ]
+        ],
+        [
+          [
+            3.3477152783313775,
+            3.33532309239425,
+            3.3479674011386833,
+            3.3465306456899633
+          ],
+          [
+            3.33532309239425,
+            3.337384860445814,
+            3.353174816056369,
+            3.353021633554896
+          ],
+          [
+            3.3479674011386833,
+            3.353174816056369,
+            3.379901648387477,
+            3.382068112635244
+          ],
+          [
+            3.3465306456899633,
+            3.353021633554896,
+            3.382068112635244,
+            3.3874030292526522
+          ]
+        ],
+        [
+          [
+            3.3813773220844063,
+            3.3848533567272643,
+            3.3884121913403695,
+            3.3884113083016723
+          ],
+          [
+            3.3848533567272643,
+            3.4017362473346564,
+            3.4095170532394525,
+            3.4095160878881043
+          ],
+          [
+            3.3884121913403695,
+            3.4095170532394525,
+            3.4282781409365395,
+            3.428277119864268
+          ],
+          [
+            3.3884113083016723,
+            3.4095160878881043,
+            3.428277119864268,
+            3.428276257046021
+          ]
+        ],
+        [
+          [
+            3.185751325763696,
+            3.1732434236298315,
+            3.1377022469669957,
+            3.1346947309364377
+          ],
+          [
+            3.1732434236298315,
+            3.176427549247559,
+            3.1431624720082865,
+            3.1413176184091185
+          ],
+          [
+            3.1377022469669957,
+            3.1431624720082865,
+            3.122787685144393,
+            3.1228058093619193
+          ],
+          [
+            3.1346947309364377,
+            3.1413176184091185,
+            3.1228058093619193,
+            3.1256219535893077
+          ]
+        ],
+        [
+          [
+            3.23677137555097,
+            3.2359551387793077,
+            3.2084845172191647,
+            3.2170793552998194
+          ],
+          [
+            3.2359551387793077,
+            3.2550663343309036,
+            3.228942728130461,
+            3.236650883661056
+          ],
+          [
+            3.2084845172191647,
+            3.228942728130461,
+            3.2096317000389365,
+            3.218109374396142
+          ],
+          [
+            3.2170793552998194,
+            3.236650883661056,
+            3.218109374396142,
+            3.228418755512601
+          ]
+        ],
+        [
+          [
+            3.2898276951045258,
+            3.278482515149648,
+            3.268421139028691,
+            3.2534432119133765
+          ],
+          [
+            3.278482515149648,
+            3.2834603305287944,
+            3.2759154436250535,
+            3.2611453444824625
+          ],
+          [
+            3.268421139028691,
+            3.2759154436250535,
+            3.278779170686364,
+            3.2700489827065202
+          ],
+          [
+            3.2534432119133765,
+            3.2611453444824625,
+            3.2700489827065202,
+            3.2735330760658496
+          ]
+        ],
+        [
+          [
+            3.3139880305753815,
+            3.324260088118848,
+            3.348665350792219,
+            3.3732177207008114
+          ],
+          [
+            3.324260088118848,
+            3.3509602443632933,
+            3.3800349294346446,
+            3.407853382857481
+          ],
+          [
+            3.348665350792219,
+            3.3800349294346446,
+            3.420494597526096,
+            3.4568904919994705
+          ],
+          [
+            3.3732177207008114,
+            3.407853382857481,
+            3.4568904919994705,
+            3.5106922284735753
+          ]
+        ],
+        [
+          [
+            3.441669388218823,
+            3.443962564227973,
+            3.4900811025584657,
+            3.53721352127834
+          ],
+          [
+            3.443962564227973,
+            3.4699619370164982,
+            3.5234573532451123,
+            3.574559967083642
+          ],
+          [
+            3.4900811025584657,
+            3.5234573532451123,
+            3.5924920795962447,
+            3.657480923646444
+          ],
+          [
+            3.53721352127834,
+            3.574559967083642,
+            3.657480923646444,
+            3.752036747152361
+          ]
+        ],
+        [
+          [
+            3.258223286994452,
+            3.215504833581742,
+            3.201705074882022,
+            3.1885176305058303
+          ],
+          [
+            3.215504833581742,
+            3.193872979475259,
+            3.18534201606976,
+            3.17166835664107
+          ],
+          [
+            3.201705074882022,
+            3.18534201606976,
+            3.1884378663571256,
+            3.1768815186130035
+          ],
+          [
+            3.1885176305058303,
+            3.17166835664107,
+            3.1768815186130035,
+            3.1712260551328386
+          ]
+        ],
+        [
+          [
+            3.148734943609395,
+            3.164993019094426,
+            3.1998332644591074,
+            3.2440925077531455
+          ],
+          [
+            3.164993019094426,
+            3.1986871114569877,
+            3.239013526924843,
+            3.2903956333631172
+          ],
+          [
+            3.1998332644591074,
+            3.239013526924843,
+            3.29854912686002,
+            3.3631164099536006
+          ],
+          [
+            3.2440925077531455,
+            3.2903956333631172,
+            3.3631164099536006,
+            3.450825243920309
+          ]
+        ],
+        [
+          [
+            3.333935993008218,
+            3.3174848209061785,
+            3.328229537634362,
+            3.352593306860148
+          ],
+          [
+            3.3174848209061785,
+            3.3224227077563278,
+            3.340199889303416,
+            3.3699927887723238
+          ],
+          [
+            3.328229537634362,
+            3.340199889303416,
+            3.3715622076709613,
+            3.4091507685954956
+          ],
+          [
+            3.352593306860148,
+            3.3699927887723238,
+            3.4091507685954956,
+            3.4617834828484777
+          ]
+        ],
+        [
+          [
+            3.3125716666721825,
+            3.2808593695826542,
+            3.2879690209937635,
+            3.2788704403303335
+          ],
+          [
+            3.2808593695826542,
+            3.264564929322224,
+            3.274831025214569,
+            3.2658191382464627
+          ],
+          [
+            3.2879690209937635,
+            3.274831025214569,
+            3.2927466631511657,
+            3.283904453609348
+          ],
+          [
+            3.2788704403303335,
+            3.2658191382464627,
+            3.283904453609348,
+            3.2752668073085656
+          ]
+        ],
+        [
+          [
+            3.3006276564942993,
+            3.2813049479889758,
+            3.247716708213795,
+            3.2592212369601232
+          ],
+          [
+            3.2813049479889758,
+            3.2788335419779613,
+            3.253198207989097,
+            3.268575384781386
+          ],
+          [
+            3.247716708213795,
+            3.253198207989097,
+            3.2493095281286672,
+            3.27447276989696
+          ],
+          [
+            3.2592212369601232,
+            3.268575384781386,
+            3.27447276989696,
+            3.3131721723133185
+          ]
+        ],
+        [
+          [
+            3.4738166611994084,
+            3.5021422882566484,
+            3.497008016212229,
+            3.498620385083382
+          ],
+          [
+            3.5021422882566484,
+            3.547048007034657,
+            3.5465542880132745,
+            3.550965766549053
+          ],
+          [
+            3.497008016212229,
+            3.5465542880132745,
+            3.5560032011997476,
+            3.5642112246298603
+          ],
+          [
+            3.498620385083382,
+            3.550965766549053,
+            3.5642112246298603,
+            3.5782597865058943
+          ]
+        ],
+        [
+          [
+            3.4515113331975646,
+            3.4493584579879437,
+            3.423166439430177,
+            3.4532270023923752
+          ],
+          [
+            3.4493584579879437,
+            3.4600349101013905,
+            3.4352929963808174,
+            3.4654621271790202
+          ],
+          [
+            3.423166439430177,
+            3.4352929963808174,
+            3.4184422942701205,
+            3.4524067616558107
+          ],
+          [
+            3.4532270023923752,
+            3.4654621271790202,
+            3.4524067616558107,
+            3.4950918308581502
+          ]
+        ],
+        [
+          [
+            3.2978119809313196,
+            3.303932812335432,
+            3.364819996970218,
+            3.352908327239054
+          ],
+          [
+            3.303932812335432,
+            3.325726544481223,
+            3.3903554084493033,
+            3.3783508038764354
+          ],
+          [
+            3.364819996970218,
+            3.3903554084493033,
+            3.465143975981153,
+            3.4548836468411985
+          ],
+          [
+            3.352908327239054,
+            3.3783508038764354,
+            3.4548836468411985,
+            3.4544483302169695
+          ]
+        ],
+        [
+          [
+            3.326985615582717,
+            3.266278198716456,
+            3.2768443124136315,
+            3.2585536258750167
+          ],
+          [
+            3.266278198716456,
+            3.227137610214801,
+            3.2388242028530585,
+            3.2201516127957617
+          ],
+          [
+            3.2768443124136315,
+            3.2388242028530585,
+            3.2577713725692594,
+            3.2393790843931947
+          ],
+          [
+            3.2585536258750167,
+            3.2201516127957617,
+            3.2393790843931947,
+            3.2226929188514326
+          ]
+        ],
+        [
+          [
+            3.372361770902794,
+            3.3591196901789644,
+            3.3516947104924477,
+            3.345215434672013
+          ],
+          [
+            3.3591196901789644,
+            3.36075568014443,
+            3.3599009060627067,
+            3.363143419231977
+          ],
+          [
+            3.3516947104924477,
+            3.3599009060627067,
+            3.3709930458526003,
+            3.3850750049626392
+          ],
+          [
+            3.345215434672013,
+            3.363143419231977,
+            3.3850750049626392,
+            3.419283591685806
+          ]
+        ],
+        [
+          [
+            3.413237696915642,
+            3.400785256956594,
+            3.3709725636084182,
+            3.3898639459452036
+          ],
+          [
+            3.400785256956594,
+            3.4055537907507216,
+            3.3821136137182015,
+            3.4013081784749373
+          ],
+          [
+            3.3709725636084182,
+            3.3821136137182015,
+            3.370568726835939,
+            3.3898024656190486
+          ],
+          [
+            3.3898639459452036,
+            3.4013081784749373,
+            3.3898024656190486,
+            3.426321424716651
+          ]
+        ],
+        [
+          [
+            3.3630862834692206,
+            3.3711509959717048,
+            3.3402139226118193,
+            3.325904301620084
+          ],
+          [
+            3.3711509959717048,
+            3.396135753298315,
+            3.369849747090649,
+            3.3568377345139933
+          ],
+          [
+            3.3402139226118193,
+            3.369849747090649,
+            3.3540783532016567,
+            3.343834505528796
+          ],
+          [
+            3.325904301620084,
+            3.3568377345139933,
+            3.343834505528796,
+            3.3376878413222184
+          ]
+        ],
+        [
+          [
+            3.2043424469422357,
+            3.143294077701093,
+            3.101617799194522,
+            3.1120217126908476
+          ],
+          [
+            3.143294077701093,
+            3.116488863017623,
+            3.10565551429089,
+            3.141957642179888
+          ],
+          [
+            3.101617799194522,
+            3.10565551429089,
+            3.1627728289434147,
+            3.2655623147077613
+          ],
+          [
+            3.1120217126908476,
+            3.141957642179888,
+            3.2655623147077613,
+            3.4622559652188807
+          ]
+        ],
+        [
+          [
+            3.082877715043256,
+            3.1033034977528065,
+            3.103338794486166,
+            3.094686363754784
+          ],
+          [
+            3.1033034977528065,
+            3.1422777536964017,
+            3.1476912203709935,
+            3.1391758860526515
+          ],
+          [
+            3.103338794486166,
+            3.1476912203709935,
+            3.160289461386086,
+            3.152203399661963
+          ],
+          [
+            3.094686363754784,
+            3.1391758860526515,
+            3.152203399661963,
+            3.1467782901120125
+          ]
+        ],
+        [
+          [
+            3.2991545147166503,
+            3.288247663737086,
+            3.288402095478019,
+            3.299776776393103
+          ],
+          [
+            3.288247663737086,
+            3.298157532042822,
+            3.296148299666761,
+            3.3058444653318007
+          ],
+          [
+            3.288402095478019,
+            3.296148299666761,
+            3.3090092786734164,
+            3.3287607356741202
+          ],
+          [
+            3.299776776393103,
+            3.3058444653318007,
+            3.3287607356741202,
+            3.3637089743238575
+          ]
+        ],
+        [
+          [
+            3.2706503514160326,
+            3.2492605996874393,
+            3.260430642180184,
+            3.282112942077345
+          ],
+          [
+            3.2492605996874393,
+            3.243366043224167,
+            3.2572420222989966,
+            3.2782073593993712
+          ],
+          [
+            3.260430642180184,
+            3.2572420222989966,
+            3.2795945868112732,
+            3.3022020292195435
+          ],
+          [
+            3.282112942077345,
+            3.2782073593993712,
+            3.3022020292195435,
+            3.3339387630146753
+          ]
+        ],
+        [
+          [
+            3.7217445547043697,
+            3.7328106311881726,
+            3.7634968160563,
+            3.8420805838536656
+          ],
+          [
+            3.7328106311881726,
+            3.762814468490246,
+            3.8016859895784667,
+            3.894250326271954
+          ],
+          [
+            3.7634968160563,
+            3.8016859895784667,
+            3.8656891244097955,
+            3.991855131667211
+          ],
+          [
+            3.8420805838536656,
+            3.894250326271954,
+            3.991855131667211,
+            4.193026471810254
+          ]
+        ],
+        [
+          [
+            3.2888673637794716,
+            3.336761280315465,
+            3.2871731841189464,
+            3.2734262039026336
+          ],
+          [
+            3.336761280315465,
+            3.4332147284265186,
+            3.380607740312871,
+            3.3649238623798046
+          ],
+          [
+            3.2871731841189464,
+            3.380607740312871,
+            3.346193387457506,
+            3.335507106648152
+          ],
+          [
+            3.2734262039026336,
+            3.3649238623798046,
+            3.335507106648152,
+            3.3308163503044956
+          ]
+        ],
+        [
+          [
+            3.3597292763717186,
+            3.3164345200017658,
+            3.306195821997625,
+            3.3203474426397457
+          ],
+          [
+            3.3164345200017658,
+            3.2927868578496926,
+            3.289209623447323,
+            3.306569564025009
+          ],
+          [
+            3.306195821997625,
+            3.289209623447323,
+            3.299851813575415,
+            3.324535584044182
+          ],
+          [
+            3.3203474426397457,
+            3.306569564025009,
+            3.324535584044182,
+            3.3651281461688187
+          ]
+        ],
+        [
+          [
+            3.2061306269996437,
+            3.198625281283035,
+            3.1724326403116714,
+            3.1932813226533914
+          ],
+          [
+            3.198625281283035,
+            3.2068849550697007,
+            3.1849679865938074,
+            3.2067721924241845
+          ],
+          [
+            3.1724326403116714,
+            3.1849679865938074,
+            3.1721500914606904,
+            3.1956863475220776
+          ],
+          [
+            3.1932813226533914,
+            3.2067721924241845,
+            3.1956863475220776,
+            3.227445670653364
+          ]
+        ],
+        [
+          [
+            3.3013093953422192,
+            3.344713611696274,
+            3.334623759374084,
+            3.330905645695629
+          ],
+          [
+            3.344713611696274,
+            3.4078652360027446,
+            3.4037452670775576,
+            3.4006742620452544
+          ],
+          [
+            3.334623759374084,
+            3.4037452670775576,
+            3.4106068424006555,
+            3.408530846592805
+          ],
+          [
+            3.330905645695629,
+            3.4006742620452544,
+            3.408530846592805,
+            3.410987627328245
+          ]
+        ],
+        [
+          [
+            3.2562256899026396,
+            3.2729007779434967,
+            3.2352557787480904,
+            3.2172337127030586
+          ],
+          [
+            3.2729007779434967,
+            3.3080387183261535,
+            3.2771871029147035,
+            3.2626823586053884
+          ],
+          [
+            3.2352557787480904,
+            3.2771871029147035,
+            3.262643785425903,
+            3.2529450990186413
+          ],
+          [
+            3.2172337127030586,
+            3.2626823586053884,
+            3.2529450990186413,
+            3.2555216096306907
+          ]
+        ],
+        [
+          [
+            3.1399215014637707,
+            3.090058315550434,
+            3.082058803166914,
+            3.0875438658708694
+          ],
+          [
+            3.090058315550434,
+            3.0619431651441213,
+            3.0625899709626303,
+            3.071001520648171
+          ],
+          [
+            3.082058803166914,
+            3.0625899709626303,
+            3.0796245286387287,
+            3.093794181591034
+          ],
+          [
+            3.0875438658708694,
+            3.071001520648171,
+            3.093794181591034,
+            3.118263954109032
+          ]
+        ],
+        [
+          [
+            3.500772585969362,
+            3.50315151120971,
+            3.508037774405706,
+            3.529429550821864
+          ],
+          [
+            3.50315151120971,
+            3.536090314410629,
+            3.5528011376692845,
+            3.5881358554800262
+          ],
+          [
+            3.508037774405706,
+            3.5528011376692845,
+            3.5897449448922774,
+            3.640805413865451
+          ],
+          [
+            3.529429550821864,
+            3.5881358554800262,
+            3.640805413865451,
+            3.716279794291139
+          ]
+        ],
+        [
+          [
+            3.1301250259176836,
+            3.1697698028853987,
+            3.166615770283334,
+            3.1555537888905523
+          ],
+          [
+            3.1697698028853987,
+            3.223837685914863,
+            3.2217594422274174,
+            3.20900424839487
+          ],
+          [
+            3.166615770283334,
+            3.2217594422274174,
+            3.227595868457183,
+            3.219430177221305
+          ],
+          [
+            3.1555537888905523,
+            3.20900424839487,
+            3.219430177221305,
+            3.2192629170767595
+          ]
+        ],
+        [
+          [
+            3.265459743433656,
+            3.242437727081511,
+            3.262770202442852,
+            3.271916933190416
+          ],
+          [
+            3.242437727081511,
+            3.2355429619110216,
+            3.2570819919152947,
+            3.266111835056696
+          ],
+          [
+            3.262770202442852,
+            3.2570819919152947,
+            3.284888511335469,
+            3.2961325013516354
+          ],
+          [
+            3.271916933190416,
+            3.266111835056696,
+            3.2961325013516354,
+            3.3107354809487375
+          ]
+        ],
+        [
+          [
+            3.2949801087958503,
+            3.3245729477881065,
+            3.3023661791402876,
+            3.3092046738689005
+          ],
+          [
+            3.3245729477881065,
+            3.3750624651453234,
+            3.3605972884826616,
+            3.3788249740103575
+          ],
+          [
+            3.3023661791402876,
+            3.3605972884826616,
+            3.371176736867972,
+            3.410738517824195
+          ],
+          [
+            3.3092046738689005,
+            3.3788249740103575,
+            3.410738517824195,
+            3.4885377418597856
+          ]
+        ],
+        [
+          [
+            3.2211250313397892,
+            3.2639997215750456,
+            3.2542310776448318,
+            3.2773437837831536
+          ],
+          [
+            3.2639997215750456,
+            3.3286667230724736,
+            3.329396184660917,
+            3.364532287381974
+          ],
+          [
+            3.2542310776448318,
+            3.329396184660917,
+            3.3514145357650844,
+            3.400932885956792
+          ],
+          [
+            3.2773437837831536,
+            3.364532287381974,
+            3.400932885956792,
+            3.4767463041169107
+          ]
+        ],
+        [
+          [
+            3.4949816057569287,
+            3.4802214835287266,
+            3.4429164962818155,
+            3.456199783261449
+          ],
+          [
+            3.4802214835287266,
+            3.4845411968897073,
+            3.451982488195152,
+            3.4673752340181574
+          ],
+          [
+            3.4429164962818155,
+            3.451982488195152,
+            3.4337198671461575,
+            3.4551026574949346
+          ],
+          [
+            3.456199783261449,
+            3.4673752340181574,
+            3.4551026574949346,
+            3.4926819481904454
+          ]
+        ],
+        [
+          [
+            3.4026200793782975,
+            3.427384029563487,
+            3.455616215297803,
+            3.4466522641003206
+          ],
+          [
+            3.427384029563487,
+            3.4753919778332754,
+            3.504536818021357,
+            3.4950674752210764
+          ],
+          [
+            3.455616215297803,
+            3.504536818021357,
+            3.5451795539664173,
+            3.539264487463513
+          ],
+          [
+            3.4466522641003206,
+            3.4950674752210764,
+            3.539264487463513,
+            3.539169477886634
+          ]
+        ],
+        [
+          [
+            3.323252421013853,
+            3.2807934403899264,
+            3.2462433490593443,
+            3.2063094727562875
+          ],
+          [
+            3.2807934403899264,
+            3.256935434740301,
+            3.23008779044637,
+            3.1928578340945473
+          ],
+          [
+            3.2462433490593443,
+            3.23008779044637,
+            3.2233624666804,
+            3.192491587630496
+          ],
+          [
+            3.2063094727562875,
+            3.1928578340945473,
+            3.192491587630496,
+            3.1712517463855194
+          ]
+        ],
+        [
+          [
+            3.387188871158827,
+            3.3891688987961803,
+            3.4073071677542055,
+            3.4338082662949123
+          ],
+          [
+            3.3891688987961803,
+            3.412054655054999,
+            3.4418113740296152,
+            3.4767788867167995
+          ],
+          [
+            3.4073071677542055,
+            3.4418113740296152,
+            3.5004112230812305,
+            3.5503900594993123
+          ],
+          [
+            3.4338082662949123,
+            3.4767788867167995,
+            3.5503900594993123,
+            3.621855466127526
+          ]
+        ],
+        [
+          [
+            3.307384384016896,
+            3.320599584174988,
+            3.357518533318667,
+            3.35616198227746
+          ],
+          [
+            3.320599584174988,
+            3.3493476264016278,
+            3.3886540063975703,
+            3.3891833164985643
+          ],
+          [
+            3.357518533318667,
+            3.3886540063975703,
+            3.4383831657389057,
+            3.4425393486281712
+          ],
+          [
+            3.35616198227746,
+            3.3891833164985643,
+            3.4425393486281712,
+            3.456268687408045
+          ]
+        ],
+        [
+          [
+            3.185760366318252,
+            3.168431759866164,
+            3.148284627783876,
+            3.1440582313841237
+          ],
+          [
+            3.168431759866164,
+            3.172457149370936,
+            3.1548314961986117,
+            3.1508784882072236
+          ],
+          [
+            3.148284627783876,
+            3.1548314961986117,
+            3.1446406507811675,
+            3.141070894635651
+          ],
+          [
+            3.1440582313841237,
+            3.1508784882072236,
+            3.141070894635651,
+            3.139207246876921
+          ]
+        ],
+        [
+          [
+            3.257323421202316,
+            3.24661971369134,
+            3.2671942867031802,
+            3.3067498907788684
+          ],
+          [
+            3.24661971369134,
+            3.253467501405863,
+            3.2782659425846337,
+            3.3234371311984465
+          ],
+          [
+            3.2671942867031802,
+            3.2782659425846337,
+            3.318874570532176,
+            3.377989830891621
+          ],
+          [
+            3.3067498907788684,
+            3.3234371311984465,
+            3.377989830891621,
+            3.463434260399684
+          ]
+        ],
+        [
+          [
+            3.1749981876194,
+            3.1785917886802664,
+            3.165277083353164,
+            3.1180243857257
+          ],
+          [
+            3.1785917886802664,
+            3.1955104355236883,
+            3.182900535821217,
+            3.135938561659768
+          ],
+          [
+            3.165277083353164,
+            3.182900535821217,
+            3.1752607473408654,
+            3.131394447203452
+          ],
+          [
+            3.1180243857257,
+            3.135938561659768,
+            3.131394447203452,
+            3.103786371864054
+          ]
+        ],
+        [
+          [
+            3.0559859790217634,
+            3.081219433499498,
+            3.0879128621070784,
+            3.0761118632363575
+          ],
+          [
+            3.081219433499498,
+            3.1219967216889546,
+            3.1324940543935127,
+            3.122276523754397
+          ],
+          [
+            3.0879128621070784,
+            3.1324940543935127,
+            3.1495969464337,
+            3.1405735765144858
+          ],
+          [
+            3.0761118632363575,
+            3.122276523754397,
+            3.1405735765144858,
+            3.135490619020937
+          ]
+        ],
+        [
+          [
+            3.313763140580697,
+            3.334191176281153,
+            3.3369989511660396,
+            3.336999249553604
+          ],
+          [
+            3.334191176281153,
+            3.370646065806553,
+            3.373785161949064,
+            3.373785570555079
+          ],
+          [
+            3.3369989511660396,
+            3.373785161949064,
+            3.380767397711054,
+            3.3807677337975135
+          ],
+          [
+            3.336999249553604,
+            3.373785570555079,
+            3.3807677337975135,
+            3.3807683258874452
+          ]
+        ],
+        [
+          [
+            3.1717127536233627,
+            3.2129529738370275,
+            3.211400358278528,
+            3.2354963866863766
+          ],
+          [
+            3.2129529738370275,
+            3.272895605985175,
+            3.274638039588074,
+            3.2997728009085288
+          ],
+          [
+            3.211400358278528,
+            3.274638039588074,
+            3.28867524442564,
+            3.317205294428472
+          ],
+          [
+            3.2354963866863766,
+            3.2997728009085288,
+            3.317205294428472,
+            3.351758484064751
+          ]
+        ],
+        [
+          [
+            3.1265567834253427,
+            3.133292118358246,
+            3.1375371944947577,
+            3.1546671277577505
+          ],
+          [
+            3.133292118358246,
+            3.156908725392763,
+            3.163556184246308,
+            3.1813432686144307
+          ],
+          [
+            3.1375371944947577,
+            3.163556184246308,
+            3.1847311044937294,
+            3.2033510329275683
+          ],
+          [
+            3.1546671277577505,
+            3.1813432686144307,
+            3.2033510329275683,
+            3.2250012839283366
+          ]
+        ],
+        [
+          [
+            3.306017815534403,
+            3.2995091854701797,
+            3.29694175212037,
+            3.2926206645187723
+          ],
+          [
+            3.2995091854701797,
+            3.310929951718656,
+            3.310947695369722,
+            3.307077506743677
+          ],
+          [
+            3.29694175212037,
+            3.310947695369722,
+            3.3190122571328935,
+            3.3172309527684827
+          ],
+          [
+            3.2926206645187723,
+            3.307077506743677,
+            3.3172309527684827,
+            3.325245624072318
+          ]
+        ],
+        [
+          [
+            3.2889838197181964,
+            3.312346362045624,
+            3.3157912125300153,
+            3.3011400938044773
+          ],
+          [
+            3.312346362045624,
+            3.357398158198025,
+            3.3668594598198722,
+            3.3548623351872076
+          ],
+          [
+            3.3157912125300153,
+            3.3668594598198722,
+            3.387985736539962,
+            3.378212766467847
+          ],
+          [
+            3.3011400938044773,
+            3.3548623351872076,
+            3.378212766467847,
+            3.378717494173062
+          ]
+        ],
+        [
+          [
+            3.4262251357014937,
+            3.395999761660815,
+            3.37741717743014,
+            3.383921008901443
+          ],
+          [
+            3.395999761660815,
+            3.3877360390895035,
+            3.377412126972341,
+            3.3926672359889474
+          ],
+          [
+            3.37741717743014,
+            3.377412126972341,
+            3.383592861706847,
+            3.4201638145072457
+          ],
+          [
+            3.383921008901443,
+            3.3926672359889474,
+            3.4201638145072457,
+            3.513668357119458
+          ]
+        ],
+        [
+          [
+            3.382298910261562,
+            3.392722279669161,
+            3.417056722655656,
+            3.4183837555106353
+          ],
+          [
+            3.392722279669161,
+            3.4205091112620565,
+            3.4528750123043945,
+            3.458615700364907
+          ],
+          [
+            3.417056722655656,
+            3.4528750123043945,
+            3.496485104181937,
+            3.5056698435858995
+          ],
+          [
+            3.4183837555106353,
+            3.458615700364907,
+            3.5056698435858995,
+            3.521713683962793
+          ]
+        ]
+      ],
+      "correction_second_moment_v_k": [
+        3.298969022307828,
+        0.019089859054239496,
+        0.013952755466126109,
+        0.0140576076260189
+      ],
+      "incremental_cuda_time_ms": [
+        518.0007705688477,
+        529.2722091674805,
+        1226.933837890625,
+        3170.957977294922
+      ],
+      "level_time_samples_ms": [
+        [
+          525.9857177734375,
+          1048.945556640625,
+          2275.206298828125,
+          5474.9287109375
+        ],
+        [
+          517.6566162109375,
+          1047.5452880859375,
+          2273.130615234375,
+          5438.1240234375
+        ],
+        [
+          516.1170654296875,
+          1045.736328125,
+          2273.539794921875,
+          5439.60400390625
+        ],
+        [
+          516.5231323242188,
+          1047.3514404296875,
+          2273.486572265625,
+          5440.05126953125
+        ],
+        [
+          516.7998657226562,
+          1045.9287109375,
+          2274.083740234375,
+          5439.02587890625
+        ],
+        [
+          516.662353515625,
+          1046.185791015625,
+          2273.699951171875,
+          5440.99755859375
+        ],
+        [
+          517.0712890625,
+          1048.1363525390625,
+          2275.050537109375,
+          5442.478515625
+        ],
+        [
+          517.1901245117188,
+          1048.3543701171875,
+          2275.45703125,
+          5446.1083984375
+        ]
+      ],
+      "logical_parent_batches": 64,
+      "maximum_level_peak_memory_bytes": [
+        11585175040,
+        15769166336,
+        28762931712,
+        54486057472
+      ],
+      "mean_gradient_correction_cosine": [
+        [
+          1.0,
+          0.08770059024961417,
+          0.07310623526998374,
+          0.07764767255655625
+        ],
+        [
+          0.08770059024961417,
+          1.0,
+          0.7587548044426866,
+          0.44064323829595703
+        ],
+        [
+          0.07310623526998374,
+          0.7587548044426866,
+          0.9999999999999999,
+          0.7640057638609167
+        ],
+        [
+          0.07764767255655625,
+          0.44064323829595703,
+          0.7640057638609167,
+          1.0
+        ]
+      ],
+      "mean_gradient_correction_gram": [
+        [
+          3.1820320251261878,
+          0.0069261881380722114,
+          0.003641132254671978,
+          0.0032587119572666627
+        ],
+        [
+          0.0069261881380722114,
+          0.001960103434534799,
+          0.0009379306105797927,
+          0.0004589779940844771
+        ],
+        [
+          0.003641132254671978,
+          0.0009379306105797927,
+          0.0007795779054001674,
+          0.0005018704837864601
+        ],
+        [
+          0.0032587119572666627,
+          0.0004589779940844771,
+          0.0005018704837864601,
+          0.0005535164306519294
+        ]
+      ],
+      "mean_gradient_level_cosine": [
+        [
+          1.0,
+          0.9996958383449994,
+          0.9992857860700047,
+          0.9989065869469049
+        ],
+        [
+          0.9996958383449994,
+          0.9999999999999999,
+          0.9998795012297221,
+          0.9996400546511677
+        ],
+        [
+          0.9992857860700047,
+          0.9998795012297221,
+          1.0,
+          0.9999148231804176
+        ],
+        [
+          0.9989065869469049,
+          0.9996400546511677,
+          0.9999148231804176,
+          1.0
+        ]
+      ],
+      "mean_gradient_level_gram": [
+        [
+          3.1820320251261878,
+          3.188958213264255,
+          3.192599345518919,
+          3.1958580574761872
+        ],
+        [
+          3.188958213264255,
+          3.197844504836863,
+          3.202423567702114,
+          3.2061412576534627
+        ],
+        [
+          3.192599345518919,
+          3.202423567702114,
+          3.2077822084727714,
+          3.2120017689079017
+        ],
+        [
+          3.1958580574761872,
+          3.2061412576534627,
+          3.2120017689079017,
+          3.216774845773695
+        ]
+      ],
+      "mean_gradient_level_to_direct_correction_gram_relative_residual": 7.375578425849555e-15,
+      "mean_level_cuda_time_ms_c_k": [
+        518.0007705688477,
+        1047.2729797363281,
+        2274.206817626953,
+        5445.164794921875
+      ],
+      "mean_per_batch_correction_cosine": [
+        [
+          1.0,
+          -0.012834313690718208,
+          -0.008005002069119218,
+          0.021744468020781612
+        ],
+        [
+          -0.012834313690718208,
+          1.0,
+          0.297425590145474,
+          0.17987844873860434
+        ],
+        [
+          -0.008005002069119218,
+          0.297425590145474,
+          1.0,
+          0.5069419938357548
+        ],
+        [
+          0.021744468020781612,
+          0.17987844873860434,
+          0.5069419938357548,
+          0.9999999999999999
+        ]
+      ],
+      "mean_per_batch_correction_gram": [
+        [
+          3.298969022307828,
+          -0.0032207953431438994,
+          -0.0017174359865639159,
+          0.004682670662510242
+        ],
+        [
+          -0.0032207953431438994,
+          0.019089859054239496,
+          0.004854110789480266,
+          0.0029467018999287044
+        ],
+        [
+          -0.0017174359865639159,
+          0.004854110789480266,
+          0.013952755466126109,
+          0.007099764913556932
+        ],
+        [
+          0.004682670662510242,
+          0.0029467018999287044,
+          0.007099764913556932,
+          0.0140576076260189
+        ]
+      ],
+      "mean_per_batch_level_cosine": [
+        [
+          1.0,
+          0.997114054204719,
+          0.9935649110979,
+          0.9885427850672878
+        ],
+        [
+          0.997114054204719,
+          1.0,
+          0.9979044008461562,
+          0.9937328945231146
+        ],
+        [
+          0.9935649110979,
+          0.9979044008461562,
+          1.0,
+          0.9979251059418174
+        ],
+        [
+          0.9885427850672878,
+          0.9937328945231146,
+          0.9979251059418174,
+          1.0
+        ]
+      ],
+      "mean_per_batch_level_gram": [
+        [
+          3.298969022307828,
+          3.295748226964685,
+          3.2940307909781206,
+          3.298713461640631
+        ],
+        [
+          3.295748226964685,
+          3.31161729067578,
+          3.3147539654786966,
+          3.3223833380411354
+        ],
+        [
+          3.2940307909781206,
+          3.3147539654786966,
+          3.3318433957477387,
+          3.3465725332237346
+        ],
+        [
+          3.298713461640631,
+          3.3223833380411354,
+          3.3465725332237346,
+          3.3753592783257496
+        ]
+      ],
+      "per_batch_level_to_direct_correction_gram_relative_residual": 7.108412100638199e-16,
+      "timed_logical_parent_batches": 8
+    },
+    "selection": {
+      "batch_level_grams": [
+        [
+          [
+            3.3272549014916177,
+            3.319728362633614,
+            3.3943923891504,
+            3.472151074418475
+          ],
+          [
+            3.319728362633614,
+            3.3299092373940473,
+            3.41092380476011,
+            3.492467051373988
+          ],
+          [
+            3.3943923891504,
+            3.41092380476011,
+            3.5080196146440956,
+            3.6006899846486573
+          ],
+          [
+            3.472151074418475,
+            3.492467051373988,
+            3.6006899846486573,
+            3.710472897807246
+          ]
+        ],
+        [
+          [
+            3.253263194117827,
+            3.2142273731994235,
+            3.23910106149955,
+            3.2286368979513225
+          ],
+          [
+            3.2142273731994235,
+            3.1971400839150435,
+            3.2255913557319844,
+            3.2166688300778783
+          ],
+          [
+            3.23910106149955,
+            3.2255913557319844,
+            3.27246778799121,
+            3.274924742491638
+          ],
+          [
+            3.2286368979513225,
+            3.2166688300778783,
+            3.274924742491638,
+            3.2966956100540896
+          ]
+        ],
+        [
+          [
+            3.1745493733739196,
+            3.2106920116576205,
+            3.246311865527887,
+            3.2409540460811277
+          ],
+          [
+            3.2106920116576205,
+            3.267777165338757,
+            3.309657178253735,
+            3.303906273391579
+          ],
+          [
+            3.246311865527887,
+            3.309657178253735,
+            3.3610544944374046,
+            3.3558226662596953
+          ],
+          [
+            3.2409540460811277,
+            3.303906273391579,
+            3.3558226662596953,
+            3.3539563454072714
+          ]
+        ],
+        [
+          [
+            3.3746152893416297,
+            3.369315021815159,
+            3.4335991170695017,
+            3.463448109261023
+          ],
+          [
+            3.369315021815159,
+            3.3815120478138683,
+            3.454327906270752,
+            3.4915671769171115
+          ],
+          [
+            3.4335991170695017,
+            3.454327906270752,
+            3.5485158935940038,
+            3.601906653355685
+          ],
+          [
+            3.463448109261023,
+            3.4915671769171115,
+            3.601906653355685,
+            3.672157128712297
+          ]
+        ],
+        [
+          [
+            3.148984637915874,
+            3.135292096724601,
+            3.154715309914804,
+            3.160582685197148
+          ],
+          [
+            3.135292096724601,
+            3.1417056576042124,
+            3.164595186502223,
+            3.176644189751149
+          ],
+          [
+            3.154715309914804,
+            3.164595186502223,
+            3.201516896886912,
+            3.217071250759726
+          ],
+          [
+            3.160582685197148,
+            3.176644189751149,
+            3.217071250759726,
+            3.249161578865709
+          ]
+        ],
+        [
+          [
+            3.160649093396949,
+            3.1590181226648837,
+            3.1391457005775707,
+            3.1030863908697692
+          ],
+          [
+            3.1590181226648837,
+            3.1709125624229344,
+            3.153518410064576,
+            3.1193914074829947
+          ],
+          [
+            3.1391457005775707,
+            3.153518410064576,
+            3.1539933053494655,
+            3.1303895543758053
+          ],
+          [
+            3.1030863908697692,
+            3.1193914074829947,
+            3.1303895543758053,
+            3.1269982490277717
+          ]
+        ],
+        [
+          [
+            3.1054152421208814,
+            3.0860659022091177,
+            3.105700938827922,
+            3.086873052841174
+          ],
+          [
+            3.0860659022091177,
+            3.083257708940623,
+            3.1107059381273214,
+            3.0991728243992807
+          ],
+          [
+            3.105700938827922,
+            3.1107059381273214,
+            3.1580049439613345,
+            3.1623786646399776
+          ],
+          [
+            3.086873052841174,
+            3.0991728243992807,
+            3.1623786646399776,
+            3.197528143696565
+          ]
+        ],
+        [
+          [
+            3.421242969795714,
+            3.4267440729722143,
+            3.4097291287082436,
+            3.402805788825808
+          ],
+          [
+            3.4267440729722143,
+            3.4563415230547307,
+            3.447308599903424,
+            3.4446872999578337
+          ],
+          [
+            3.4097291287082436,
+            3.447308599903424,
+            3.458301370730815,
+            3.4647504012297015
+          ],
+          [
+            3.402805788825808,
+            3.4446872999578337,
+            3.4647504012297015,
+            3.4869008241246204
+          ]
+        ],
+        [
+          [
+            3.252427710833734,
+            3.223365017454391,
+            3.2144766725795746,
+            3.2384325360145017
+          ],
+          [
+            3.223365017454391,
+            3.2152075565559213,
+            3.2136810839544427,
+            3.2413727583831253
+          ],
+          [
+            3.2144766725795746,
+            3.2136810839544427,
+            3.226016862202353,
+            3.2590748624247894
+          ],
+          [
+            3.2384325360145017,
+            3.2413727583831253,
+            3.2590748624247894,
+            3.3025446085523713
+          ]
+        ],
+        [
+          [
+            3.4062595890694793,
+            3.443178912174301,
+            3.4723242445606513,
+            3.547492196439067
+          ],
+          [
+            3.443178912174301,
+            3.5035331986019336,
+            3.54744878310039,
+            3.641295697363356
+          ],
+          [
+            3.4723242445606513,
+            3.54744878310039,
+            3.616608448604708,
+            3.738061113965647
+          ],
+          [
+            3.547492196439067,
+            3.641295697363356,
+            3.738061113965647,
+            3.902591292070676
+          ]
+        ],
+        [
+          [
+            3.3949940179467695,
+            3.391690329032413,
+            3.4088288463220673,
+            3.4191174416603864
+          ],
+          [
+            3.391690329032413,
+            3.4038088330809284,
+            3.4237258943019455,
+            3.4344898409296163
+          ],
+          [
+            3.4088288463220673,
+            3.4237258943019455,
+            3.451780446624685,
+            3.46419412936653
+          ],
+          [
+            3.4191174416603864,
+            3.4344898409296163,
+            3.46419412936653,
+            3.4885332806529985
+          ]
+        ],
+        [
+          [
+            3.1953234128715704,
+            3.16577394078501,
+            3.135460265885726,
+            3.119163264019219
+          ],
+          [
+            3.16577394078501,
+            3.1566133546939867,
+            3.1287515460652737,
+            3.1128150083054154
+          ],
+          [
+            3.135460265885726,
+            3.1287515460652737,
+            3.1213089799725644,
+            3.108923223537308
+          ],
+          [
+            3.119163264019219,
+            3.1128150083054154,
+            3.108923223537308,
+            3.1042660830913515
+          ]
+        ],
+        [
+          [
+            3.2910095870327694,
+            3.3408289751995253,
+            3.3299024775384054,
+            3.3192185320676013
+          ],
+          [
+            3.3408289751995253,
+            3.4140207401971767,
+            3.4078727370581428,
+            3.398291326459775
+          ],
+          [
+            3.3299024775384054,
+            3.4078727370581428,
+            3.4157836329794264,
+            3.4128109573302448
+          ],
+          [
+            3.3192185320676013,
+            3.398291326459775,
+            3.4128109573302448,
+            3.420808302495412
+          ]
+        ],
+        [
+          [
+            3.453385683610866,
+            3.493894647471648,
+            3.4887860060173295,
+            3.488194348340387
+          ],
+          [
+            3.493894647471648,
+            3.5530612329472517,
+            3.555801609654839,
+            3.5608764484598407
+          ],
+          [
+            3.4887860060173295,
+            3.555801609654839,
+            3.5725932593596834,
+            3.584545606426121
+          ],
+          [
+            3.488194348340387,
+            3.5608764484598407,
+            3.584545606426121,
+            3.6085267598747297
+          ]
+        ],
+        [
+          [
+            3.1218683302450483,
+            3.1145963255811586,
+            3.131491297552216,
+            3.1321940738504854
+          ],
+          [
+            3.1145963255811586,
+            3.1240739815663567,
+            3.143330377868623,
+            3.1443672134930116
+          ],
+          [
+            3.131491297552216,
+            3.143330377868623,
+            3.1713939885271554,
+            3.1740207865705194
+          ],
+          [
+            3.1321940738504854,
+            3.1443672134930116,
+            3.1740207865705194,
+            3.1843932872184597
+          ]
+        ],
+        [
+          [
+            3.2841903775122123,
+            3.2448049943608375,
+            3.2081728059277617,
+            3.2040379623946587
+          ],
+          [
+            3.2448049943608375,
+            3.2262959749965225,
+            3.1952132212043654,
+            3.1932672542069263
+          ],
+          [
+            3.2081728059277617,
+            3.1952132212043654,
+            3.176052455560166,
+            3.1774751270876775
+          ],
+          [
+            3.2040379623946587,
+            3.1932672542069263,
+            3.1774751270876775,
+            3.18887318464288
+          ]
+        ],
+        [
+          [
+            3.1352615278300955,
+            3.1513121949634746,
+            3.145378145432846,
+            3.1361456941586705
+          ],
+          [
+            3.1513121949634746,
+            3.1921028656459476,
+            3.191505737642471,
+            3.181957722518639
+          ],
+          [
+            3.145378145432846,
+            3.191505737642471,
+            3.2029532738159654,
+            3.194558995404219
+          ],
+          [
+            3.1361456941586705,
+            3.181957722518639,
+            3.194558995404219,
+            3.1929983993231326
+          ]
+        ],
+        [
+          [
+            3.394606887039586,
+            3.3784777200523957,
+            3.3124033297730873,
+            3.3123213693172517
+          ],
+          [
+            3.3784777200523957,
+            3.3802893760804182,
+            3.3200139273901716,
+            3.321105739493479
+          ],
+          [
+            3.3124033297730873,
+            3.3200139273901716,
+            3.2774555344992113,
+            3.2807551642143062
+          ],
+          [
+            3.3123213693172517,
+            3.321105739493479,
+            3.2807551642143062,
+            3.285615769946034
+          ]
+        ],
+        [
+          [
+            3.246458128822206,
+            3.24793029068512,
+            3.217810848340029,
+            3.2352677686806324
+          ],
+          [
+            3.24793029068512,
+            3.2661042187703875,
+            3.237694188947094,
+            3.2564137130996165
+          ],
+          [
+            3.217810848340029,
+            3.237694188947094,
+            3.223044220982403,
+            3.24348707988961
+          ],
+          [
+            3.2352677686806324,
+            3.2564137130996165,
+            3.24348707988961,
+            3.2679260891363455
+          ]
+        ],
+        [
+          [
+            3.155207856122559,
+            3.1564986967314934,
+            3.112995430892153,
+            3.0677580503833264
+          ],
+          [
+            3.1564986967314934,
+            3.1816992004588944,
+            3.1500396881637207,
+            3.1182071375802867
+          ],
+          [
+            3.112995430892153,
+            3.1500396881637207,
+            3.1471222092310045,
+            3.1392717437962796
+          ],
+          [
+            3.0677580503833264,
+            3.1182071375802867,
+            3.1392717437962796,
+            3.1772214009497315
+          ]
+        ],
+        [
+          [
+            3.381998361477766,
+            3.3369617135970473,
+            3.316340671376978,
+            3.302959258015996
+          ],
+          [
+            3.3369617135970473,
+            3.320321387394101,
+            3.299940374290275,
+            3.2869797381229793
+          ],
+          [
+            3.316340671376978,
+            3.299940374290275,
+            3.2924149943352163,
+            3.2885853555510374
+          ],
+          [
+            3.302959258015996,
+            3.2869797381229793,
+            3.2885853555510374,
+            3.3054169513024876
+          ]
+        ],
+        [
+          [
+            3.346211644506292,
+            3.3365851344960693,
+            3.337895251654674,
+            3.343757891030176
+          ],
+          [
+            3.3365851344960693,
+            3.341448883573364,
+            3.346502743512861,
+            3.3530377692244664
+          ],
+          [
+            3.337895251654674,
+            3.346502743512861,
+            3.362063700004225,
+            3.369756079395916
+          ],
+          [
+            3.343757891030176,
+            3.3530377692244664,
+            3.369756079395916,
+            3.378701598282513
+          ]
+        ],
+        [
+          [
+            3.3323156832400356,
+            3.303131872045551,
+            3.2928295947065886,
+            3.300848306091101
+          ],
+          [
+            3.303131872045551,
+            3.287455634824026,
+            3.2795775602679536,
+            3.288463361094208
+          ],
+          [
+            3.2928295947065886,
+            3.2795775602679536,
+            3.27950733291757,
+            3.289473925966674
+          ],
+          [
+            3.300848306091101,
+            3.288463361094208,
+            3.289473925966674,
+            3.3023955796668547
+          ]
+        ],
+        [
+          [
+            3.165240879805207,
+            3.1505067573305894,
+            3.108877045007466,
+            3.0932630437138724
+          ],
+          [
+            3.1505067573305894,
+            3.155230551942962,
+            3.119884596338816,
+            3.111545406321785
+          ],
+          [
+            3.108877045007466,
+            3.119884596338816,
+            3.101249280411374,
+            3.1056375644659147
+          ],
+          [
+            3.0932630437138724,
+            3.111545406321785,
+            3.1056375644659147,
+            3.137310197720048
+          ]
+        ],
+        [
+          [
+            3.4090063129460435,
+            3.3666609930616156,
+            3.3724309406636714,
+            3.391081471237343
+          ],
+          [
+            3.3666609930616156,
+            3.3486540388080583,
+            3.3626962350688117,
+            3.3855015495156953
+          ],
+          [
+            3.3724309406636714,
+            3.3626962350688117,
+            3.391081940817283,
+            3.417769368229847
+          ],
+          [
+            3.391081471237343,
+            3.3855015495156953,
+            3.417769368229847,
+            3.449953408060548
+          ]
+        ],
+        [
+          [
+            3.219150134546611,
+            3.2394840090304107,
+            3.234800162803767,
+            3.2312707502216096
+          ],
+          [
+            3.2394840090304107,
+            3.2811001027868443,
+            3.2817669384266615,
+            3.2804918220138424
+          ],
+          [
+            3.234800162803767,
+            3.2817669384266615,
+            3.2936647990632553,
+            3.2965836972168723
+          ],
+          [
+            3.2312707502216096,
+            3.2804918220138424,
+            3.2965836972168723,
+            3.3067914485983705
+          ]
+        ],
+        [
+          [
+            3.246986630362574,
+            3.2418865467432343,
+            3.2418340051495185,
+            3.226941672360882
+          ],
+          [
+            3.2418865467432343,
+            3.2514485813562524,
+            3.2547824459468924,
+            3.242004017960253
+          ],
+          [
+            3.2418340051495185,
+            3.2547824459468924,
+            3.266154673377028,
+            3.256809590550155
+          ],
+          [
+            3.226941672360882,
+            3.242004017960253,
+            3.256809590550155,
+            3.256720979365617
+          ]
+        ],
+        [
+          [
+            3.1248535895138128,
+            3.1017930226864854,
+            3.0826276680681803,
+            3.0985244584425833
+          ],
+          [
+            3.1017930226864854,
+            3.0985816398848183,
+            3.0853385276538168,
+            3.1038826498237357
+          ],
+          [
+            3.0826276680681803,
+            3.0853385276538168,
+            3.086459522149177,
+            3.1131594872943835
+          ],
+          [
+            3.0985244584425833,
+            3.1038826498237357,
+            3.1131594872943835,
+            3.1557028485141276
+          ]
+        ],
+        [
+          [
+            3.2241990437291883,
+            3.207655406688893,
+            3.2164351339841653,
+            3.2203204731661614
+          ],
+          [
+            3.207655406688893,
+            3.2133025801577735,
+            3.23118986848105,
+            3.243415849117431
+          ],
+          [
+            3.2164351339841653,
+            3.23118986848105,
+            3.2696185295832767,
+            3.292953385830783
+          ],
+          [
+            3.2203204731661614,
+            3.243415849117431,
+            3.292953385830783,
+            3.333467398206613
+          ]
+        ],
+        [
+          [
+            3.2939046428017495,
+            3.278405000818111,
+            3.26955492001606,
+            3.238218656671681
+          ],
+          [
+            3.278405000818111,
+            3.2810420724114877,
+            3.2786358367875894,
+            3.2511631618104433
+          ],
+          [
+            3.26955492001606,
+            3.2786358367875894,
+            3.2898444037753722,
+            3.2709242036337396
+          ],
+          [
+            3.238218656671681,
+            3.2511631618104433,
+            3.2709242036337396,
+            3.2678012050390635
+          ]
+        ],
+        [
+          [
+            3.3614453956667942,
+            3.3355912023410967,
+            3.3442065451861316,
+            3.3491020687797666
+          ],
+          [
+            3.3355912023410967,
+            3.328753396485452,
+            3.338719988751809,
+            3.343655058358563
+          ],
+          [
+            3.3442065451861316,
+            3.338719988751809,
+            3.354147669062627,
+            3.3598143290597573
+          ],
+          [
+            3.3491020687797666,
+            3.343655058358563,
+            3.3598143290597573,
+            3.366454364153554
+          ]
+        ],
+        [
+          [
+            3.317694693294665,
+            3.295898365435707,
+            3.304700285042251,
+            3.3126484285838376
+          ],
+          [
+            3.295898365435707,
+            3.2932410462427337,
+            3.30734000046154,
+            3.315119757536211
+          ],
+          [
+            3.304700285042251,
+            3.30734000046154,
+            3.3297294455608517,
+            3.338467844522291
+          ],
+          [
+            3.3126484285838376,
+            3.315119757536211,
+            3.338467844522291,
+            3.348620420129387
+          ]
+        ]
+      ],
+      "correction_second_moment_v_k": [
+        3.272499213199439,
+        0.019685349782607234,
+        0.014678305157883811,
+        0.013666702084927488
+      ],
+      "logical_parent_batches": 32,
+      "maximum_level_peak_memory_bytes": [
+        11585175040,
+        15769498112,
+        28762423808,
+        54486041088
+      ],
+      "mean_gradient_correction_cosine": [
+        [
+          1.0,
+          0.0631303324897324,
+          0.07989072202157804,
+          0.06382433782717338
+        ],
+        [
+          0.0631303324897324,
+          1.0,
+          0.6819817427481986,
+          0.4835990471621133
+        ],
+        [
+          0.07989072202157804,
+          0.6819817427481986,
+          1.0,
+          0.7659431645072741
+        ],
+        [
+          0.06382433782717338,
+          0.4835990471621133,
+          0.7659431645072741,
+          0.9999999999999999
+        ]
+      ],
+      "mean_gradient_correction_gram": [
+        [
+          3.159859799788006,
+          0.005349301966507126,
+          0.005036442406132758,
+          0.0031823382155227353
+        ],
+        [
+          0.005349301966507126,
+          0.002272219390663325,
+          0.001152899625570619,
+          0.0006466014539772723
+        ],
+        [
+          0.005036442406132758,
+          0.001152899625570619,
+          0.0012577294723209534,
+          0.000761932104396956
+        ],
+        [
+          0.0031823382155227353,
+          0.0006466014539772723,
+          0.000761932104396956,
+          0.0007867780206417355
+        ]
+      ],
+      "mean_gradient_level_cosine": [
+        [
+          1.0,
+          0.9996432889763529,
+          0.9990892333709793,
+          0.9985314537423494
+        ],
+        [
+          0.9996432889763529,
+          1.0,
+          0.9998045205751759,
+          0.9994466152133336
+        ],
+        [
+          0.9990892333709793,
+          0.9998045205751759,
+          0.9999999999999999,
+          0.999877956029134
+        ],
+        [
+          0.9985314537423494,
+          0.9994466152133336,
+          0.999877956029134,
+          1.0
+        ]
+      ],
+      "mean_gradient_level_gram": [
+        [
+          3.159859799788006,
+          3.1652091017545225,
+          3.1702455441606534,
+          3.1734278823761706
+        ],
+        [
+          3.1652091017545225,
+          3.1728306231116936,
+          3.179019965143388,
+          3.1828489048128907
+        ],
+        [
+          3.1702455441606534,
+          3.179019965143388,
+          3.1864670366474175,
+          3.191057908421313
+        ],
+        [
+          3.1734278823761706,
+          3.1828489048128907,
+          3.191057908421313,
+          3.1964355582158537
+        ]
+      ],
+      "mean_gradient_level_to_direct_correction_gram_relative_residual": 8.871383420092214e-15,
+      "mean_per_batch_correction_cosine": [
+        [
+          1.0,
+          -0.031024471172368756,
+          -0.006378791956325534,
+          0.009392039620365524
+        ],
+        [
+          -0.031024471172368756,
+          1.0,
+          0.32516328622565865,
+          0.2144963096452698
+        ],
+        [
+          -0.006378791956325534,
+          0.32516328622565865,
+          1.0,
+          0.5052186722817288
+        ],
+        [
+          0.009392039620365524,
+          0.2144963096452698,
+          0.5052186722817288,
+          1.0
+        ]
+      ],
+      "mean_per_batch_correction_gram": [
+        [
+          3.272499213199439,
+          -0.00787436842933863,
+          -0.0013980289651886772,
+          0.001986239229058499
+        ],
+        [
+          -0.00787436842933863,
+          0.019685349782607234,
+          0.005527274434121792,
+          0.0035182221331561373
+        ],
+        [
+          -0.0013980289651886772,
+          0.005527274434121792,
+          0.014678305157883811,
+          0.007155652027775499
+        ],
+        [
+          0.001986239229058499,
+          0.0035182221331561373,
+          0.007155652027775499,
+          0.013666702084927488
+        ]
+      ],
+      "mean_per_batch_level_cosine": [
+        [
+          1.0,
+          0.996994294483441,
+          0.9930973032945196,
+          0.9878822768220729
+        ],
+        [
+          0.996994294483441,
+          1.0,
+          0.9977739023616268,
+          0.9935949167315802
+        ],
+        [
+          0.9930973032945196,
+          0.9977739023616268,
+          0.9999999999999999,
+          0.9979582726393302
+        ],
+        [
+          0.9878822768220729,
+          0.9935949167315802,
+          0.9979582726393302,
+          1.0
+        ]
+      ],
+      "mean_per_batch_level_gram": [
+        [
+          3.272499213199439,
+          3.2646248447701005,
+          3.263226815804912,
+          3.2652130550339704
+        ],
+        [
+          3.2646248447701005,
+          3.276435826123369,
+          3.2805650715923025,
+          3.2860695329545164
+        ],
+        [
+          3.263226815804912,
+          3.2805650715923025,
+          3.2993726222191198,
+          3.31203273560911
+        ],
+        [
+          3.2652130550339704,
+          3.2860695329545164,
+          3.31203273560911,
+          3.3383595510840274
+        ]
+      ],
+      "per_batch_level_to_direct_correction_gram_relative_residual": 4.662881090028516e-16
+    }
+  },
+  "timing": {
+    "method": "single distributed forward/backward including DDP gradient reduction",
+    "rank_aggregation": "maximum",
+    "repeats_per_parent_batch_and_level": 1,
+    "timing_parent_batches": 8
+  },
+  "tokenizer": {
+    "eos_token_id": 1,
+    "name": "t5-base",
+    "pad_token_id": 0,
+    "resolved_commit": "a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1",
+    "revision": "main",
+    "vocab_size": 32100
+  },
+  "wall_time_seconds": 1949.8830711841583,
+  "weights": {
+    "metadata": {
+      "format": "umcg_canonical_fp32",
+      "optimizer_update": "30",
+      "source_backend": "ddp"
+    },
+    "path": "/home/ubuntu/checkpoint/keunyoung/umcg/full_gradient_3000_20260721T232425_KST_f57ee32/exports/rr_3000_step00030.safetensors",
+    "sha256": "84ef521ce766ae9fccd98a71a30510ee40bbd0aef1ef8b93c0c9048c0a2ed495"
+  }
+}

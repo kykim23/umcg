@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#222}.grid{stroke:#ddd;stroke-width:1}.axis{stroke:#222;stroke-width:1.5}.series{fill:none;stroke-width:3}.point{stroke:white;stroke-width:1.5}</style>
+<text x="500.0" y="34" text-anchor="middle" font-size="22" font-weight="bold">Minimum cosine among mean context-level gradients</text>
+<line class="grid" x1="100.00" y1="70" x2="100.00" y2="530"/>
+<text x="100.00" y="558" text-anchor="middle" font-size="13">30</text>
+<line class="grid" x1="100" y1="530.00" x2="965" y2="530.00"/>
+<text x="88" y="535.00" text-anchor="end" font-size="13">0.714</text>
+<line class="grid" x1="273.00" y1="70" x2="273.00" y2="530"/>
+<text x="273.00" y="558" text-anchor="middle" font-size="13">624</text>
+<line class="grid" x1="100" y1="438.00" x2="965" y2="438.00"/>
+<text x="88" y="443.00" text-anchor="end" font-size="13">0.775</text>
+<line class="grid" x1="446.00" y1="70" x2="446.00" y2="530"/>
+<text x="446.00" y="558" text-anchor="middle" font-size="13">1218</text>
+<line class="grid" x1="100" y1="346.00" x2="965" y2="346.00"/>
+<text x="88" y="351.00" text-anchor="end" font-size="13">0.836</text>
+<line class="grid" x1="619.00" y1="70" x2="619.00" y2="530"/>
+<text x="619.00" y="558" text-anchor="middle" font-size="13">1812</text>
+<line class="grid" x1="100" y1="254.00" x2="965" y2="254.00"/>
+<text x="88" y="259.00" text-anchor="end" font-size="13">0.897</text>
+<line class="grid" x1="792.00" y1="70" x2="792.00" y2="530"/>
+<text x="792.00" y="558" text-anchor="middle" font-size="13">2406</text>
+<line class="grid" x1="100" y1="162.00" x2="965" y2="162.00"/>
+<text x="88" y="167.00" text-anchor="end" font-size="13">0.959</text>
+<line class="grid" x1="965.00" y1="70" x2="965.00" y2="530"/>
+<text x="965.00" y="558" text-anchor="middle" font-size="13">3000</text>
+<line class="grid" x1="100" y1="70.00" x2="965" y2="70.00"/>
+<text x="88" y="75.00" text-anchor="end" font-size="13">1.02</text>
+<line class="axis" x1="100" y1="530" x2="965" y2="530"/>
+<line class="axis" x1="100" y1="70" x2="100" y2="530"/>
+<text x="532.5" y="596" text-anchor="middle" font-size="16">Optimizer update</text>
+<text x="24" y="300.0" text-anchor="middle" font-size="16" transform="rotate(-90 24 300.0)">Minimum off-diagonal cosine</text>
+<polyline class="series" points="100.00,101.72 178.64,121.79 528.13,188.83 877.63,427.27 965.00,498.28" stroke="#0072B2"/>
+<circle class="point" cx="100.00" cy="101.72" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="178.64" cy="121.79" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="528.13" cy="188.83" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="877.63" cy="427.27" r="4.5" fill="#0072B2"/>
+<circle class="point" cx="965.00" cy="498.28" r="4.5" fill="#0072B2"/>
+<polyline class="series" points="100.00,101.78 178.64,119.74 528.13,195.03 877.63,410.73 965.00,486.24" stroke="#D55E00"/>
+<circle class="point" cx="100.00" cy="101.78" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="178.64" cy="119.74" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="528.13" cy="195.03" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="877.63" cy="410.73" r="4.5" fill="#D55E00"/>
+<circle class="point" cx="965.00" cy="486.24" r="4.5" fill="#D55E00"/>
+<line x1="112" y1="90" x2="142" y2="90" stroke="#0072B2" stroke-width="4"/>
+<text x="150" y="95" font-size="13">Full trajectory</text>
+<line x1="112" y1="113" x2="142" y2="113" stroke="#D55E00" stroke-width="4"/>
+<text x="150" y="118" font-size="13">RR trajectory</text>
+</svg>

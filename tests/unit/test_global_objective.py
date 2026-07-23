@@ -1,5 +1,9 @@
+import json
+import math
+
 import pytest
 import torch
+from torch import nn
 
 from umcg.data.collate import ParentBatch
 from umcg.estimators.global_objective import (
@@ -28,6 +32,37 @@ def make_batch(mask_rows):
     )
     batch.validate()
     return batch
+
+
+class TinyCausalGradientModel(nn.Module):
+    """Small prefix-invariant model with a real parameter-gradient vector."""
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.embedding = nn.Embedding(11, 4)
+        self.readout = nn.Linear(4, 1)
+        self.forward_lengths: list[int] = []
+
+    def forward(self, input_ids: torch.Tensor) -> torch.Tensor:
+        self.forward_lengths.append(input_ids.shape[1])
+        predictions = self.readout(self.embedding(input_ids[:, :-1])).squeeze(-1)
+        targets = input_ids[:, 1:].float() / 10.0
+        return (predictions - targets).square() * 0.001
+
+
+def flattened_gradient(scalar: torch.Tensor, model: nn.Module) -> torch.Tensor:
+    gradients = torch.autograd.grad(scalar, tuple(model.parameters()))
+    return torch.cat([gradient.reshape(-1) for gradient in gradients])
+
+
+def segmented_4096_tokens() -> torch.Tensor:
+    input_ids = torch.empty((1, 4096), dtype=torch.long)
+    input_ids[:, :512] = 1
+    input_ids[:, 512:1024] = 3
+    input_ids[:, 1024:2048] = 6
+    input_ids[:, 2048:] = 9
+    input_ids[:, 1::31] = (input_ids[:, 1::31] + 1) % 11
+    return input_ids
 
 
 def test_q_one_gradient_is_the_full_global_token_average_across_microbatches():
@@ -187,3 +222,114 @@ def test_russian_roulette_scalar_is_monte_carlo_unbiased():
     for _ in range(30_000):
         values.append(cached[sampler.sample()])
     assert sum(values) / len(values) == pytest.approx(float(exact), abs=0.05)
+
+
+def test_tail_probabilities_induce_the_expected_maximum_level_probabilities():
+    levels = LevelSpec((512, 1024, 2048, 4096), (1.0, 0.5, 0.25, 0.125))
+    sampler = LevelSampler(levels, seed=1729)
+    torch.testing.assert_close(
+        sampler.maximum_level_probabilities,
+        torch.tensor([0.5, 0.25, 0.125, 0.125], dtype=torch.float64),
+        rtol=0,
+        atol=0,
+    )
+
+
+def test_selected_context_gradient_accumulates_every_lower_correction_in_one_forward():
+    torch.manual_seed(11)
+    model = TinyCausalGradientModel()
+    input_ids = segmented_4096_tokens()
+    levels = LevelSpec((512, 1024, 2048, 4096), (1.0, 0.5, 0.25, 0.125))
+    target_mask = torch.ones((1, 4095), dtype=torch.bool)
+    counts = torch.tensor([511, 1023, 2047, 4095])
+
+    full_level_gradients = []
+    for length in levels.lengths:
+        losses = model(input_ids[:, :length])
+        full_level_gradients.append(flattened_gradient(losses.mean(), model))
+
+    selected_gradients = []
+    for level_index, length in enumerate(levels.lengths):
+        model.forward_lengths.clear()
+        losses = model(input_ids[:, :length])
+        coefficients = global_token_coefficients(
+            target_mask,
+            levels=levels,
+            global_target_counts=counts,
+            sampled_level_index=level_index,
+            gradient_estimator="russian_roulette",
+            gradient_scale=1.0,
+        )
+        selected_gradients.append(flattened_gradient(estimator_scalar(losses, coefficients), model))
+        assert model.forward_lengths == [length]
+
+    g_512, g_1024, g_2048, g_4096 = full_level_gradients
+    expected_2048 = g_512 + 2 * (g_1024 - g_512) + 4 * (g_2048 - g_1024)
+    expected_4096 = expected_2048 + 8 * (g_4096 - g_2048)
+    torch.testing.assert_close(selected_gradients[2], expected_2048, rtol=1e-5, atol=1e-6)
+    torch.testing.assert_close(selected_gradients[3], expected_4096, rtol=1e-5, atol=1e-6)
+
+
+def test_4096_monte_carlo_mean_parameter_gradient_converges_to_full_gradient():
+    torch.manual_seed(11)
+    model = TinyCausalGradientModel()
+    input_ids = segmented_4096_tokens()
+    levels = LevelSpec((512, 1024, 2048, 4096), (1.0, 0.5, 0.25, 0.125))
+    target_mask = torch.ones((1, 4095), dtype=torch.bool)
+    counts = torch.tensor([511, 1023, 2047, 4095])
+
+    full_gradient = flattened_gradient(model(input_ids).mean(), model)
+    outcome_gradients = []
+    for level_index, length in enumerate(levels.lengths):
+        losses = model(input_ids[:, :length])
+        coefficients = global_token_coefficients(
+            target_mask,
+            levels=levels,
+            global_target_counts=counts,
+            sampled_level_index=level_index,
+            gradient_estimator="russian_roulette",
+            gradient_scale=1.0,
+        )
+        outcome_gradients.append(flattened_gradient(estimator_scalar(losses, coefficients), model))
+    outcomes = torch.stack(outcome_gradients).double()
+    probabilities = LevelSampler(levels, seed=1729).maximum_level_probabilities
+
+    exact_expectation = (probabilities.unsqueeze(1) * outcomes).sum(dim=0)
+    torch.testing.assert_close(exact_expectation, full_gradient.double(), rtol=1e-5, atol=1e-6)
+
+    sample_count = 65_536
+    generator = torch.Generator(device="cpu")
+    generator.manual_seed(1729)
+    sampled_indices = torch.multinomial(
+        probabilities,
+        num_samples=sample_count,
+        replacement=True,
+        generator=generator,
+    )
+    sampled_gradients = outcomes[sampled_indices]
+    mean_gradient = sampled_gradients.mean(dim=0)
+    error_l2 = torch.linalg.vector_norm(mean_gradient - full_gradient.double())
+    full_l2 = torch.linalg.vector_norm(full_gradient.double())
+    relative_l2_error = error_l2 / full_l2
+    cosine_similarity = torch.nn.functional.cosine_similarity(
+        mean_gradient, full_gradient.double(), dim=0
+    )
+    standard_error_l2 = torch.sqrt(
+        sampled_gradients.var(dim=0, unbiased=True).sum() / sample_count
+    )
+    error_over_standard_error = error_l2 / standard_error_l2
+    metrics = {
+        "samples": sample_count,
+        "gradient_dimension": full_gradient.numel(),
+        "relative_l2_error": float(relative_l2_error),
+        "cosine_similarity": float(cosine_similarity),
+        "standard_error_l2": float(standard_error_l2),
+        "relative_standard_error_l2": float(standard_error_l2 / full_l2),
+        "error_over_standard_error": float(error_over_standard_error),
+    }
+    print("UMCG_4096_GRADIENT_METRICS=" + json.dumps(metrics, sort_keys=True))
+
+    assert math.isfinite(metrics["relative_l2_error"])
+    assert relative_l2_error <= 0.02
+    assert cosine_similarity >= 0.999
+    assert error_l2 <= 4 * standard_error_l2

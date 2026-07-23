@@ -1,0 +1,345 @@
+{
+  "accumulation_steps": 4,
+  "attention": {
+    "hardware": {
+      "capability_major": 9,
+      "capability_minor": 0,
+      "cuda_available": true,
+      "device_name": "NVIDIA H100 80GB HBM3"
+    },
+    "huggingface_implementation": "sdpa",
+    "package_versions": {
+      "flash-attn": null,
+      "flash-attn-3": null,
+      "flash-attn-4": null,
+      "torch": "2.11.0+cu128",
+      "transformers": "5.14.1"
+    },
+    "rank_probe_results": [
+      {
+        "rank": 0,
+        "results": [
+          {
+            "backend": "pytorch_sdpa_flash",
+            "error": "RuntimeError: No available kernel. Aborting execution.",
+            "level_times_ms": {},
+            "passed": false,
+            "worst_level_time_ms": null
+          },
+          {
+            "backend": "pytorch_sdpa_cudnn",
+            "error": null,
+            "level_times_ms": {
+              "512": 1.317555084824562,
+              "1024": 1.288698986172676,
+              "2048": 1.551806926727295,
+              "4096": 2.0721517503261566
+            },
+            "passed": true,
+            "worst_level_time_ms": 2.0721517503261566
+          },
+          {
+            "backend": "pytorch_sdpa_efficient",
+            "error": null,
+            "level_times_ms": {
+              "512": 0.5057733505964279,
+              "1024": 0.5395002663135529,
+              "2048": 1.0726656764745712,
+              "4096": 3.1479597091674805
+            },
+            "passed": true,
+            "worst_level_time_ms": 3.1479597091674805
+          },
+          {
+            "backend": "pytorch_sdpa_math",
+            "error": null,
+            "level_times_ms": {
+              "512": 0.9580831974744797,
+              "1024": 1.178935170173645,
+              "2048": 3.249669447541237,
+              "4096": 11.851111426949501
+            },
+            "passed": true,
+            "worst_level_time_ms": 11.851111426949501
+          },
+          {
+            "backend": "eager",
+            "error": null,
+            "level_times_ms": {
+              "512": 0.9712669998407364,
+              "1024": 1.1195186525583267,
+              "2048": 2.7710720896720886,
+              "4096": 10.323755443096161
+            },
+            "passed": true,
+            "worst_level_time_ms": 10.323755443096161
+          }
+        ]
+      },
+      {
+        "rank": 1,
+        "results": [
+          {
+            "backend": "pytorch_sdpa_flash",
+            "error": "RuntimeError: No available kernel. Aborting execution.",
+            "level_times_ms": {},
+            "passed": false,
+            "worst_level_time_ms": null
+          },
+          {
+            "backend": "pytorch_sdpa_cudnn",
+            "error": null,
+            "level_times_ms": {
+              "512": 1.4654677361249924,
+              "1024": 1.2942999601364136,
+              "2048": 1.7085541039705276,
+              "4096": 1.8340349197387695
+            },
+            "passed": true,
+            "worst_level_time_ms": 1.8340349197387695
+          },
+          {
+            "backend": "pytorch_sdpa_efficient",
+            "error": null,
+            "level_times_ms": {
+              "512": 0.520976260304451,
+              "1024": 0.5372967571020126,
+              "2048": 1.0726694017648697,
+              "4096": 3.1343158334493637
+            },
+            "passed": true,
+            "worst_level_time_ms": 3.1343158334493637
+          },
+          {
+            "backend": "pytorch_sdpa_math",
+            "error": null,
+            "level_times_ms": {
+              "512": 0.9544305503368378,
+              "1024": 1.171804964542389,
+              "2048": 3.21250781416893,
+              "4096": 11.83752529323101
+            },
+            "passed": true,
+            "worst_level_time_ms": 11.83752529323101
+          },
+          {
+            "backend": "eager",
+            "error": null,
+            "level_times_ms": {
+              "512": 0.9911488741636276,
+              "1024": 1.0969266295433044,
+              "2048": 2.767140045762062,
+              "4096": 10.333484038710594
+            },
+            "passed": true,
+            "worst_level_time_ms": 10.333484038710594
+          }
+        ]
+      }
+    ],
+    "requested_backend": "automatic",
+    "resolved_backend": "pytorch_sdpa_cudnn"
+  },
+  "batch_resolution": {
+    "batch_size": 64,
+    "source": "explicit"
+  },
+  "batch_size": 64,
+  "canonical_cli": [
+    "/home/ubuntu/checkpoint/keunyoung/umcg/full_gradient_3000_20260721T232425_KST_f57ee32/torchrun_no_ddp_graph_split.py",
+    "--distributed_backend",
+    "ddp",
+    "--model_backend",
+    "huggingface",
+    "--model_config",
+    "configs/model/llama_350m_t5_4096.json",
+    "--tokenizer",
+    "t5-base",
+    "--tokenizer_revision",
+    "main",
+    "--precision",
+    "bfloat16",
+    "--attention_backend",
+    "automatic",
+    "--estimator_config",
+    "/home/ubuntu/checkpoint/keunyoung/umcg/full_gradient_3000_20260721T232425_KST_f57ee32/calibration_350m_exact_64_32_32.json",
+    "--gradient_estimator",
+    "russian_roulette",
+    "--optimizer",
+    "adamw",
+    "--scheduler",
+    "cosine",
+    "--learning_rate",
+    "3e-4",
+    "--beta1",
+    "0.9",
+    "--beta2",
+    "0.95",
+    "--epsilon",
+    "1e-8",
+    "--weight_decay",
+    "0.1",
+    "--batch_size",
+    "64",
+    "--total_batch_size",
+    "512",
+    "--num_training_steps",
+    "4",
+    "--warmup_steps",
+    "4",
+    "--eval_every",
+    "5",
+    "--eval_parent_batches",
+    "1",
+    "--save_every",
+    "4",
+    "--save_at_step",
+    "4",
+    "--save_dir",
+    "/home/ubuntu/checkpoint/keunyoung/umcg/full_gradient_3000_20260721T232425_KST_f57ee32/rr_350m_all_shapes_preflight",
+    "--c4_source",
+    "local_raw",
+    "--c4_local_path",
+    "/home/ubuntu/data/c4_en/en",
+    "--c4_revision",
+    "1588ec454efa1a09f29cd18ddd04fe05fc8653a2",
+    "--workers",
+    "1",
+    "--seed",
+    "777",
+    "--use_torch_compile",
+    "--compile_mode",
+    "default",
+    "--activation_checkpointing",
+    "--wandb_mode",
+    "disabled",
+    "--name",
+    "umcg_350m_rr_all_shapes_preflight",
+    "--initial_weights",
+    "/home/ubuntu/checkpoint/keunyoung/umcg/full_gradient_3000_20260721T232425_KST_f57ee32/pilot_350m_exact_1_1_1.json.initial.safetensors"
+  ],
+  "config_sha256": "45b699d81ea27a91363e68c421aaac28e1e5a1209de13ebcbd2ada716e58009c",
+  "data_source": {
+    "file_manifest_sha256": "c26bb10e180f23234c55564cad5364f8c5b826d8f5a690c002234e3df8852b4f",
+    "path": "/home/ubuntu/data/c4_en/en",
+    "source": "local_raw",
+    "train_shard_count": 1024,
+    "upstream_revision": "1588ec454efa1a09f29cd18ddd04fe05fc8653a2",
+    "validation_shard_count": 8
+  },
+  "estimator": {
+    "context_levels": [
+      512,
+      1024,
+      2048,
+      4096
+    ],
+    "sampling": "shared_global_microbatch",
+    "schema_version": 1,
+    "source": {
+      "audit_parent_batches": 32,
+      "criterion": "gradient_variance_times_expected_distributed_cuda_cost",
+      "independent_audit_passed": true,
+      "logical_parent_batch_size": 128,
+      "measurement_parent_batches": 64,
+      "seed": 777,
+      "selection_parent_batches": 32,
+      "timing_repeats": 1,
+      "type": "full_coordinate_calibration"
+    },
+    "tail_probabilities": [
+      1.0,
+      1.0,
+      0.75,
+      0.25
+    ]
+  },
+  "fp8": null,
+  "model": {
+    "architectures": [
+      "LlamaForCausalLM"
+    ],
+    "attention_bias": false,
+    "attention_dropout": 0.0,
+    "bos_token_id": 0,
+    "eos_token_id": 1,
+    "hidden_act": "silu",
+    "hidden_size": 1024,
+    "initializer_range": 0.02,
+    "intermediate_size": 2736,
+    "lm_head_chunk_size": 128,
+    "max_position_embeddings": 4096,
+    "mlp_bias": false,
+    "model_type": "llama",
+    "num_attention_heads": 16,
+    "num_hidden_layers": 24,
+    "num_key_value_heads": 16,
+    "pad_token_id": 0,
+    "rms_norm_eps": 1e-06,
+    "rope_theta": 10000.0,
+    "tie_word_embeddings": false,
+    "use_cache": false,
+    "vocab_size": 32100
+  },
+  "model_parameter_count": 368174080,
+  "parameter_roles": null,
+  "runtime": {
+    "activation_checkpointing": true,
+    "attention_backend": "automatic",
+    "batch_size": "64",
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "c4_local_path": "/home/ubuntu/data/c4_en/en",
+    "c4_repo": "allenai/c4",
+    "c4_revision": "1588ec454efa1a09f29cd18ddd04fe05fc8653a2",
+    "c4_source": "local_raw",
+    "compile_mode": "default",
+    "continue_from": null,
+    "distributed_backend": "ddp",
+    "epsilon": 1e-08,
+    "estimator_config": "/home/ubuntu/checkpoint/keunyoung/umcg/full_gradient_3000_20260721T232425_KST_f57ee32/calibration_350m_exact_64_32_32.json",
+    "eval_every": 5,
+    "eval_parent_batches": 1,
+    "gradient_clip_norm": null,
+    "gradient_estimator": "russian_roulette",
+    "initial_weights": "/home/ubuntu/checkpoint/keunyoung/umcg/full_gradient_3000_20260721T232425_KST_f57ee32/pilot_350m_exact_1_1_1.json.initial.safetensors",
+    "learning_rate": 0.0003,
+    "model_backend": "huggingface",
+    "model_config": "/home/ubuntu/keunyoung/workspace/umcg/configs/model/llama_350m_t5_4096.json",
+    "momentum": null,
+    "name": "umcg_350m_rr_all_shapes_preflight",
+    "num_training_steps": 4,
+    "optimizer": "adamw",
+    "precision": "bfloat16",
+    "save_at_steps": [
+      4
+    ],
+    "save_dir": "/home/ubuntu/checkpoint/keunyoung/umcg/full_gradient_3000_20260721T232425_KST_f57ee32/rr_350m_all_shapes_preflight",
+    "save_every": 4,
+    "scheduler": "cosine",
+    "seed": 777,
+    "tokenizer": "t5-base",
+    "tokenizer_revision": "main",
+    "total_batch_size": 512,
+    "use_torch_compile": true,
+    "wandb_entity": null,
+    "wandb_mode": "disabled",
+    "wandb_project": "umcg-pretraining",
+    "warmup_steps": 4,
+    "weight_decay": 0.1,
+    "workers": 1,
+    "zero_stage": null
+  },
+  "schema_version": 1,
+  "source_tree_sha256": "952ae8bbcc29b075017527c68052eec748e228278edde7b0da666a3351805163",
+  "tokenizer": {
+    "eos_token_id": 1,
+    "name": "t5-base",
+    "pad_token_id": 0,
+    "resolved_commit": "a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1",
+    "revision": "main",
+    "vocab_size": 32100
+  },
+  "trainable_parameter_count": 368174080,
+  "world_size": 2
+}

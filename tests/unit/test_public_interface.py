@@ -1,8 +1,12 @@
+import argparse
+import dataclasses
 from pathlib import Path
 
 import pytest
 
 from umcg.cli.arguments import build_training_parser
+from umcg.config import RuntimeConfig
+from umcg.training.runner import SUPPORTED_RUNTIME_ARGUMENTS
 
 CANONICAL_ENTRY_FILES = {
     "torchrun_main.py",
@@ -45,6 +49,8 @@ def valid_arguments(project_root: Path) -> list[str]:
         "--eval_every",
         "1",
         "--save_every",
+        "1",
+        "--save_at_step",
         "1",
         "--save_dir",
         "out",
@@ -96,6 +102,37 @@ def test_legacy_and_abbreviated_flags_are_rejected(project_root, forbidden):
     parser = build_training_parser()
     with pytest.raises(SystemExit):
         parser.parse_args([*valid_arguments(project_root), forbidden, "value"])
+
+
+def test_runner_argument_summary_matches_parser_and_runtime_config():
+    parser = build_training_parser()
+    parser_fields = {
+        action.dest for action in parser._actions if action.dest not in {"help", argparse.SUPPRESS}
+    }
+    runtime_fields = {field.name for field in dataclasses.fields(RuntimeConfig)}
+    runner_fields = {
+        field
+        for _group_name, group_fields in SUPPORTED_RUNTIME_ARGUMENTS
+        for field in group_fields
+    }
+    runner_field_count = sum(len(fields) for _name, fields in SUPPORTED_RUNTIME_ARGUMENTS)
+
+    assert runner_field_count == len(runner_fields)
+    assert runner_fields == parser_fields == runtime_fields
+
+
+def test_training_help_is_grouped_and_every_argument_is_explained():
+    parser = build_training_parser()
+    help_text = parser.format_help()
+    normalized_help = " ".join(help_text.split())
+    for group_name, _fields in SUPPORTED_RUNTIME_ARGUMENTS:
+        assert f"{group_name}:" in help_text
+    assert "INTEGER|auto" in help_text
+    assert "not CPU cores, threads, processes" in normalized_help
+    assert "Full gradients still require the context levels but ignore Q_k" in normalized_help
+    for action in parser._actions:
+        if action.dest != "help":
+            assert action.help not in {None, argparse.SUPPRESS}
 
 
 def test_package_initializers_do_not_reexport_public_objects(project_root):

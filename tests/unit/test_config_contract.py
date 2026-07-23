@@ -39,6 +39,7 @@ def runtime_config(**changes) -> RuntimeConfig:
         eval_every=10,
         eval_parent_batches=2,
         save_every=10,
+        save_at_steps=(),
         save_dir="out",
         c4_source="streaming",
         c4_repo="allenai/c4",
@@ -80,6 +81,16 @@ def test_local_raw_requires_a_path_and_accepts_two_gpu_runtime():
     runtime_config(
         c4_source="local_raw", c4_local_path="/data/c4_en/en"
     ).validate_before_model_creation(world_size=2)
+
+
+def test_explicit_checkpoint_steps_are_bounded_and_unique():
+    runtime_config(save_at_steps=(30, 100)).validate_before_model_creation(world_size=2)
+    with pytest.raises(ValueError, match="1..num_training_steps"):
+        runtime_config(save_at_steps=(0,)).validate_before_model_creation(world_size=2)
+    with pytest.raises(ValueError, match="1..num_training_steps"):
+        runtime_config(save_at_steps=(101,)).validate_before_model_creation(world_size=2)
+    with pytest.raises(ValueError, match="duplicates"):
+        runtime_config(save_at_steps=(30, 30)).validate_before_model_creation(world_size=2)
 
 
 @pytest.mark.parametrize(

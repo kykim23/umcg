@@ -1,0 +1,2455 @@
+{
+  "all_candidates": [
+    {
+      "estimator_noise_second_moment": 0.009785452380998982,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 44.18962335586548,
+      "gradient_variance": 0.08961436545100543,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.75,
+        0.25
+      ],
+      "objective": 3.960025056554814,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.020121443843106934,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 40.853623390197754,
+      "gradient_variance": 0.09995035691311338,
+      "maximum_level_probabilities": [
+        0.0,
+        0.25,
+        0.5,
+        0.25
+      ],
+      "objective": 4.0833342390441825,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.75,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.02283272222233096,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 40.88942742347717,
+      "gradient_variance": 0.1026616352923374,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.875,
+        0.125
+      ],
+      "objective": 4.197775485461513,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.003261817460332994,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 50.79001522064209,
+      "gradient_variance": 0.08309073053033944,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.5,
+        0.5
+      ],
+      "objective": 4.220179468330211,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        0.5
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.03316871368443888,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        0.9999999999999999,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 37.55342745780945,
+      "gradient_variance": 0.1129976267544453,
+      "maximum_level_probabilities": [
+        0.0,
+        0.25,
+        0.625,
+        0.125
+      ],
+      "objective": 4.2434481792276895,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.75,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.013597808922440918,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 47.454015254974365,
+      "gradient_variance": 0.09342672199244734,
+      "maximum_level_probabilities": [
+        0.0,
+        0.25,
+        0.25,
+        0.5
+      ],
+      "objective": 4.433473090651845,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.75,
+        0.5
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.04079342676732289,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 37.51762342453003,
+      "gradient_variance": 0.12062233983732928,
+      "maximum_level_probabilities": [
+        0.0,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "objective": 4.525463522602607,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.05384069660865487,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 34.217427492141724,
+      "gradient_variance": 0.13366960967866126,
+      "maximum_level_probabilities": [
+        0.0,
+        0.5,
+        0.375,
+        0.125
+      ],
+      "objective": 4.573830177082478,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.5,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.0010872724867776462,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 57.3904070854187,
+      "gradient_variance": 0.08091618555678404,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.25,
+        0.75
+      ],
+      "objective": 4.643812828903113,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        0.75
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.011423263948885626,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 54.05440711975098,
+      "gradient_variance": 0.09125217701889204,
+      "maximum_level_probabilities": [
+        0.0,
+        0.25,
+        0.0,
+        0.75
+      ],
+      "objective": 4.932582327142774,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.034269791846656905,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 44.11801528930664,
+      "gradient_variance": 0.1140987049166633,
+      "maximum_level_probabilities": [
+        0.0,
+        0.5,
+        0.0,
+        0.5
+      ],
+      "objective": 5.033808408003438,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.0,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 63.99079895019531,
+      "gradient_variance": 0.07982891307000639,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "objective": 5.108315926675398,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.11585664538130266,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 30.881427526474,
+      "gradient_variance": 0.19568555845130908,
+      "maximum_level_probabilities": [
+        0.0,
+        0.75,
+        0.125,
+        0.125
+      ],
+      "objective": 6.043049391291693,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.25,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.10280937553997072,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 34.181623458862305,
+      "gradient_variance": 0.1826382886099771,
+      "maximum_level_probabilities": [
+        0.0,
+        0.75,
+        0.0,
+        0.25
+      ],
+      "objective": 6.242873210437257,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.2398885429265983,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 29.213427543640137,
+      "gradient_variance": 0.3197174559966047,
+      "maximum_level_probabilities": [
+        0.0,
+        0.875,
+        0.0,
+        0.125
+      ],
+      "objective": 9.340042735193766,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.125,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.03788599944044116,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 154.22005605697632,
+      "gradient_variance": 0.11771491251044758,
+      "maximum_level_probabilities": [
+        0.25,
+        0.0,
+        0.25,
+        0.5
+      ],
+      "objective": 18.15400040610329,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.75,
+        0.5
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.044409634361107175,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 147.6196641921997,
+      "gradient_variance": 0.12423854743111362,
+      "maximum_level_probabilities": [
+        0.25,
+        0.0,
+        0.5,
+        0.25
+      ],
+      "objective": 18.34005265150767,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.75,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.03571145446688581,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 160.82044792175293,
+      "gradient_variance": 0.11554036753689223,
+      "maximum_level_probabilities": [
+        0.25,
+        0.0,
+        0.0,
+        0.75
+      ],
+      "objective": 18.58125366032697,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.75,
+        0.75
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.057456904202439096,
+      "expected_correction_coefficients": [
+        1.0,
+        0.9999999999999999,
+        0.9999999999999999,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 144.3194682598114,
+      "gradient_variance": 0.1372858172724455,
+      "maximum_level_probabilities": [
+        0.25,
+        0.0,
+        0.625,
+        0.125
+      ],
+      "objective": 19.813016148372963,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.75,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.05855798236465709,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 150.8840560913086,
+      "gradient_variance": 0.13838689543466354,
+      "maximum_level_probabilities": [
+        0.25,
+        0.25,
+        0.0,
+        0.5
+      ],
+      "objective": 20.88037609306583,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.0650816172853231,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 144.28366422653198,
+      "gradient_variance": 0.14491053035532953,
+      "maximum_level_probabilities": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "objective": 20.908222304677036,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.07812888712665508,
+      "expected_correction_coefficients": [
+        1.0,
+        0.9999999999999999,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 140.98346829414368,
+      "gradient_variance": 0.1579578001966615,
+      "maximum_level_probabilities": [
+        0.25,
+        0.25,
+        0.375,
+        0.125
+      ],
+      "objective": 22.269438515838708,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.5,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.12709756605797093,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 140.94766426086426,
+      "gradient_variance": 0.20692647912797735,
+      "maximum_level_probabilities": [
+        0.25,
+        0.5,
+        0.0,
+        0.25
+      ],
+      "objective": 29.165803906812886,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.1401448358993029,
+      "expected_correction_coefficients": [
+        1.0,
+        0.9999999999999999,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 137.64746832847595,
+      "gradient_variance": 0.21997374896930932,
+      "maximum_level_probabilities": [
+        0.25,
+        0.5,
+        0.125,
+        0.125
+      ],
+      "objective": 30.278829644349123,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.25,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.2641767334445986,
+      "expected_correction_coefficients": [
+        1.0,
+        0.9999999999999999,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 135.9794683456421,
+      "gradient_variance": 0.34400564651460497,
+      "maximum_level_probabilities": [
+        0.25,
+        0.625,
+        0.0,
+        0.125
+      ],
+      "objective": 46.77770492095487,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.75,
+        0.125,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.10713436340065755,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 257.65009689331055,
+      "gradient_variance": 0.18696327647066396,
+      "maximum_level_probabilities": [
+        0.5,
+        0.0,
+        0.0,
+        0.5
+      ],
+      "objective": 48.171106298157376,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.11365799832132353,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 251.04970502853394,
+      "gradient_variance": 0.19348691139132995,
+      "maximum_level_probabilities": [
+        0.5,
+        0.0,
+        0.25,
+        0.25
+      ],
+      "objective": 48.57483203167547,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.5,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.1267052681626555,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 247.74950909614563,
+      "gradient_variance": 0.20653418123266193,
+      "maximum_level_probabilities": [
+        0.5,
+        0.0,
+        0.375,
+        0.125
+      ],
+      "objective": 51.168742011966366,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.5,
+        0.5,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.17567394709397136,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 247.7137050628662,
+      "gradient_variance": 0.25550286016397783,
+      "maximum_level_probabilities": [
+        0.5,
+        0.25,
+        0.0,
+        0.25
+      ],
+      "objective": 63.291560145378355,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.18872121693530333,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 244.4135091304779,
+      "gradient_variance": 0.2685501300053098,
+      "maximum_level_probabilities": [
+        0.5,
+        0.25,
+        0.125,
+        0.125
+      ],
+      "objective": 65.63727965204382,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.5,
+        0.25,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.31275311448059895,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 242.74550914764404,
+      "gradient_variance": 0.39258202755060545,
+      "maximum_level_probabilities": [
+        0.5,
+        0.375,
+        0.0,
+        0.125
+      ],
+      "objective": 95.29752415998614,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.5,
+        0.125,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.3214030902019728,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 354.47974586486816,
+      "gradient_variance": 0.40123200327197917,
+      "maximum_level_probabilities": [
+        0.75,
+        0.0,
+        0.0,
+        0.25
+      ],
+      "objective": 142.22861855270313,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.33445036004330464,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 351.17954993247986,
+      "gradient_variance": 0.41427927311331103,
+      "maximum_level_probabilities": [
+        0.75,
+        0.0,
+        0.125,
+        0.125
+      ],
+      "objective": 145.48640867828746,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.25,
+        0.25,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.4584822575886004,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 349.511549949646,
+      "gradient_variance": 0.5383111706586068,
+      "maximum_level_probabilities": [
+        0.75,
+        0.125,
+        0.0,
+        0.125
+      ],
+      "objective": 188.14597161209807,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.25,
+        0.125,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.7499405438046031,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 402.894570350647,
+      "gradient_variance": 0.8297694568746093,
+      "maximum_level_probabilities": [
+        0.875,
+        0.0,
+        0.0,
+        0.125
+      ],
+      "objective": 334.3096088175854,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        0.125,
+        0.125,
+        0.125
+      ]
+    }
+  ],
+  "attention": {
+    "hardware": {
+      "capability_major": 9,
+      "capability_minor": 0,
+      "cuda_available": true,
+      "device_name": "NVIDIA H100 80GB HBM3"
+    },
+    "huggingface_implementation": "sdpa",
+    "package_versions": {
+      "flash-attn": null,
+      "flash-attn-3": null,
+      "flash-attn-4": null,
+      "torch": "2.11.0+cu128",
+      "transformers": "5.14.1"
+    },
+    "rank_probe_results": [
+      {
+        "rank": 0,
+        "results": [
+          {
+            "backend": "pytorch_sdpa_flash",
+            "error": "RuntimeError: No available kernel. Aborting execution.",
+            "level_times_ms": {},
+            "passed": false,
+            "worst_level_time_ms": null
+          },
+          {
+            "backend": "pytorch_sdpa_cudnn",
+            "error": null,
+            "level_times_ms": {
+              "512": 1.4110617339611053,
+              "1024": 1.6221795231103897,
+              "2048": 1.409171149134636,
+              "4096": 1.401163637638092
+            },
+            "passed": true,
+            "worst_level_time_ms": 1.6221795231103897
+          },
+          {
+            "backend": "pytorch_sdpa_efficient",
+            "error": "RuntimeError: No available kernel. Aborting execution.",
+            "level_times_ms": {},
+            "passed": false,
+            "worst_level_time_ms": null
+          },
+          {
+            "backend": "pytorch_sdpa_math",
+            "error": null,
+            "level_times_ms": {
+              "512": 0.9563006460666656,
+              "1024": 0.9687449783086777,
+              "2048": 1.1832602322101593,
+              "4096": 3.0664093792438507
+            },
+            "passed": true,
+            "worst_level_time_ms": 3.0664093792438507
+          },
+          {
+            "backend": "eager",
+            "error": null,
+            "level_times_ms": {
+              "512": 1.0559167712926865,
+              "1024": 0.9198300540447235,
+              "2048": 1.0667070746421814,
+              "4096": 2.8510279953479767
+            },
+            "passed": true,
+            "worst_level_time_ms": 2.8510279953479767
+          }
+        ]
+      },
+      {
+        "rank": 1,
+        "results": [
+          {
+            "backend": "pytorch_sdpa_flash",
+            "error": "RuntimeError: No available kernel. Aborting execution.",
+            "level_times_ms": {},
+            "passed": false,
+            "worst_level_time_ms": null
+          },
+          {
+            "backend": "pytorch_sdpa_cudnn",
+            "error": null,
+            "level_times_ms": {
+              "512": 1.5334971249103546,
+              "1024": 1.5139896422624588,
+              "2048": 1.9600559026002884,
+              "4096": 1.460392028093338
+            },
+            "passed": true,
+            "worst_level_time_ms": 1.9600559026002884
+          },
+          {
+            "backend": "pytorch_sdpa_efficient",
+            "error": "RuntimeError: No available kernel. Aborting execution.",
+            "level_times_ms": {},
+            "passed": false,
+            "worst_level_time_ms": null
+          },
+          {
+            "backend": "pytorch_sdpa_math",
+            "error": null,
+            "level_times_ms": {
+              "512": 1.033766195178032,
+              "1024": 1.0458901524543762,
+              "2048": 1.1817030608654022,
+              "4096": 3.083663061261177
+            },
+            "passed": true,
+            "worst_level_time_ms": 3.083663061261177
+          },
+          {
+            "backend": "eager",
+            "error": null,
+            "level_times_ms": {
+              "512": 1.08332559466362,
+              "1024": 0.9680632501840591,
+              "2048": 1.2292079627513885,
+              "4096": 2.875693142414093
+            },
+            "passed": true,
+            "worst_level_time_ms": 2.875693142414093
+          }
+        ]
+      }
+    ],
+    "requested_backend": "automatic",
+    "resolved_backend": "pytorch_sdpa_cudnn"
+  },
+  "batch_contract": {
+    "logical_parent_batch_size": 4,
+    "parent_samples": {
+      "audit": 8,
+      "measurement": 16,
+      "selection": 8
+    },
+    "selected_physical_parent_batch_size_per_gpu": 2,
+    "vram_probe": {
+      "memory_limit_fraction": 0.85,
+      "probes": [
+        {
+          "error": null,
+          "maximum_memory_fraction": 0.004793958275206137,
+          "passed": true,
+          "physical_parent_batch_size_per_gpu": 2
+        }
+      ],
+      "selected_physical_parent_batch_size_per_gpu": 2
+    },
+    "world_size": 2
+  },
+  "candidate_count": 35,
+  "data_source": {
+    "file_manifest_sha256": "c26bb10e180f23234c55564cad5364f8c5b826d8f5a690c002234e3df8852b4f",
+    "path": "/home/ubuntu/data/c4_en/en",
+    "source": "local_raw",
+    "train_shard_count": 1024,
+    "upstream_revision": "1588ec454efa1a09f29cd18ddd04fe05fc8653a2",
+    "validation_shard_count": 8
+  },
+  "diagnostic_only": false,
+  "estimator": null,
+  "gradient_statistics": {
+    "audit_temporary_full_gradient_count": 2,
+    "dot_product_accumulator_dtype": "float64",
+    "gradient_storage": "current_logical_batch_only",
+    "method": "full_coordinate_streaming_gram",
+    "model_parameter_count": 4182848,
+    "projection": null,
+    "trainable_parameter_count": 4182848
+  },
+  "independent_audit": {
+    "bootstrap_parent_batch_resamples": 500,
+    "cosine_similarity": 1.0,
+    "efficiency_objective_ratio_vs_q_one": 0.6905621448289097,
+    "efficiency_passed": false,
+    "efficiency_ratio_95_percent_confidence_interval": [
+      0.6905621448289098,
+      null
+    ],
+    "error_l2": 0.0,
+    "gram_consistency_passed": true,
+    "locked_schedule": {
+      "estimator_noise_second_moment": 3.8130248958268e-11,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 44.18962335586548,
+      "gradient_variance": 0.10213788163191762,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.75,
+        0.25
+      ],
+      "objective": 4.51343451968041,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        0.25
+      ]
+    },
+    "passed": false,
+    "q_one_baseline": {
+      "estimator_noise_second_moment": 0.0,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 63.99079895019531,
+      "gradient_variance": 0.10213788159378734,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "objective": 6.5358846462669,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "relative_l2_error": 0.0,
+    "unbiasedness_passed": true
+  },
+  "locked_estimator_diagnostic": null,
+  "optimizer_updates": 0,
+  "parent_cache": {
+    "batch_counts": {
+      "audit": 2,
+      "measurement": 4,
+      "selection": 2
+    },
+    "data_source": {
+      "file_manifest_sha256": "c26bb10e180f23234c55564cad5364f8c5b826d8f5a690c002234e3df8852b4f",
+      "path": "/home/ubuntu/data/c4_en/en",
+      "source": "local_raw",
+      "train_shard_count": 1024,
+      "upstream_revision": "1588ec454efa1a09f29cd18ddd04fe05fc8653a2",
+      "validation_shard_count": 8
+    },
+    "logical_parent_batch_size": 4,
+    "maximum_context": 4096,
+    "path": "/home/ubuntu/checkpoint/keunyoung/umcg/full_gradient_3000_20260721T232425_KST_f57ee32/tiny_exact_4_2_2.json.parents.pt",
+    "schema_version": 1,
+    "seed": 777,
+    "sha256": "3fcc86e368ffeede322818c7bae2ca66f8da6ffc4243ff69dce3b48374b8225f",
+    "split_contract": {
+      "assignment": "sha256(seed:calibration-split:document_hash) modulo 4",
+      "overlap_document_counts": {
+        "measurement_audit": 0,
+        "measurement_selection": 0,
+        "selection_audit": 0
+      },
+      "ratio": {
+        "audit": 0.25,
+        "measurement": 0.5,
+        "selection": 0.25
+      },
+      "scanned_parent_samples": 48,
+      "seed": 777,
+      "splits": {
+        "audit": {
+          "document_manifest_sha256": "72721e65eb590f32660d49b9e00a353bf93cead83987c1e2206a90127614dd1c",
+          "parent_batches": 2,
+          "parent_samples": 8,
+          "unique_documents": 8
+        },
+        "measurement": {
+          "document_manifest_sha256": "7ae921a5423fcb4b581f7bf52a55edac34ca8284f9ed513581d9ba9a93ae3fe8",
+          "parent_batches": 4,
+          "parent_samples": 16,
+          "unique_documents": 16
+        },
+        "selection": {
+          "document_manifest_sha256": "00558278be3d6330b26acca7aa273171d105594ca7457c3f4eb3bd38bbf213a2",
+          "parent_batches": 2,
+          "parent_samples": 8,
+          "unique_documents": 8
+        }
+      }
+    },
+    "tokenizer": {
+      "eos_token_id": 1,
+      "name": "t5-base",
+      "pad_token_id": 0,
+      "resolved_commit": "a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1",
+      "revision": "main",
+      "vocab_size": 32100
+    }
+  },
+  "pareto_candidates": [
+    {
+      "estimator_noise_second_moment": 0.2398885429265983,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 29.213427543640137,
+      "gradient_variance": 0.3197174559966047,
+      "maximum_level_probabilities": [
+        0.0,
+        0.875,
+        0.0,
+        0.125
+      ],
+      "objective": 9.340042735193766,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.125,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.11585664538130266,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 30.881427526474,
+      "gradient_variance": 0.19568555845130908,
+      "maximum_level_probabilities": [
+        0.0,
+        0.75,
+        0.125,
+        0.125
+      ],
+      "objective": 6.043049391291693,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.25,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.10280937553997072,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 34.181623458862305,
+      "gradient_variance": 0.1826382886099771,
+      "maximum_level_probabilities": [
+        0.0,
+        0.75,
+        0.0,
+        0.25
+      ],
+      "objective": 6.242873210437257,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.05384069660865487,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 34.217427492141724,
+      "gradient_variance": 0.13366960967866126,
+      "maximum_level_probabilities": [
+        0.0,
+        0.5,
+        0.375,
+        0.125
+      ],
+      "objective": 4.573830177082478,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.5,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.04079342676732289,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 37.51762342453003,
+      "gradient_variance": 0.12062233983732928,
+      "maximum_level_probabilities": [
+        0.0,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "objective": 4.525463522602607,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.03316871368443888,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        0.9999999999999999,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 37.55342745780945,
+      "gradient_variance": 0.1129976267544453,
+      "maximum_level_probabilities": [
+        0.0,
+        0.25,
+        0.625,
+        0.125
+      ],
+      "objective": 4.2434481792276895,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.75,
+        0.125
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.020121443843106934,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 40.853623390197754,
+      "gradient_variance": 0.09995035691311338,
+      "maximum_level_probabilities": [
+        0.0,
+        0.25,
+        0.5,
+        0.25
+      ],
+      "objective": 4.0833342390441825,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        0.75,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.009785452380998982,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 44.18962335586548,
+      "gradient_variance": 0.08961436545100543,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.75,
+        0.25
+      ],
+      "objective": 3.960025056554814,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        0.25
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.003261817460332994,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 50.79001522064209,
+      "gradient_variance": 0.08309073053033944,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.5,
+        0.5
+      ],
+      "objective": 4.220179468330211,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        0.5
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.0010872724867776462,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 57.3904070854187,
+      "gradient_variance": 0.08091618555678404,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.25,
+        0.75
+      ],
+      "objective": 4.643812828903113,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        0.75
+      ]
+    },
+    {
+      "estimator_noise_second_moment": 0.0,
+      "expected_correction_coefficients": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected_cuda_cost_ms": 63.99079895019531,
+      "gradient_variance": 0.07982891307000639,
+      "maximum_level_probabilities": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "objective": 5.108315926675398,
+      "schedule_evaluation": "analytic_four_outcome_enumeration",
+      "tail_probabilities": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "precision": "bfloat16",
+  "proposed_estimator": {
+    "context_levels": [
+      512,
+      1024,
+      2048,
+      4096
+    ],
+    "sampling": "shared_global_microbatch",
+    "schema_version": 1,
+    "source": {
+      "audit_parent_batches": 2,
+      "criterion": "gradient_variance_times_expected_distributed_cuda_cost",
+      "independent_audit_passed": false,
+      "logical_parent_batch_size": 4,
+      "measurement_parent_batches": 4,
+      "seed": 777,
+      "selection_parent_batches": 2,
+      "timing_repeats": 1,
+      "type": "full_coordinate_calibration"
+    },
+    "tail_probabilities": [
+      1.0,
+      1.0,
+      1.0,
+      0.25
+    ]
+  },
+  "schema_version": 3,
+  "selection_recommendation": {
+    "estimator_noise_second_moment": 0.009785452380998982,
+    "expected_correction_coefficients": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "expected_cuda_cost_ms": 44.18962335586548,
+    "gradient_variance": 0.08961436545100543,
+    "maximum_level_probabilities": [
+      0.0,
+      0.0,
+      0.75,
+      0.25
+    ],
+    "objective": 3.960025056554814,
+    "schedule_evaluation": "analytic_four_outcome_enumeration",
+    "tail_probabilities": [
+      1.0,
+      1.0,
+      1.0,
+      0.25
+    ]
+  },
+  "split_statistics": {
+    "audit": {
+      "batch_level_grams": [
+        [
+          [
+            0.2886973466361926,
+            0.2527991894804216,
+            0.2470720659867461,
+            0.24707206923213224
+          ],
+          [
+            0.2527991894804216,
+            0.2660382150987175,
+            0.2617106456039715,
+            0.26171064644963005
+          ],
+          [
+            0.2470720659867461,
+            0.2617106456039715,
+            0.2646189956909118,
+            0.26461899627618446
+          ],
+          [
+            0.24707206923213224,
+            0.26171064644963005,
+            0.26461899627618446,
+            0.2646189968779127
+          ]
+        ],
+        [
+          [
+            0.3388043540572739,
+            0.324381191313065,
+            0.32438118961951606,
+            0.3243811933584644
+          ],
+          [
+            0.324381191313065,
+            0.33322402070605134,
+            0.3332240199176563,
+            0.333224022529143
+          ],
+          [
+            0.32438118961951606,
+            0.3332240199176563,
+            0.33322401914456495,
+            0.3332240217485304
+          ],
+          [
+            0.3243811933584644,
+            0.333224022529143,
+            0.3332240217485304,
+            0.3332240243614604
+          ]
+        ]
+      ],
+      "correction_second_moment_v_k": [
+        0.3137508503467332,
+        0.03620158745563132,
+        0.003617959798494852,
+        1.271013350361252e-11
+      ],
+      "logical_parent_batches": 2,
+      "maximum_level_peak_memory_bytes": [
+        186664448,
+        201025536,
+        258977792,
+        407968256
+      ],
+      "mean_gradient_correction_cosine": [
+        [
+          0.9999999999999999,
+          -0.15552710129444566,
+          -0.0652947916460904,
+          0.001305292851107722
+        ],
+        [
+          -0.15552710129444566,
+          1.0,
+          0.04558655932730782,
+          -0.00398822834113888
+        ],
+        [
+          -0.0652947916460904,
+          0.04558655932730782,
+          0.9999999999999999,
+          -0.0012107292457021724
+        ],
+        [
+          0.001305292851107722,
+          -0.00398822834113888,
+          -0.0012107292457021724,
+          1.0
+        ]
+      ],
+      "mean_gradient_correction_gram": [
+        [
+          0.19715289480135942,
+          -0.009415786304783758,
+          -0.001233096290038422,
+          1.4610651984932811e-09
+        ],
+        [
+          -0.009415786304783758,
+          0.018590791203417143,
+          0.0002643641878741128,
+          -1.3708470749900628e-09
+        ],
+        [
+          -0.001233096290038422,
+          0.0002643641878741128,
+          0.0018089799078569036,
+          -1.2981472643410298e-10
+        ],
+        [
+          1.4610651984932811e-09,
+          -1.3708470749900628e-09,
+          -1.2981472643410298e-10,
+          6.3550667351212e-12
+        ]
+      ],
+      "mean_gradient_level_cosine": [
+        [
+          0.9999999999999999,
+          0.9528232126019055,
+          0.9468738379362005,
+          0.9468738455292127
+        ],
+        [
+          0.9528232126019055,
+          1.0,
+          0.9954051851639805,
+          0.9954051858065157
+        ],
+        [
+          0.9468738379362005,
+          0.9954051851639805,
+          0.9999999999999999,
+          0.9999999999838525
+        ],
+        [
+          0.9468738455292127,
+          0.9954051858065157,
+          0.9999999999838525,
+          0.9999999999999999
+        ]
+      ],
+      "mean_gradient_level_gram": [
+        [
+          0.19715289480135942,
+          0.1877371084965756,
+          0.1865040122065372,
+          0.1865040136676024
+        ],
+        [
+          0.1877371084965756,
+          0.1969121133952091,
+          0.19594338129304475,
+          0.19594338138326287
+        ],
+        [
+          0.1865040122065372,
+          0.19594338129304475,
+          0.1967836290987373,
+          0.1967836290591407
+        ],
+        [
+          0.1865040136676024,
+          0.19594338138326287,
+          0.1967836290591407,
+          0.1967836290258992
+        ]
+      ],
+      "mean_gradient_level_to_direct_correction_gram_relative_residual": 1.012581329292156e-15,
+      "mean_per_batch_correction_cosine": [
+        [
+          1.0,
+          -0.23608357061641538,
+          -0.08499284297704424,
+          0.0017487491591715021
+        ],
+        [
+          -0.23608357061641538,
+          1.0,
+          0.061145467356774306,
+          -0.0025999195295636104
+        ],
+        [
+          -0.08499284297704424,
+          0.061145467356774306,
+          1.0,
+          -0.0006246652699785699
+        ],
+        [
+          0.0017487491591715021,
+          -0.0025999195295636104,
+          -0.0006246652699785699,
+          1.0
+        ]
+      ],
+      "mean_per_batch_correction_gram": [
+        [
+          0.3137508503467332,
+          -0.025160659949990127,
+          -0.002863562593612226,
+          3.4921672133704803e-09
+        ],
+        [
+          -0.025160659949990127,
+          0.03620158745563132,
+          0.0006997774520418294,
+          -1.763594638648732e-09
+        ],
+        [
+          -0.002863562593612226,
+          0.0006997774520418294,
+          0.003617959798494852,
+          -1.3395356779641858e-10
+        ],
+        [
+          3.4921672133704803e-09,
+          -1.763594638648732e-09,
+          -1.3395356779641858e-10,
+          1.271013350361252e-11
+        ]
+      ],
+      "mean_per_batch_level_cosine": [
+        [
+          1.0,
+          0.9412297628030757,
+          0.932995776952418,
+          0.9329957833585748
+        ],
+        [
+          0.9412297628030757,
+          1.0,
+          0.9939561843848996,
+          0.9939561848372807
+        ],
+        [
+          0.932995776952418,
+          0.9939561843848996,
+          1.0,
+          0.9999999999787401
+        ],
+        [
+          0.9329957833585748,
+          0.9939561848372807,
+          0.9999999999787401,
+          0.9999999999999998
+        ]
+      ],
+      "mean_per_batch_level_gram": [
+        [
+          0.3137508503467332,
+          0.2885901903967433,
+          0.2857266278031311,
+          0.2857266312952983
+        ],
+        [
+          0.2885901903967433,
+          0.2996311179023844,
+          0.29746733276081394,
+          0.29746733448938656
+        ],
+        [
+          0.2857266278031311,
+          0.29746733276081394,
+          0.2989215074177384,
+          0.2989215090123574
+        ],
+        [
+          0.2857266312952983,
+          0.29746733448938656,
+          0.2989215090123574,
+          0.2989215106196865
+        ]
+      ],
+      "per_batch_level_to_direct_correction_gram_relative_residual": 1.213184764173508e-15
+    },
+    "measurement": {
+      "batch_level_grams": [
+        [
+          [
+            1.058672120088908,
+            1.0778640303190639,
+            1.0778640487228517,
+            1.0778640482189084
+          ],
+          [
+            1.0778640303190639,
+            1.1142331619716015,
+            1.114233185324617,
+            1.1142331846758493
+          ],
+          [
+            1.0778640487228517,
+            1.114233185324617,
+            1.1142332087811495,
+            1.1142332081287436
+          ],
+          [
+            1.0778640482189084,
+            1.1142331846758493,
+            1.1142332081287436,
+            1.114233207479976
+          ]
+        ],
+        [
+          [
+            0.2464380977655616,
+            0.22540460933400744,
+            0.22540461738664422,
+            0.22540461656376384
+          ],
+          [
+            0.22540460933400744,
+            0.23797069905501658,
+            0.23797070527772757,
+            0.23797070300796222
+          ],
+          [
+            0.22540461738664422,
+            0.23797070527772757,
+            0.23797071152631113,
+            0.2379707092564569
+          ],
+          [
+            0.22540461656376384,
+            0.23797070300796222,
+            0.2379707092564569,
+            0.23797070698881553
+          ]
+        ],
+        [
+          [
+            0.3258993463204132,
+            0.31198756841930736,
+            0.31198780007418175,
+            0.3119878059988243
+          ],
+          [
+            0.31198756841930736,
+            0.3160011680676062,
+            0.3160013939544131,
+            0.31600139960642953
+          ],
+          [
+            0.31198780007418175,
+            0.3160013939544131,
+            0.31600162080504385,
+            0.31600162645615054
+          ],
+          [
+            0.3119878059988243,
+            0.31600139960642953,
+            0.31600162645615054,
+            0.31600163212279436
+          ]
+        ],
+        [
+          [
+            0.26618058869917904,
+            0.2284341068783063,
+            0.21714282866370596,
+            0.21714282804430848
+          ],
+          [
+            0.2284341068783063,
+            0.24831021531896355,
+            0.24017188497578112,
+            0.24017188409170248
+          ],
+          [
+            0.21714282866370596,
+            0.24017188497578112,
+            0.24113632848905223,
+            0.24113632766531143
+          ],
+          [
+            0.21714282804430848,
+            0.24017188409170248,
+            0.24113632766531143,
+            0.24113632684407116
+          ]
+        ]
+      ],
+      "correction_second_moment_v_k": [
+        0.47429753821851545,
+        0.03158119184647034,
+        0.002275693737416742,
+        5.97207916520146e-12
+      ],
+      "incremental_cuda_time_ms": [
+        451.3093948364258,
+        -427.0641632080078,
+        13.343999862670898,
+        26.401567459106445
+      ],
+      "level_time_samples_ms": [
+        [
+          20.391616821289062,
+          24.495487213134766,
+          39.08310317993164,
+          65.03465270996094
+        ],
+        [
+          882.2271728515625,
+          23.994976043701172,
+          36.095359802246094,
+          62.94694519042969
+        ]
+      ],
+      "logical_parent_batches": 4,
+      "maximum_level_peak_memory_bytes": [
+        186664448,
+        201025536,
+        258977792,
+        407968256
+      ],
+      "mean_gradient_correction_cosine": [
+        [
+          0.9999999999999999,
+          0.007118359062382447,
+          -0.019207129720296055,
+          7.386702164921049e-06
+        ],
+        [
+          0.007118359062382447,
+          1.0,
+          0.11319932777553111,
+          -0.0023588661835531473
+        ],
+        [
+          -0.019207129720296055,
+          0.11319932777553111,
+          1.0,
+          3.057032327771937e-05
+        ],
+        [
+          7.386702164921049e-06,
+          -0.0023588661835531473,
+          3.057032327771937e-05,
+          1.0
+        ]
+      ],
+      "mean_gradient_correction_gram": [
+        [
+          0.19960360763030796,
+          0.0002890404332047799,
+          -0.00020467934211989254,
+          4.032436775693035e-12
+        ],
+        [
+          0.0002890404332047799,
+          0.00826017086383866,
+          0.00024539500189974884,
+          -2.6195736006295746e-10
+        ],
+        [
+          -0.00020467934211989254,
+          0.00024539500189974884,
+          0.0005689245822971714,
+          8.909640200707269e-13
+        ],
+        [
+          4.032436775693035e-12,
+          -2.6195736006295746e-10,
+          8.909640200707269e-13,
+          1.493019810726288e-12
+        ]
+      ],
+      "mean_gradient_level_cosine": [
+        [
+          0.9999999999999999,
+          0.9799866484598716,
+          0.9774595049257505,
+          0.9774595061435756
+        ],
+        [
+          0.9799866484598716,
+          0.9999999999999999,
+          0.9986386290242221,
+          0.9986386290127989
+        ],
+        [
+          0.9774595049257505,
+          0.9986386290242221,
+          1.0,
+          0.9999999999964299
+        ],
+        [
+          0.9774595061435756,
+          0.9986386290127989,
+          0.9999999999964299,
+          0.9999999999999999
+        ]
+      ],
+      "mean_gradient_level_gram": [
+        [
+          0.19960360763030796,
+          0.19989264806351262,
+          0.1996879687213928,
+          0.19968796872542527
+        ],
+        [
+          0.19989264806351262,
+          0.20844185936055612,
+          0.2084825750203361,
+          0.20848257476241114
+        ],
+        [
+          0.1996879687213928,
+          0.2084825750203361,
+          0.209092215262413,
+          0.2090922150053791
+        ],
+        [
+          0.19968796872542527,
+          0.20848257476241114,
+          0.2090922150053791,
+          0.20909221474983816
+        ]
+      ],
+      "mean_gradient_level_to_direct_correction_gram_relative_residual": 2.0943233628203756e-15,
+      "mean_level_cuda_time_ms_c_k": [
+        451.3093948364258,
+        24.24523162841797,
+        37.58923149108887,
+        63.99079895019531
+      ],
+      "mean_per_batch_correction_cosine": [
+        [
+          1.0,
+          -0.10928304358598326,
+          -0.08591932310660835,
+          0.0005909661209194573
+        ],
+        [
+          -0.10928304358598326,
+          0.9999999999999998,
+          0.09297908525527178,
+          -0.0012255811701501025
+        ],
+        [
+          -0.08591932310660835,
+          0.09297908525527178,
+          0.9999999999999998,
+          0.00011945011521855467
+        ],
+        [
+          0.0005909661209194573,
+          -0.0012255811701501025,
+          0.00011945011521855467,
+          0.9999999999999999
+        ]
+      ],
+      "mean_per_batch_correction_gram": [
+        [
+          0.47429753821851545,
+          -0.013374959480844419,
+          -0.0028227550258252297,
+          9.946053649554791e-10
+        ],
+        [
+          -0.013374959480844419,
+          0.03158119184647034,
+          0.0007882363056629385,
+          -5.322542228772376e-10
+        ],
+        [
+          -0.0028227550258252297,
+          0.0007882363056629385,
+          0.002275693737416742,
+          1.3925354445738878e-11
+        ],
+        [
+          9.946053649554791e-10,
+          -5.322542228772376e-10,
+          1.3925354445738878e-11,
+          5.97207916520146e-12
+        ]
+      ],
+      "mean_per_batch_level_cosine": [
+        [
+          1.0,
+          0.966888521166004,
+          0.9627706379870767,
+          0.9627706391107426
+        ],
+        [
+          0.966888521166004,
+          0.9999999999999999,
+          0.997622476291434,
+          0.997622476256578
+        ],
+        [
+          0.9627706379870767,
+          0.997622476291434,
+          1.0,
+          0.9999999999937442
+        ],
+        [
+          0.9627706391107426,
+          0.997622476256578,
+          0.9999999999937442,
+          0.9999999999999999
+        ]
+      ],
+      "mean_per_batch_level_gram": [
+        [
+          0.47429753821851545,
+          0.46092257873767123,
+          0.45809982371184593,
+          0.4580998247064512
+        ],
+        [
+          0.46092257873767123,
+          0.47912881110329697,
+          0.4770942923831347,
+          0.4770942928454859
+        ],
+        [
+          0.45809982371184593,
+          0.4770942923831347,
+          0.4773354674003892,
+          0.4773354678766656
+        ],
+        [
+          0.4580998247064512,
+          0.4770942928454859,
+          0.4773354678766656,
+          0.4773354683589142
+        ]
+      ],
+      "per_batch_level_to_direct_correction_gram_relative_residual": 1.2127161995981787e-15,
+      "timed_logical_parent_batches": 2
+    },
+    "selection": {
+      "batch_level_grams": [
+        [
+          [
+            0.39506142177558573,
+            0.36055773645696565,
+            0.33194647638608665,
+            0.3231496508439846
+          ],
+          [
+            0.36055773645696565,
+            0.3697298455195762,
+            0.35686304893995857,
+            0.3500350927135285
+          ],
+          [
+            0.33194647638608665,
+            0.35686304893995857,
+            0.38581962318842267,
+            0.38186106254828583
+          ],
+          [
+            0.3231496508439846,
+            0.3500350927135285,
+            0.38186106254828583,
+            0.38442613681939464
+          ]
+        ],
+        [
+          [
+            0.4168074169093887,
+            0.35207310094895417,
+            0.3431157355005363,
+            0.3431157344308099
+          ],
+          [
+            0.35207310094895417,
+            0.3494972538880157,
+            0.34277399622194626,
+            0.3427739944765754
+          ],
+          [
+            0.3431157355005363,
+            0.34277399622194626,
+            0.3505045250921625,
+            0.3505045234646386
+          ],
+          [
+            0.3431157344308099,
+            0.3427739944765754,
+            0.3505045234646386,
+            0.3505045218465351
+          ]
+        ]
+      ],
+      "correction_second_moment_v_k": [
+        0.4059344193424872,
+        0.052917131640362935,
+        0.028138578682183717,
+        0.003261817460332815
+      ],
+      "logical_parent_batches": 2,
+      "maximum_level_peak_memory_bytes": [
+        186664448,
+        201025536,
+        258977792,
+        407968256
+      ],
+      "mean_gradient_correction_cosine": [
+        [
+          1.0,
+          -0.23416872849152554,
+          -0.05887306798185061,
+          -0.06680606674015242
+        ],
+        [
+          -0.23416872849152554,
+          0.9999999999999999,
+          0.2857762132015538,
+          0.08746693025628545
+        ],
+        [
+          -0.05887306798185061,
+          0.2857762132015538,
+          1.0,
+          0.1708039969910306
+        ],
+        [
+          -0.06680606674015242,
+          0.08746693025628545,
+          0.1708039969910306,
+          1.0
+        ]
+      ],
+      "mean_gradient_correction_gram": [
+        [
+          0.28248730584474013,
+          -0.020386117708467214,
+          -0.003687560475657753,
+          -0.0014339374248649088
+        ],
+        [
+          -0.020386117708467214,
+          0.0268294841592684,
+          0.005516393693824754,
+          0.0005785819414483157
+        ],
+        [
+          -0.003687560475657753,
+          0.005516393693824754,
+          0.013888202162774373,
+          0.0008128976583962928
+        ],
+        [
+          -0.0014339374248649088,
+          0.0005785819414483157,
+          0.0008128976583962928,
+          0.0016309087268163867
+        ]
+      ],
+      "mean_gradient_level_cosine": [
+        [
+          1.0,
+          0.9516151469559408,
+          0.9090008397088554,
+          0.9015242191304785
+        ],
+        [
+          0.9516151469559408,
+          1.0,
+          0.9754479661875661,
+          0.9697453762477705
+        ],
+        [
+          0.9090008397088554,
+          0.9754479661875661,
+          0.9999999999999998,
+          0.9971609630760723
+        ],
+        [
+          0.9015242191304785,
+          0.9697453762477705,
+          0.9971609630760723,
+          1.0
+        ]
+      ],
+      "mean_gradient_level_gram": [
+        [
+          0.28248730584474013,
+          0.2621011881362731,
+          0.2584136276606152,
+          0.25697969023575035
+        ],
+        [
+          0.2621011881362731,
+          0.2685445545870741,
+          0.27037338780524117,
+          0.2695180323218246
+        ],
+        [
+          0.2584136276606152,
+          0.27037338780524117,
+          0.28609042318618255,
+          0.2860479653611624
+        ],
+        [
+          0.25697969023575035,
+          0.2695180323218246,
+          0.2860479653611624,
+          0.28763641626295844
+        ]
+      ],
+      "mean_gradient_level_to_direct_correction_gram_relative_residual": 2.1178565668289767e-15,
+      "mean_per_batch_correction_cosine": [
+        [
+          0.9999999999999999,
+          -0.3385493052723253,
+          -0.17575848232107635,
+          -0.12087549658974535
+        ],
+        [
+          -0.3385493052723253,
+          1.0,
+          0.23295710165395742,
+          0.07493052434978985
+        ],
+        [
+          -0.17575848232107635,
+          0.23295710165395742,
+          1.0,
+          0.14975438333304733
+        ],
+        [
+          -0.12087549658974535,
+          0.07493052434978985,
+          0.14975438333304733,
+          1.0
+        ]
+      ],
+      "mean_per_batch_correction_gram": [
+        [
+          0.4059344193424872,
+          -0.04961900063952715,
+          -0.018784312759648647,
+          -0.004398413305914132
+        ],
+        [
+          -0.04961900063952715,
+          0.052917131640362935,
+          0.0089892856368052,
+          0.000984434320013555
+        ],
+        [
+          -0.018784312759648647,
+          0.0089892856368052,
+          0.028138578682183717,
+          0.0014346978520702145
+        ],
+        [
+          -0.004398413305914132,
+          0.000984434320013555,
+          0.0014346978520702145,
+          0.003261817460332815
+        ]
+      ],
+      "mean_per_batch_level_cosine": [
+        [
+          0.9999999999999999,
+          0.9325854897415556,
+          0.8731047278771755,
+          0.8625437488591976
+        ],
+        [
+          0.9325854897415556,
+          1.0,
+          0.9614025147147566,
+          0.9529220396963556
+        ],
+        [
+          0.8731047278771755,
+          0.9614025147147566,
+          1.0,
+          0.9955663846275056
+        ],
+        [
+          0.8625437488591976,
+          0.9529220396963556,
+          0.9955663846275056,
+          1.0
+        ]
+      ],
+      "mean_per_batch_level_gram": [
+        [
+          0.4059344193424872,
+          0.3563154187029599,
+          0.3375311059433115,
+          0.33313269263739725
+        ],
+        [
+          0.3563154187029599,
+          0.359613549703796,
+          0.3498185225809524,
+          0.34640454359505196
+        ],
+        [
+          0.3375311059433115,
+          0.3498185225809524,
+          0.36816207414029256,
+          0.3661827930064622
+        ],
+        [
+          0.33313269263739725,
+          0.34640454359505196,
+          0.3661827930064622,
+          0.36746532933296483
+        ]
+      ],
+      "per_batch_level_to_direct_correction_gram_relative_residual": 2.050439940993824e-15
+    }
+  },
+  "timing": {
+    "method": "single distributed forward/backward including DDP gradient reduction",
+    "rank_aggregation": "maximum",
+    "repeats_per_parent_batch_and_level": 1,
+    "timing_parent_batches": 2
+  },
+  "tokenizer": {
+    "eos_token_id": 1,
+    "name": "t5-base",
+    "pad_token_id": 0,
+    "resolved_commit": "a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1",
+    "revision": "main",
+    "vocab_size": 32100
+  },
+  "wall_time_seconds": 27.77600646018982,
+  "weights": {
+    "metadata": {
+      "format": "umcg_canonical_fp32",
+      "seed": "777",
+      "source": "calibration_init"
+    },
+    "path": "/home/ubuntu/checkpoint/keunyoung/umcg/full_gradient_3000_20260721T232425_KST_f57ee32/tiny_exact_4_2_2.json.initial.safetensors",
+    "sha256": "5a05c6ef8fcf108c041aab6629f8b4b88ef2491089d362fdf7c3514d20c3137a"
+  }
+}

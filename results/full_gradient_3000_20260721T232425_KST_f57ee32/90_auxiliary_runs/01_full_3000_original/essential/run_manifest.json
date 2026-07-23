@@ -1,0 +1,149 @@
+{
+  "attention": {
+    "hardware": {
+      "capability_major": 9,
+      "capability_minor": 0,
+      "cuda_available": true,
+      "device_name": "NVIDIA H100 80GB HBM3"
+    },
+    "huggingface_implementation": "sdpa",
+    "package_versions": {
+      "flash-attn": null,
+      "flash-attn-3": null,
+      "flash-attn-4": null,
+      "torch": "2.11.0+cu128",
+      "transformers": "5.14.1"
+    },
+    "rank_probe_results": [
+      {
+        "rank": 0,
+        "results": [
+          {
+            "backend": "pytorch_sdpa_flash",
+            "error": "RuntimeError: No available kernel. Aborting execution.",
+            "level_times_ms": {},
+            "passed": false,
+            "worst_level_time_ms": null
+          },
+          {
+            "backend": "pytorch_sdpa_cudnn",
+            "error": null,
+            "level_times_ms": {
+              "512": 1.426994800567627,
+              "1024": 1.3730227947235107,
+              "2048": 1.4717895537614822,
+              "4096": 1.8257088959217072
+            },
+            "passed": true,
+            "worst_level_time_ms": 1.8257088959217072
+          },
+          {
+            "backend": "pytorch_sdpa_efficient",
+            "error": null,
+            "level_times_ms": {
+              "512": 0.5215685814619064,
+              "1024": 0.555751845240593,
+              "2048": 1.0803807526826859,
+              "4096": 3.145495429635048
+            },
+            "passed": true,
+            "worst_level_time_ms": 3.145495429635048
+          },
+          {
+            "backend": "pytorch_sdpa_math",
+            "error": null,
+            "level_times_ms": {
+              "512": 1.0140128433704376,
+              "1024": 1.177661120891571,
+              "2048": 3.2377000898122787,
+              "4096": 11.857371777296066
+            },
+            "passed": true,
+            "worst_level_time_ms": 11.857371777296066
+          },
+          {
+            "backend": "eager",
+            "error": null,
+            "level_times_ms": {
+              "512": 1.0048840194940567,
+              "1024": 1.1216681450605392,
+              "2048": 2.77736596763134,
+              "4096": 10.32864861190319
+            },
+            "passed": true,
+            "worst_level_time_ms": 10.32864861190319
+          }
+        ]
+      },
+      {
+        "rank": 1,
+        "results": [
+          {
+            "backend": "pytorch_sdpa_flash",
+            "error": "RuntimeError: No available kernel. Aborting execution.",
+            "level_times_ms": {},
+            "passed": false,
+            "worst_level_time_ms": null
+          },
+          {
+            "backend": "pytorch_sdpa_cudnn",
+            "error": null,
+            "level_times_ms": {
+              "512": 1.329241320490837,
+              "1024": 1.250704750418663,
+              "2048": 1.4201737940311432,
+              "4096": 1.8207207322120667
+            },
+            "passed": true,
+            "worst_level_time_ms": 1.8207207322120667
+          },
+          {
+            "backend": "pytorch_sdpa_efficient",
+            "error": null,
+            "level_times_ms": {
+              "512": 0.46185776591300964,
+              "1024": 0.5194190889596939,
+              "2048": 1.0667871683835983,
+              "4096": 3.1225550919771194
+            },
+            "passed": true,
+            "worst_level_time_ms": 3.1225550919771194
+          },
+          {
+            "backend": "pytorch_sdpa_math",
+            "error": null,
+            "level_times_ms": {
+              "512": 0.8925069123506546,
+              "1024": 1.1518392711877823,
+              "2048": 3.210879862308502,
+              "4096": 11.848192662000656
+            },
+            "passed": true,
+            "worst_level_time_ms": 11.848192662000656
+          },
+          {
+            "backend": "eager",
+            "error": null,
+            "level_times_ms": {
+              "512": 0.9265895932912827,
+              "1024": 1.054413616657257,
+              "2048": 2.7707964181900024,
+              "4096": 10.314028710126877
+            },
+            "passed": true,
+            "worst_level_time_ms": 10.314028710126877
+          }
+        ]
+      }
+    ],
+    "requested_backend": "automatic",
+    "resolved_backend": "pytorch_sdpa_cudnn"
+  },
+  "distributed_backend": "ddp",
+  "external_distributed_validation": "pending",
+  "name": "umcg_350m_full_3000_seed777_exact",
+  "precision": "bfloat16",
+  "schema_version": 1,
+  "source_tree_sha256": "952ae8bbcc29b075017527c68052eec748e228278edde7b0da666a3351805163",
+  "zero_stage": null
+}

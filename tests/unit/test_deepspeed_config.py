@@ -4,6 +4,7 @@ from torch import nn
 
 from umcg.config import RuntimeConfig
 from umcg.distributed.runtime import (
+    BackendRuntime,
     _assign_deepspeed_muon_roles,
     _build_deepspeed_config,
 )
@@ -56,6 +57,7 @@ def runtime_config(**changes):
         eval_every=10,
         eval_parent_batches=2,
         save_every=10,
+        save_at_steps=(),
         save_dir="out",
         c4_source="streaming",
         c4_repo="allenai/c4",
@@ -87,6 +89,22 @@ def test_internal_zero_config_has_no_cpu_or_nvme_offload():
     assert value["zero_optimization"]["stage"] == 2
     assert "offload_param" not in value["zero_optimization"]
     assert "offload_optimizer" not in value["zero_optimization"]
+
+
+def test_evaluation_avoids_compiled_wrappers_when_backend_exposes_raw_model():
+    training_model = nn.Linear(2, 2)
+    checkpoint_model = nn.Linear(2, 2)
+    common = {
+        "context": None,
+        "training_model": training_model,
+        "checkpoint_model": checkpoint_model,
+        "optimizer": None,
+        "scheduler": None,
+        "precision": None,
+    }
+    assert BackendRuntime(backend_name="ddp", **common).evaluation_model is checkpoint_model
+    assert BackendRuntime(backend_name="fsdp2", **common).evaluation_model is checkpoint_model
+    assert BackendRuntime(backend_name="zero", **common).evaluation_model is training_model
 
 
 def test_internal_zero_config_uses_deepspeed_muon():

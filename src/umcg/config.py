@@ -126,6 +126,7 @@ class RuntimeConfig:
     eval_every: int
     eval_parent_batches: int
     save_every: int
+    save_at_steps: tuple[int, ...]
     save_dir: str
     c4_source: str
     c4_repo: str
@@ -209,6 +210,10 @@ class RuntimeConfig:
         )
         if min(positive_values) <= 0:
             raise ValueError("step, evaluation, save, and worker values must be positive")
+        if any(step <= 0 or step > self.num_training_steps for step in self.save_at_steps):
+            raise ValueError("save_at_steps must be within 1..num_training_steps")
+        if len(set(self.save_at_steps)) != len(self.save_at_steps):
+            raise ValueError("save_at_steps must not contain duplicates")
         if not 0 <= self.warmup_steps <= self.num_training_steps:
             raise ValueError("warmup_steps must be between 0 and num_training_steps")
         if self.gradient_clip_norm is not None and self.gradient_clip_norm <= 0:
@@ -220,7 +225,7 @@ class RuntimeConfig:
                 "c4_local_path is required when c4_source is local or local_raw"
             )
         if self.c4_source == "streaming" and self.c4_local_path is not None:
-            raise ValueError("c4_local_path is valid only when c4_source=local")
+            raise ValueError("c4_local_path is valid only when c4_source=local or local_raw")
         if self.continue_from is not None and self.initial_weights is not None:
             raise ValueError("continue_from and initial_weights are mutually exclusive")
         if self.wandb_mode not in {"online", "offline", "disabled"}:

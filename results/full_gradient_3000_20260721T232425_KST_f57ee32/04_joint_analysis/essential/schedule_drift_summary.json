@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "locked_tail_probabilities": [1.0, 1.0, 0.75, 0.25],
+  "locked_maximum_level_probabilities": [0.0, 0.25, 0.5, 0.25],
+  "checkpoint_grid_recommendation": [1.0, 1.0, 0.5, 0.25],
+  "checkpoint_grid_recommendation_maximum_level_probabilities": [0.0, 0.5, 0.25, 0.25],
+  "rows": [
+    {
+      "arm": "full",
+      "step": 30,
+      "selection_objective_improvement_fraction_vs_locked": 0.022149136541718906,
+      "recommended_schedule_audit_efficiency_ratio_vs_q_one": 0.6325465553506683,
+      "recommended_schedule_audit_efficiency_ratio_95_percent_confidence_interval": [0.5962191471780031, 0.6860862255487974]
+    },
+    {
+      "arm": "full",
+      "step": 300,
+      "selection_objective_improvement_fraction_vs_locked": 0.024998937044492076,
+      "recommended_schedule_audit_efficiency_ratio_vs_q_one": 0.6536857928188842,
+      "recommended_schedule_audit_efficiency_ratio_95_percent_confidence_interval": [0.6213139231035871, 0.7086722856408393]
+    },
+    {
+      "arm": "full",
+      "step": 1500,
+      "selection_objective_improvement_fraction_vs_locked": 0.02573651652096598,
+      "recommended_schedule_audit_efficiency_ratio_vs_q_one": 0.6547821778903925,
+      "recommended_schedule_audit_efficiency_ratio_95_percent_confidence_interval": [0.6299290595646276, 0.6954293372499292]
+    },
+    {
+      "arm": "full",
+      "step": 2700,
+      "selection_objective_improvement_fraction_vs_locked": 0.02655292225505479,
+      "recommended_schedule_audit_efficiency_ratio_vs_q_one": 0.656924800703289,
+      "recommended_schedule_audit_efficiency_ratio_95_percent_confidence_interval": [0.6325125121996613, 0.6975099540642158]
+    },
+    {
+      "arm": "full",
+      "step": 3000,
+      "selection_objective_improvement_fraction_vs_locked": 0.026775437414246483,
+      "recommended_schedule_audit_efficiency_ratio_vs_q_one": 0.657129768310713,
+      "recommended_schedule_audit_efficiency_ratio_95_percent_confidence_interval": [0.6330371357511297, 0.6978329094320525]
+    },
+    {
+      "arm": "rr",
+      "step": 30,
+      "selection_objective_improvement_fraction_vs_locked": 0.02192706188202176,
+      "recommended_schedule_audit_efficiency_ratio_vs_q_one": 0.6325580294555377,
+      "recommended_schedule_audit_efficiency_ratio_95_percent_confidence_interval": [0.5964278890540309, 0.6859897907363468]
+    },
+    {
+      "arm": "rr",
+      "step": 300,
+      "selection_objective_improvement_fraction_vs_locked": 0.02369289927895546,
+      "recommended_schedule_audit_efficiency_ratio_vs_q_one": 0.6617509808250196,
+      "recommended_schedule_audit_efficiency_ratio_95_percent_confidence_interval": [0.6297140610367435, 0.7176800347615725]
+    },
+    {
+      "arm": "rr",
+      "step": 1500,
+      "selection_objective_improvement_fraction_vs_locked": 0.025253428738080563,
+      "recommended_schedule_audit_efficiency_ratio_vs_q_one": 0.6481303320639245,
+      "recommended_schedule_audit_efficiency_ratio_95_percent_confidence_interval": [0.6248857273629861, 0.6869266030773473]
+    },
+    {
+      "arm": "rr",
+      "step": 2700,
+      "selection_objective_improvement_fraction_vs_locked": 0.026385155037490837,
+      "recommended_schedule_audit_efficiency_ratio_vs_q_one": 0.6475301120117851,
+      "recommended_schedule_audit_efficiency_ratio_95_percent_confidence_interval": [0.624532226814629, 0.6864087380260848]
+    },
+    {
+      "arm": "rr",
+      "step": 3000,
+      "selection_objective_improvement_fraction_vs_locked": 0.02650436959481217,
+      "recommended_schedule_audit_efficiency_ratio_vs_q_one": 0.6482695487913359,
+      "recommended_schedule_audit_efficiency_ratio_95_percent_confidence_interval": [0.6253527291119197, 0.6870833481852813]
+    }
+  ],
+  "interpretation": "The schedule was intentionally locked during training. These post-hoc recommendations are diagnostics and were not applied to either arm."
+}

@@ -1,0 +1,152 @@
+# 작업 내역
+
+최종 갱신: 2026-07-23 (Asia/Seoul)
+
+## 시작 상태
+
+- 저장소: `/home/ubuntu/keunyoung/workspace/umcg`
+- 기준 커밋: `f57ee32` (`ready`)
+- 작업 시작 시 사용자 변경사항: 없음
+- Conda 환경: `umcg`
+- GPU: NVIDIA H100 80GB HBM3 두 장
+- CPU: Intel Xeon Gold 6448Y, 논리 CPU 124개
+- C4 원본: `/home/ubuntu/data/c4_en/en`, 약 305GB, train gzip shard 1,024개, validation shard 8개
+- 저장장치: 네트워크 파일 시스템
+- 작업 시작 시 두 GPU에 `galore` 환경 프로세스가 실행 중이다. 실제 GPU 실험 전에는 종료하지 않는다.
+
+## 감사 결과
+
+- Tail probability와 categorical 최대-level 확률 변환: 구현됨
+- 선택 최대 level까지 correction 누적: 구현됨
+- 선택 최대 context 한 번의 논리적 forward와 token signed coefficient: 구현됨
+- 직접 full 4096 gradient에 수렴하는 벡터 몬테카를로 단위 테스트: 없음
+- 측정/선택/감사 자료가 분리된 calibration: 없음
+- 학습 CLI parser는 `src/umcg/cli/arguments.py`에 있으나 help가 그룹화되지 않았고 대부분 설명이 없다.
+- `codex_log`는 작업 시작 시 존재하지 않아 이번 작업에서 생성했다.
+
+## 진행 기록
+
+- 2026-07-21: 통합 구현 작업 시작. 사용자 지시, 대화 이력, 시작 상태를 `codex_log`에 복원했다.
+- 2026-07-21: `runner.py` 시작부에 지원 RuntimeConfig 인자 그룹을 추가하고 학습 CLI help를 9개 기능 그룹으로 정리했다. Parser·RuntimeConfig·runner 목록 일치 테스트를 추가했다.
+- 2026-07-21: 첫 CLI gate에서 help 줄바꿈 때문에 문자열 검사가 1건 실패했다. Help 내용을 공백 정규화한 뒤 실패 테스트부터 재개한다.
+- 2026-07-21: 실패한 CLI help 테스트를 다시 실행해 통과했다.
+- 2026-07-21: `[1, 0.5, 0.25, 0.125]` 전용 미검증 4096 smoke 설정과 최대-level 확률, correction 누적 수식, 단일 선택-context forward, 65,536회 4096 parameter-gradient 수렴 테스트를 추가했다.
+- 2026-07-21: 새 estimator 테스트 2건이 FP32 token 합산 순서에서 생긴 최대 약 `6.2e-5` 반올림 차이로 실패했다. 생산 코드는 유지하고 테스트 model의 loss scale을 낮춰 고정된 절대 허용치에서 수식을 검증하도록 조정했다.
+- 2026-07-21: 65,536회 4096 gradient 테스트는 상대 L2 오차 `0.00346265`, 코사인 유사도 `0.99999628`, L2 표준오차 `0.000253169`로 통과했다. 누적식 테스트 한 좌표에 `6.39e-6` 반올림 차이가 남아 test loss scale을 추가 조정했다.
+- 2026-07-21: Calibration을 document-hash 기반 측정/선택/감사 split, V_k·C_k 측정, 공통 난수 schedule 비교, 독립 감사와 출력 gate 구조로 재작성했다. 문법과 새 CLI help 출력은 정상이며 정적 검사 지적에 맞춰 import/줄 길이를 정리 중이다.
+- 2026-07-21: Calibration parser alias/default, 문서 단위 split, V_k/C_k, 후보 일정, 효율적인 독립 감사, 감사 실패 시 report-only 출력에 대한 CPU 단위 테스트를 추가했다.
+- 2026-07-21: Calibration 기능 테스트 8건이 모두 통과했다. 정적 검사는 테스트 파일의 미사용 import 한 건만 지적해 제거했다.
+- 2026-07-21: CONFIG_REFERENCE를 전체 학습 인자 표와 parser 흐름 중심으로 재작성하고 README, scientific/data/smoke 문서를 새 estimator·calibration·자료 계약에 맞췄다. 기존 C-1/C/C+1/2C EOS 테스트에 EOS 포함·제외 단언을 추가했다.
+- 2026-07-21: 전체 CPU suite가 `89 passed in 101.12s`로 통과했다. 원본 log는 checkpoint 검증 디렉터리에 저장했다.
+- 2026-07-21: 최종 ruff 명령에서 quoted `*.py`가 literal 경로로 전달되어 E902가 발생했다. 코드 오류가 아니며 root 진입 파일을 명시해 정적 검사 gate만 재실행한다.
+- 2026-07-21: 명시적인 root 진입 파일로 ruff gate를 재실행해 통과했고 전체 학습 CLI help 원본을 checkpoint에 저장했다.
+- 2026-07-21: GPU 실험 시작 직전 PID 447968, 448035가 `galore` 환경의 instance-saver임을 명령행으로 확인하고 SIGTERM으로 종료했다. 종료 후 두 H100 모두 compute process 없이 1MiB만 사용했다.
+- 2026-07-21: Tiny BF16 4/2/2 calibration은 측정·선택·감사를 완주했고 unbiasedness는 통과했다. 감사 parent가 2개여서 bootstrap 일부의 Q=1 분산이 0이 되어 효율 신뢰구간 상한을 정할 수 없었고, 설계대로 estimator 없이 진단 report만 생성됐다.
+- 2026-07-21: 350M calibration의 병목을 피하기 위해 CountSketch를 gradient GPU에서 집계하고 최종 저차원 sketch만 CPU로 이동하도록 최적화했다. 통계 정의와 출력 dtype은 유지한다.
+- 2026-07-21: GPU-side CountSketch 관련 CPU 테스트 9건과 정적 검사가 통과했다. Tiny BF16 4/2/2 재실행은 대부분 level당 14~63ms로 줄어 약 30초에 측정을 완료했고, 감사 표본 2개의 bootstrap 한계 때문에 report-only로 종료됐다.
+- 2026-07-21: 첫 350M 64/32/32 시도에서 정상 level 시간 55~98ms 사이에 약 0.9~1.2초 지연이 주기적으로 섞여 C_k 평균을 왜곡할 수 있어 selection 6/32 지점에서 중단했다. CPU gate는 유지하고 calibration 측정 구간에서 Python cyclic GC만 일시 중지하도록 수정했다.
+- 2026-07-21: Python cyclic GC를 끈 두 번째 350M 시도에서도 동일 parent·level 위치에 약 0.9~1.2초 지연이 재현되어 GC 원인이 아님을 확인하고 selection 25/32 지점에서 중단했다. GC 변경은 제거하고, 각 parent·level을 3회 측정한 중앙값을 사용하되 원 반복시간도 log에 보존하도록 보완한다.
+- 2026-07-21: 중앙값 측정 보완 후 calibration 단위 테스트 10건이 통과했다. 정적 검사는 새 helper import 순서 한 건만 지적했으므로 이를 정리한 뒤 정적 검사 gate부터 재개한다.
+- 2026-07-21: 정적 검사 import 순서를 수정한 뒤 관련 ruff와 전체 저장소 ruff가 통과했다.
+- 2026-07-21: 실제 C4 local_raw, 350M model, 단일 H100, BF16으로 64/32/32 calibration을 완주했다. 독립 감사가 통과했고 `[1, 1, 0.75, 0.125]` estimator와 schema 2 report가 생성됐다.
+- 2026-07-21: Calibration 최종 help에서 canonical 측정 기본값 64와 argparse의 `None`이 중복 표기되는 문제를 발견했다. Parser의 실제 기본값을 64로 정하고 호환 alias가 같은 destination을 쓰도록 정리한 뒤 CLI gate부터 재개한다.
+- 2026-07-21: Parser 기본값·alias 수정 뒤 calibration 단위 테스트 10건과 저장소 전체 ruff가 통과했다. 최종 help에서 측정 기본값 64가 한 번만 정확히 표시된다.
+- 2026-07-21: 65,536회 4096 parameter-gradient 시험을 최종 재실행했다. 상대 L2 오차 `0.00346481`, cosine similarity `0.9999962823`, L2 표준오차 `2.53167e-05`, 오차/표준오차 `0.303752`로 통과했다.
+- 2026-07-21: 실제 calibration의 `V_k=[6.051051,0.480421,0.143462,0.0333963]`, `C_k=[63.3833,67.4959,74.5201,99.0992] ms`를 기록했다. 선택 일정은 `[1,1,0.75,0.125]`, 최대-level 확률은 `[0,0.25,0.625,0.125]`다.
+- 2026-07-21: 독립 감사 상대 L2 오차 `0.00212939`, cosine similarity `0.999997735`, 오차/표준오차 `1.56064`, Q=1 대비 효율 비율 `0.781240`, 95% 신뢰구간 `[0.765278,0.811221]`로 통과했다. Split hash 교집합은 모두 0이다.
+- 2026-07-21: 현재 suite는 91개로 수집된다. 기존 전체 89건 통과 기록과 최신 calibration 10건 통과 기록의 합집합으로 현재 91건 모두를 검증했으며, 사용자 지시에 따라 무관한 CPU 시험은 처음부터 재실행하지 않았다.
+- 2026-07-21: 구현·시험·실험의 최종 보고서를 checkpoint 검증 디렉터리의 `FINAL_REPORT.md`에 저장했다. 실험 종료 시 두 H100은 memory 1MiB, utilization 0%이며 종료한 `galore` instance-saver는 자동 복구되지 않았다.
+- 2026-07-21: 사용자의 후속 요청에 따라 최종 보고서, estimator JSON, calibration 상세 report JSON의 실제 내용을 다시 대조하고, 각각 사람용 요약·학습용 설정·감사용 근거라는 관점에서 설명을 준비했다. 코드나 실험 결과는 변경하지 않았다.
+- 2026-07-21: 비판적 재감사 결과 calibration은 pretrained/중간 checkpoint를 불러오지 않은 무작위 초기화 350M model에서 optimizer update 0회로 수행됐음을 확인했다. 실제 model 계산은 128 parent × 4 level × 3 timing repeat인 1,536 forward/backward이며, 일정 선택 후보는 32개가 아니라 35개다.
+- 2026-07-21: `_gradient_sketch()`의 현재 hash에서 dimension 256과 홀수 multiplier 때문에 sign parity가 bucket parity와 같아져, 같은 bucket의 좌표에 독립 sign이 배정되지 않음을 확인했다. 또한 sparse CountSketch 결과를 `sqrt(256)`으로 나누므로 보고된 절대 `V_k`는 표준 CountSketch norm 추정값으로 해석할 수 없다. 현 estimator는 sketch 공간의 초기상태 후보로 격하해 보고, full-size gradient와 여러 학습 checkpoint에서 재검증해야 한다.
+- 2026-07-21: 두 GPU에는 사용자의 `galore` instance-saver가 다시 실행 중임을 확인했다. 이번 답변은 진단만 수행하므로 프로세스를 종료하거나 GPU probe를 추가 실행하지 않았다.
+- 2026-07-21: CPU 측 availability 조회에서 PyTorch `2.11.0+cu128`의 built-in flash SDPA가 available/enabled임을 확인했다. H100·BF16·head dimension 64 조건 자체보다, UMCG probe의 padded dense boolean attention mask 또는 그 layout이 flash backend 제약에 걸렸을 가능성이 높다. 기존 report는 내부 warning을 보존하지 않아 정확한 거부 사유 확정에는 분리 GPU probe가 필요하다.
+- 2026-07-21: 후속 설계 검토 결과 CountSketch는 calibration의 필수 요소가 아니며, 각 parent의 `G_512`, `G_1024`, `G_2048`, `G_4096`을 잠시 보유해 정확한 4×4 Gram matrix와 running mean을 갱신한 뒤 즉시 폐기하면 약 700GB의 전체 gradient 이력을 저장하지 않고도 후보 estimator의 full-coordinate 분산·cosine·오차를 계산할 수 있음을 정리했다. Gradient checkpointing은 activation 메모리를 줄일 뿐 이 통계 저장 문제를 해결하지 않는다.
+- 2026-07-21: level gradient Gram과 correction Gram은 누적차분 선형변환으로 정확히 상호 변환 가능하므로 둘 다 산출·보고하는 것이 적절하다고 판단했다. Level Gram/cosine은 해석용, correction Gram은 Russian Roulette 분산 최적화용이다.
+- 2026-07-21: `Q_512=1`로 고정한 다섯 값의 나머지 세 자리 전체 조합은 125개지만, tail probability는 정의상 단조감소해야 하므로 비단조 조합은 음의 최대-level 확률을 만들어 유효하지 않다. 현재 유효 격자는 35개이며, 더 넓은 탐색은 더 촘촘한 단조 grid 또는 categorical simplex 최적화로 수행해야 한다.
+- 2026-07-21: 답변 전 하드웨어 상태를 재확인했다. H100 80GB 두 장은 각각 약 68.96GB와 95–98% 사용 중이고 host memory는 약 1.7TiB available이다. 이번 작업은 설명·진단뿐이어서 `galore` 프로세스를 종료하거나 GPU 실험을 실행하지 않았다.
+- 2026-07-21: `UMCG Full-Gradient 검증 및 3,000-step Full/RR 비교 실험` 실행을 시작했다. 기준 커밋은 `f57ee32`이며 이전 통합 구현 변경사항이 작업 트리에 남아 있으므로 이를 보존해 이어서 작업한다.
+- 2026-07-21: 실행 시작 시 H100 두 장에 `galore` instance-saver PID 1027606, 1011192가 각각 약 68.95GB를 점유하고 있음을 확인했다. CPU 구현 단계에서는 종료하지 않고 첫 GPU gate 직전에만 종료한다.
+- 2026-07-21: 확정 설정은 논리 batch 128, rank당 physical 상한 64, exact VRAM 상한 85%, timing repeat 1, full-size streaming Gram, 단조감소 35개 schedule, Full/RR 각 3,000 update 순차 실행이다.
+- 2026-07-21: CountSketch 없는 exact calibration 모듈을 추가했다. 각 논리 batch의 네 full parameter gradient로 level Gram과 직접 차분 correction Gram을 FP64 streaming dot product로 계산하고, 35개 일정의 네 최대-level 결과를 해석적으로 전부 평가한다.
+- 2026-07-21: 새 calibration parser의 canonical 기본값을 논리 parent batch 128, rank당 physical 상한 64, VRAM 상한 0.85, timing repeat 1로 고정했다. CountSketch와 후보 Monte Carlo 인자는 제거했다.
+- 2026-07-21: Exact calibration·자료 분리·35개 후보·독립 감사·출력 gate 단위 테스트 11개와 관련 정적 검사가 통과했다.
+- 2026-07-21: 장기학습 milestone을 정확히 보존하는 반복형 `--save_at_step` 인자를 추가했다. 30·300·1500·2700·3000 update checkpoint를 `save_every`와 독립적으로 저장할 수 있으며 범위·중복을 사전 검증한다.
+- 2026-07-21: 학습 인자·config·checkpoint milestone과 exact calibration 관련 선택 CPU 테스트 45개가 통과했다.
+- 2026-07-21: 구현 완료 후 전체 CPU suite를 한 번 실행해 `93 passed in 97.28s`로 통과했다. JUnit 원본은 이번 실험 보존 디렉터리의 `cpu_tests.xml`에 저장했다.
+- 2026-07-21: 전체 source·test·공개 진입 파일 ruff 정적 검사가 통과했으며 원본 JSON 결과를 `ruff.json`에 저장했다. 이후 실패가 생기면 CPU 처음부터가 아니라 해당 GPU gate부터 재개한다.
+- 2026-07-21: 첫 GPU gate 직전에 GPU를 점유한 PID 1011192·1027606과 그 launcher가 `galore` 환경의 `torchrun_main_instance_saver.py`임을 재확인했다. 허용 범위에 따라 launcher PID 1011043·1027513에 SIGTERM을 보내 두 작업과 자식 process를 종료했고 두 H100을 비웠다.
+- 2026-07-21: 두 H100 BF16 tiny exact calibration 4/2/2를 완주했다. Full-coordinate Gram, 35개 해석 후보, DDP 전역 gradient, VRAM probe와 보고서 출력은 정상이며 직접/변환 correction Gram 일치 관문도 통과했다. 감사 논리 batch가 2개뿐이라 bootstrap 일부에서 Q=1 기준 분산이 0이 되어 효율 CI 상한을 만들 수 없었고, 설계대로 estimator 없이 진단 report만 보존했다.
+- 2026-07-21: 첫 350M 논리 batch 128 pilot의 VRAM probe에서 activation checkpointing이 꺼진 상태로 physical 64와 32가 모두 약 79GB까지 사용해 OOM으로 실패했다. 논리 batch와 표본 수는 유지하고, 장기학습과 동일한 activation checkpointing을 calibration 기본값으로 켜서 실패한 350M VRAM gate부터 재개한다.
+- 2026-07-21: Activation checkpointing을 켠 동일 350M weight·parent pilot은 physical 64에서 최대 54,487,384,576 bytes, H100의 64.07%로 VRAM 85% gate를 통과했다. 한 논리 batch의 C_k는 약 `[527,1048,2273,5488] ms`, 네 level 합은 약 9.34초였고 전체 pilot은 77.11초였다. 128개 논리 batch 본 calibration은 약 25분 안팎으로 예측되어 60분 시간 gate를 통과한다.
+- 2026-07-22: 실제 C4·350M·두 H100·BF16 full-coordinate 64/32/32 calibration을 1,678.63초에 완주했다. Physical 64의 최대 PyTorch allocation은 H100의 64.08%이며 timing repeat은 1, timing 논리 batch는 8이다.
+- 2026-07-22: 16,384 parent sample의 document hash split 교집합은 모두 0이다. 측정/선택/감사의 고유 문서는 각각 8,088/4,042/4,052개다.
+- 2026-07-22: Full-coordinate `V_k=[9.53695,1.14308,0.976683,1.00549]`, `C_k=[518.712,1048.112,2276.846,5451.430] ms`를 얻었다. Level/correction 직접 Gram 상대 잔차 최대값은 약 `1.89e-14`다.
+- 2026-07-22: 35개 단조 일정 중 `[1,1,0.75,0.25]`가 선택됐다. 최대-level 확률은 `[0,0.25,0.5,0.25]`다. 이전 CountSketch 일정 `[1,1,0.75,0.125]`와 달리 full-coordinate 결과에서 4096 tail이 0.25로 증가했다.
+- 2026-07-22: 독립 감사에서 expected correction coefficient가 정확히 `[1,1,1,1]`, 상대 L2 오차 0, cosine 1이었다. Q=1 대비 효율 목적함수 비율은 `0.726155`, 95% bootstrap CI는 `[0.699319,0.768031]`로 상한이 1보다 작아 감사가 통과했다.
+- 2026-07-22: Tiny Full 2-update preflight은 compile·학습·평가와 explicit step 1/final step 2 checkpoint를 모두 완료했다.
+- 2026-07-22: Tiny RR preflight은 2048 correction 학습 update 1·2를 수행했으나 step 2의 4096 full validation을 새로 compile할 때 PyTorch 2.11 AOT inference 내부에서 `AttributeError: 'int' object has no attribute 'meta'`로 실패했다. 학습 estimator가 아니라 compiled DDP evaluation 경로 문제이므로 DDP/FSDP2 평가는 같은 weight의 uncompiled checkpoint model을 사용하도록 수정하고 이 gate부터 재개한다.
+- 2026-07-22: DDP/FSDP2 평가를 uncompiled checkpoint model로 분리한 관련 정적 검사와 선택 CPU 테스트 17개가 통과했다.
+- 2026-07-22: 실패 gate부터 다시 실행한 Tiny RR은 2048 correction update 2개, eager 4096 full validation, explicit step 1/final step 2 checkpoint를 모두 완료했다. Full과 RR의 Tiny validation loss 차이는 약 `5.89e-6`이며 두 실행 모두 finite다.
+- 2026-07-22: Full 기준 3,000-update 장기학습을 두 H100, BF16, DDP, 논리 total batch 512로 시작했다. 안정 구간 업데이트 시간은 약 12.8초이고 rank별 최대 PyTorch allocation은 49,559,204,864 bytes다.
+- 2026-07-22: Full 실행의 첫 30-update checkpoint가 약 4.2GB로 완전히 저장됐다. 두 rank 상태, replicated state, manifest와 `COMPLETE` 표식이 모두 존재하며 metrics 30행은 유한값이다. 다음 gate는 update 100의 첫 full validation이다.
+- 2026-07-22: Full 실행의 update 100 첫 실제 validation이 성공했다. Full 4096 validation loss는 `6.9383171606`, perplexity는 `1031.0336901`이며 finite다. DDP 평가를 uncompiled checkpoint model로 분리한 수정이 350M·4096 조건에서도 통과했다.
+- 2026-07-22: Full 실행의 validation loss/perplexity는 update 200에서 `5.8649621290`/`352.4688075`, update 300에서 `5.3161570684`/`203.5999560`으로 연속 개선됐다.
+- 2026-07-22: Warmup 종료 update 300에서 learning rate `3e-4`, gradient norm `0.628934`로 finite였다. 약 4.2GB의 checkpoint-00000300에 두 rank state, replicated state, manifest와 `COMPLETE`가 모두 생성됐고 학습이 정상 재개됐다.
+- 2026-07-22: Full 장기학습이 update 1,000을 통과했다. Update 100부터 1,000까지 100-update 간격의 validation loss가 `6.9383, 5.8650, 5.3162, 4.9489, 4.6620, 4.4391, 4.2455, 4.0895, 3.9903, 3.8970`으로 열 번 연속 개선됐고 update 1,000 perplexity는 `49.2565`다. 모든 train/validation 수치는 finite이며 학습은 정상 재개됐다.
+- 2026-07-22: Full 장기학습의 update 1,100–1,500 validation loss도 `3.8490, 3.7732, 3.7206, 3.6775, 3.6458`로 연속 개선됐다. Update 1,500 perplexity는 `38.3123`, gradient norm은 `0.235532`로 finite다.
+- 2026-07-22: Full run의 절반인 update 1,500 checkpoint가 약 4.2GB로 완전히 저장됐다. 두 rank state, replicated state, manifest와 `COMPLETE`가 모두 있으며 학습이 정상 재개됐다.
+- 2026-07-22: Full 장기학습의 update 1,600–2,000 validation loss도 `3.6066, 3.5766, 3.5468, 3.5249, 3.5050`으로 연속 개선됐다. Update 2,000 perplexity는 `33.2822`, gradient norm은 `0.233257`로 finite이며 전체 3,000 updates의 2/3를 통과했다.
+- 2026-07-22: Full 장기학습의 update 2,100–2,500 validation loss도 `3.4860, 3.4690, 3.4558, 3.4439, 3.4350`으로 연속 개선됐다. Update 2,500 perplexity는 `31.0320`, gradient norm은 `0.216299`, rank별 최대 PyTorch allocation은 `49,559,204,864` bytes로 모두 안정적이다.
+- 2026-07-22: Full 장기학습의 update 2,600/2,700 validation loss는 `3.42849`/`3.42361`, perplexity는 `30.8302`/`30.6801`로 계속 개선됐다. Update 2,700 checkpoint는 두 rank state, 4.42GB replicated state, manifest와 `COMPLETE`를 모두 갖춰 완전히 저장됐고 학습이 정상 재개됐다.
+- 2026-07-22: Full 기준선 3,000-update 실행이 종료 코드 0으로 완료됐다. Metrics는 정확히 1–3,000 연속 3,000행, validation은 100-step 간격 30회, 필수 수치의 non-finite 값은 0건이다. 최종 validation loss/perplexity는 `3.4192079385`/`30.54521175`다.
+- 2026-07-22: Full의 update 30/300/1500/2700/3000 checkpoint 다섯 개는 각각 약 4.2GB이며 두 rank state, replicated state, manifest와 `COMPLETE`를 모두 갖췄다. 총 유효 token과 full-context-equivalent token은 모두 `766,069,681`이다.
+- 2026-07-22: 첫 350M RR 장기실행은 optimizer update 0에서 PyTorch 2.11 AOT의 `AttributeError: 'int' object has no attribute 'meta'`로 실패했다. Split-graph literal을 보존하는 환경 패치로 원 오류를 넘겼지만 후속 Inductor symbolic-shape assertion이 발생해 패치를 완전히 원복했다. 두 실패의 설정과 원본 로그는 별도 failed 디렉터리에 보존했다.
+- 2026-07-22: PyTorch traceback이 권장하는 `torch._dynamo.config.optimize_ddp=False` launcher로 DDP graph splitting만 끄고 `torch.compile`은 유지한 350M RR 1-update 관문이 통과했다. 선택 level은 `[2048,2048,2048,4096]`, gradient norm `3.87211`, rank별 peak allocation `51,137,339,392` bytes이며 checkpoint가 완전하다.
+- 2026-07-22: No-DDP-split RR 4-update 관문에서 1024/2048/4096 selectable context를 모두 실행했다. Update 3의 첫 1024 compile을 포함해 모두 finite였고 update 4는 3.229초, 최종 checkpoint는 완전했다.
+- 2026-07-22: 같은 no-DDP-split 조건의 Full 4-update benchmark에서 안정 update 2–4 중앙값은 `12.4758s`로, 기존 Full 3,000-run의 update 2–3000 중앙값 `12.8626s`보다 약 3.01% 짧았다. 실행 조건 차이가 작지만 무시할 수 없으므로 기존 Full은 보조 결과로 보존하고, no-DDP-split Full/RR 3,000-run을 둘 다 수행해 최종 primary pair로 비교한다.
+- 2026-07-22: No-DDP-split RR 3,000-update 본 실행을 시작했다. Update 30 checkpoint가 완전하며 update 100 첫 full validation loss/perplexity는 `6.9512037221`/`1044.4061466`로 finite다. 첫 400 microbatch의 최대-level 관측 비율은 `[0,0.24,0.555,0.205]`다.
+- 2026-07-22: RR update 200 validation loss/perplexity는 `5.88559`/`359.815`, update 300은 `5.34440`/`209.433`으로 연속 개선됐다. Warmup 종료 학습률은 `3e-4`, 관측 tail은 `[1,1,0.75083,0.225]`이며 update 300 checkpoint가 완전하다.
+- 2026-07-22: RR update 400–1,000 validation loss는 `5.00250,4.75060,4.53312,4.33657,4.17902,4.07525,3.98523`으로 계속 개선됐다. Update 1,000 최대-level 누적 수는 `[0,981,2052,967]`, 관측 tail은 `[1,1,0.75475,0.24175]`, 유효 token은 `230,094,652`다.
+- 2026-07-22: RR update 1,100–1,500 validation loss는 `3.92524,3.85291,3.79673,3.73974,3.70573`으로 연속 개선됐다. 절반 지점 최대-level 누적 수는 `[0,1494,3051,1455]`, tail은 `[1,1,0.751,0.2425]`, 유효 token은 `345,611,428`이며 update 1,500 checkpoint가 완전하다.
+- 2026-07-22: RR update 1,600–2,000 validation loss는 `3.66960,3.63856,3.60491,3.58123,3.56454`로 연속 개선됐다. Update 2,000 최대-level 누적 수는 `[0,1991,4054,1955]`, tail은 `[1,1,0.751125,0.244375]`, 유효 token은 `461,074,807`다.
+- 2026-07-22: RR update 2,100–2,500 validation loss는 `3.54269,3.52513,3.51149,3.49937,3.48955`로 연속 개선됐다. Update 2,500 최대-level 누적 수는 `[0,2509,5018,2473]`, 관측 tail은 `[1,1,0.7491,0.2473]`, 유효 token은 `576,525,404`, full-context-equivalent token은 `638,583,202`다.
+- 2026-07-22: RR update 2,600/2,700 validation loss는 `3.48219`/`3.47720`, perplexity는 `32.5308`/`32.3690`으로 계속 개선됐다. Update 2,700 관측 tail은 `[1,1,0.749907,0.246389]`이며 체크포인트는 두 rank state, 약 4.42GB replicated state, manifest와 `COMPLETE`를 모두 갖췄다.
+- 2026-07-22: No-DDP-split RR 3,000-update 본 실행이 종료 코드 0으로 완료됐다. Metrics는 정확히 1–3,000 연속 3,000행, validation 30회, 필수 수치의 non-finite 값 0건이며 최종 validation loss/perplexity는 `3.4727107794`/`32.22397625`다. 최종 관측 tail은 `[1,1,0.74975,0.2464167]`, 유효 token은 `691,592,591`, full-context-equivalent token은 `766,069,681`이다.
+- 2026-07-22: RR update 30/300/1500/2700/3000 checkpoint 다섯 개는 두 rank state, replicated state, manifest와 `COMPLETE`를 모두 갖췄다. 이제 primary comparison을 위해 동일한 no-DDP-split launcher와 나머지 설정으로 matched Full 3,000-update 실행을 시작한다.
+- 2026-07-22: Matched no-DDP-split Full 3,000-update 실행을 시작했다. RR과 정규화한 resolved config가 정확히 일치하며 차이는 estimator, 출력 경로, 실행 이름과 시작 시점 attention probe 시간뿐이다. Update 1 컴파일 후 안정 스텝은 약 `12.45–12.51s`, rank별 peak allocation은 `54,032,011,264` bytes이며 update 30 checkpoint가 완전하게 저장됐다.
+- 2026-07-22: Matched Full의 update 100/200/300 validation loss는 `6.93319`/`5.86150`/`5.30263`으로 연속 개선됐고 update 300 perplexity는 `200.8654`다. Warmup이 목표 학습률 `3e-4`에 도달했으며 update 300 checkpoint가 완전하게 저장됐다.
+- 2026-07-22: Matched Full의 update 400–1,000 validation loss는 `4.94922,4.66064,4.42908,4.23971,4.08920,3.98643,3.89685`로 계속 개선됐다. Update 100부터 1,000까지 열 번의 validation이 모두 연속 개선됐고 안정 스텝은 대체로 `12.53–12.58s`, update 1,000 gradient norm은 `0.300411`로 finite다.
+- 2026-07-23: Matched Full의 update 1,100–1,500 validation loss는 `3.84803,3.77338,3.72073,3.67566,3.64438`로 연속 개선됐다. Update 1,500 perplexity는 `38.2590`, gradient norm은 `0.246231`이며 절반 지점 checkpoint는 두 rank state, 약 4.42GB replicated state, manifest와 `COMPLETE`를 모두 갖췄다.
+- 2026-07-23: Matched Full의 update 1,600–2,000 validation loss는 `3.60549,3.57568,3.54666,3.52452,3.50465`로 연속 개선됐다. Update 2,000까지 모든 train/validation 수치는 finite이며 전체 3,000 updates의 2/3를 통과했다.
+- 2026-07-23: Matched Full의 update 2,100–2,500 validation loss는 `3.48586,3.46938,3.45656,3.44494,3.43592`로 연속 개선됐다. Update 2,500까지 처리 시간은 계속 안정적이고 non-finite 값이나 메모리 이상 징후는 없다.
+- 2026-07-23: Matched Full의 update 2,600/2,700 validation loss는 `3.42915`/`3.42411`, perplexity는 update 2,700에서 `30.6953`으로 계속 개선됐다. Update 2,700 checkpoint는 두 rank state, 약 4.42GB replicated state, manifest와 `COMPLETE`를 모두 갖췄다.
+- 2026-07-23: Matched no-DDP-split Full 3,000-update 실행이 종료 코드 0으로 완료됐다. Metrics는 정확히 1–3,000 연속 3,000행, validation 30회, 필수 수치의 non-finite 값 0건이며 최종 validation loss/perplexity는 `3.4198509729`/`30.56485969`다. 총 유효 token과 full-context-equivalent token은 모두 `766,069,681`이다.
+- 2026-07-23: Matched Full의 update 30/300/1500/2700/3000 checkpoint 다섯 개는 두 rank state, replicated state, manifest와 `COMPLETE`를 모두 갖췄다. Primary Full/RR 3,000-run pair가 모두 완료돼 checkpoint별 exact-gradient drift 진단 단계로 이동한다.
+- 2026-07-23: 두 실행의 milestone checkpoint 열 개를 canonical FP32 safetensors로 내보냈다. 각 파일은 368,174,080개 parameter의 219개 tensor를 포함하며 크기는 1,472,721,288 bytes다.
+- 2026-07-23: Checkpoint 진단은 초기 calibration과 같은 parent cache, 논리 batch 128, 측정/선택/감사 64/32/32, BF16, VRAM 상한 0.85, timing repeat 1, 고정 일정 `[1,1,0.75,0.25]`로 순차 실행 중이다. CountSketch 없이 368,174,080개 전체 좌표의 FP64 streaming Gram을 계산하며 각 checkpoint의 일정 변경은 금지한다.
+- 2026-07-23: Full update 30/300/1500/2700의 고정 일정 독립 감사 효율 비율은 각각 `0.652890`/`0.677057`/`0.675563`/`0.677668`이고 95% 신뢰구간 상한은 모두 1 미만이라 통과했다. Measurement mean level 최소 cosine은 `0.998941`/`0.985569`/`0.940898`/`0.782000`으로 학습에 따른 방향 drift가 관측됐다.
+- 2026-07-23: Primary 장기학습 비교 JSON을 생성했다. 구조·유한값 검사는 통과했다. RR의 안정 update 시간 중앙값은 Full의 `47.348%`로 `52.652%` 짧고, 실제 유효 token은 Full의 `90.278%`다. 최종 validation loss는 Full `3.419851`, RR `3.472711`로 RR이 `0.052860` 높다.
+- 2026-07-23: Full update 3,000 진단도 1,984.97초에 완료됐다. 고정 일정 효율 비율은 `0.677847`, 95% 신뢰구간 `[0.654446,0.715034]`, measurement mean level 최소 cosine은 `0.734683`이며 독립 감사와 unbiasedness gate가 모두 통과했다. Full trajectory의 다섯 진단이 끝나 RR trajectory 진단으로 이동했다.
+- 2026-07-23: RR update 30 전 좌표 진단이 1,949.88초에 완료됐다. 고정 일정 효율 비율은 `0.652899`, 95% 신뢰구간 `[0.618827,0.700636]`, measurement mean level 최소 cosine은 `0.998907`이며 독립 감사와 unbiasedness gate가 통과했다.
+- 2026-07-23: RR update 300 전 좌표 진단이 2,029.06초에 완료됐다. 고정 일정 효율 비율은 `0.682475`, 95% 신뢰구간 `[0.650080,0.735779]`, measurement mean level 최소 cosine은 `0.986938`이며 독립 감사와 unbiasedness gate가 통과했다.
+- 2026-07-23: RR update 1,500 전 좌표 진단이 2,000.96초에 완료됐다. 고정 일정 효율 비율은 `0.668755`, 95% 신뢰구간 `[0.646874,0.703837]`, measurement mean level 최소 cosine은 `0.936764`이며 독립 감사와 unbiasedness gate가 통과했다.
+- 2026-07-23: RR update 2,700 전 좌표 진단이 1,991.31초에 완료됐다. 고정 일정 효율 비율은 `0.668532`, 95% 신뢰구간 `[0.646531,0.703589]`, measurement mean level 최소 cosine은 `0.793021`이며 독립 감사와 unbiasedness gate가 통과했다.
+- 2026-07-23: RR update 3,000 전 좌표 진단이 2,482.74초에 완료됐다. 마지막 audit 일부가 rank 0의 CPU full-coordinate 누적과 rank 1의 분산 대기로 느려졌지만 계속 전진해 재시작 없이 완주했다. 고정 일정 효율 비율은 `0.669346`, 95% 신뢰구간 `[0.647400,0.704416]`, measurement mean level 최소 cosine은 `0.742705`이며 독립 감사와 unbiasedness gate가 통과했다.
+- 2026-07-23: Full/RR 각 다섯 시점, 총 10개 checkpoint 전 좌표 진단 보고서가 모두 생성됐다. 모든 보고서가 diagnostic-only, 고정 일정, unbiasedness, 독립 감사 조건을 충족하며 원본 로그에서 traceback·CUDA OOM·ChildFailedError는 발견되지 않았다.
+- 2026-07-23: 열 개 진단의 통합 자동 검증이 failure 0건으로 통과했다. 효율비 범위는 `[0.652890,0.682475]`, 가장 큰 95% CI 상한은 `0.735779`, 최대 exact-path memory fraction은 `0.640778`이다. 시점별 CSV와 validation/효율/level cosine/V_k SVG를 생성했다.
+- 2026-07-23: Full/RR 장기학습 구조·유한값 비교가 통과했다. RR 안정 update 시간 중앙값은 Full 대비 `47.348%`, core update time 합은 `17,869.21s` 대 `37,677.70s`, 실제 valid token 비율은 `90.278%`다. 최종 validation loss는 Full `3.419851`, RR `3.472711`이다.
+- 2026-07-23: 219개 tensor, 368,174,080개 전체 좌표의 parameter trajectory를 스트리밍 비교했다. Full/RR 초기값 대비 update-vector cosine은 step 30 `0.993850`, step 300 `0.944935`, step 1,500 `0.743393`, step 2,700 `0.723555`, step 3,000 `0.723504`다.
+- 2026-07-23: 모든 checkpoint의 post-hoc 35-grid 최적 일정은 `[1,1,0.5,0.25]`였고 selection objective를 고정 일정 대비 `2.19–2.68%` 낮췄으며 각 독립 감사도 통과했다. 사전 확정 일정은 실험 중 변경하지 않았고 이 결과는 다음 고정-arm 후보로만 기록했다.
+- 2026-07-23: 최종 종합 보고서 `FINAL_REPORT.md`를 이번 checkpoint 디렉터리에 작성했다. 보고서의 19개 절대경로 링크가 모두 존재함을 확인했다. 실험 종료 시 두 H100은 각각 1MiB, utilization 0%이고 `galore` saver는 임의로 다시 시작하지 않았다.
+- 2026-07-23: 핵심 보고서·설정·분석·CPU/ruff 결과 9개의 `SHA256SUMS`를 생성하고 전 항목 `OK`를 확인했다. 최종 보존 디렉터리는 약 90GB이며 진단 보고서 10개, 자동 검증 failure 0건이다.
+- 2026-07-23: 사용자 지시에 따라 `/home/ubuntu/checkpoint/keunyoung/umcg/full_gradient_3000_20260721T232425_KST_f57ee32`의 Markdown(`.md`), JSON(`.json`), JSON Lines(`.jsonl`) 결과 문서 75개, 12,918,517 bytes를 `/home/ubuntu/keunyoung/workspace/umcg/results/full_gradient_3000_20260721T232425_KST_f57ee32/`에 상대 경로를 유지해 복사했다. 원본과 복사본의 파일 수·총 크기·파일별 SHA-256이 모두 일치한다.
+- 2026-07-23: 앞으로 모든 실험 종료 시 같은 확장자의 결과 문서를 `results/<experiment_id>/`에도 복사하고 SHA-256으로 검증하며, checkpoint 경로의 원본을 권위 있는 장기 보존본으로 유지한다는 규칙을 `user_instructions.md`에 추가했다.
+- 2026-07-23: ChatGPT Pro 분석용 적합성을 기준으로 복사본 75개를 감사했다. JSON 64개와 JSONL 9개는 모두 정상 파싱됐고 exact byte duplicate는 없었다. 다만 primary matched Full 외의 auxiliary Full, preflight·failed·pilot·benchmark, checkpoint manifest와 구현 메모가 섞여 있어 잘못된 실행을 비교할 위험을 확인했다.
+- 2026-07-23: 분석용 primary 11개, 필요 시 읽을 Full/RR raw metrics 2개를 핵심 보존 대상으로 분류했다. 상세 checkpoint diagnostic report 10개는 통합 summary와 중복되는 선택적 감사 자료이며, 나머지 52개는 분석 묶음에서 제외하거나 checkpoint 원본에만 둘 후보로 분류했다. 현재는 점검만 수행했고 파일을 삭제·이동하지 않았다.
+- 2026-07-23: 복사된 `FINAL_REPORT.md`의 링크 19개가 모두 checkpoint 절대경로이며 이 중 image 5개는 `results`에 복사되지 않았음을 확인했다. ChatGPT용 휴대성을 위해 relative-link index, CSV 2개, SVG 5개를 추가하는 정리안을 준비했다.
+- 2026-07-23: 사용자 승인에 따라 `results/full_gradient_3000_20260721T232425_KST_f57ee32/` 복사본을 `00_overview`, `01_calibration`, `02_full_3000_matched`, `03_rr_3000`, `04_joint_analysis`, `90_auxiliary_runs`로 재구성했다. 각 주요 실험은 `essential` 필수자료와 `appendix` 상세자료·부록으로 구분했다.
+- 2026-07-23: 최초 Markdown·JSON·JSONL 결과 문서 75개는 삭제하지 않고 위치만 이동했다. 이동 전후 SHA-256 내용 해시 집합이 일치하며 checkpoint 권위 원본은 변경하지 않았다.
+- 2026-07-23: 권위 원본에서 CSV 표 2개, SVG 그래프 5개, `SHA256SUMS` 1개를 동일 내용으로 추가하고 `ANALYSIS_INDEX.md`와 디렉터리별 README 6개를 작성했다. 최종 복사본은 90개 파일, 13,308,821 bytes다.
+- 2026-07-23: 정리 후 JSON 64개와 JSONL 9개가 모두 정상 파싱됐고, `ANALYSIS_INDEX.md`의 모든 상대경로와 추가한 CSV·SVG·SHA256SUMS의 원본 일치 여부를 검증했다.
+- 2026-07-23: 작업 시작 시 H100 두 장은 각각 약 68.96GB를 사용 중이었다. 이번 작업은 결과 파일 정리뿐이므로 GPU 프로세스는 확인만 하고 종료하거나 변경하지 않았다.

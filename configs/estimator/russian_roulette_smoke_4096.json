@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "context_levels": [512, 1024, 2048, 4096],
+  "tail_probabilities": [1.0, 0.5, 0.25, 0.125],
+  "sampling": "shared_global_microbatch",
+  "source": {
+    "type": "smoke_unvalidated",
+    "efficiency_claim": false
+  }
+}

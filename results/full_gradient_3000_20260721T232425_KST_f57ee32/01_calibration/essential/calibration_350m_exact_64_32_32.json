@@ -1,0 +1,27 @@
+{
+  "context_levels": [
+    512,
+    1024,
+    2048,
+    4096
+  ],
+  "sampling": "shared_global_microbatch",
+  "schema_version": 1,
+  "source": {
+    "audit_parent_batches": 32,
+    "criterion": "gradient_variance_times_expected_distributed_cuda_cost",
+    "independent_audit_passed": true,
+    "logical_parent_batch_size": 128,
+    "measurement_parent_batches": 64,
+    "seed": 777,
+    "selection_parent_batches": 32,
+    "timing_repeats": 1,
+    "type": "full_coordinate_calibration"
+  },
+  "tail_probabilities": [
+    1.0,
+    1.0,
+    0.75,
+    0.25
+  ]
+}

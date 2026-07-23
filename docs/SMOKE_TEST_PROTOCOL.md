@@ -50,6 +50,8 @@ CUDA_VISIBLE_DEVICES=0 python smoke_main.py \
 
 결과는 `smoke_report.json`이다. Scalar와 모든 gradient가 finite여야 한다.
 
+4096 Russian Roulette 분기 자체를 검사할 때에는 `configs/estimator/russian_roulette_smoke_4096.json`과 `configs/model/llama_tiny_t5_4096.json`을 사용한다. 이 estimator는 `[1, 0.5, 0.25, 0.125]`를 사용하지만 `source.type=smoke_unvalidated`, `efficiency_claim=false`이며 최종 학습 설정으로 승격하지 않는다. 최종 일정은 `calibrate_main.py`의 측정 64 / 선택 32 / 독립 감사 32 결과로만 만든다.
+
 H100 검증에서는 FP16을 실행하지 않고 BF16을 사용한다. FP8은 본 smoke와 분리된 2-GPU 기능 관문에서 검증한다.
 
 ## CPU test suite
